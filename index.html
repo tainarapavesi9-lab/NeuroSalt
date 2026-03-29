@@ -30,15 +30,15 @@
 
     <style>
         :root {
-            --brand:        #03354F; /* Azul Marinho Profundo */
+            --brand:        #03354F; /* Deep Blue */
             --brand-dark:   #022436;
-            --brand-light:  #F6EADF; /* Bege Suave */
-            --accent:       #DE6B24; /* Laranja NeuroSalt */
+            --brand-light:  #F6EADF; /* Warm Beige */
+            --accent:       #DB6723; /* Novo Laranja Solicitado */
             --text-dark:    #0f172a;
             --text-body:    #334155;
             --bg-white:     #ffffff;
             --radius:       12px;
-            --max-w:        1100px;
+            --max-w:        1140px;
         }
 
         *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -48,10 +48,10 @@
         button{cursor:pointer;font-family:inherit;border:none;background:none}
 
         .container { max-width: 850px; margin: 0 auto; padding: 0 20px }
-        .section { padding: 50px 0 }
+        .section { padding: 60px 0 }
         .text-center { text-align: center }
         
-        /* Tipografia */
+        /* Typography */
         .h1{font-family:'Merriweather',serif;font-size:1.8rem;font-weight:900;color:var(--brand);line-height:1.2;margin-bottom:15px}
         .h2{font-family:'Merriweather',serif;font-size:1.3rem;font-weight:800;color:var(--brand);margin-bottom:15px}
         .section-badge{display:inline-block;background:var(--brand);color:#fff;font-weight:700;font-size:0.75rem;padding:6px 12px;border-radius:4px;margin-bottom:16px;text-transform:uppercase;letter-spacing:1px}
@@ -71,7 +71,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 6px 20px rgba(222,107,36,0.4);
+            box-shadow: 0 6px 20px rgba(219,103,35,0.4);
             z-index: 9998;
             transition: transform 0.3s ease;
         }
@@ -81,12 +81,12 @@
         .hero{padding:20px 0 40px; background: #ffffff;}
         .hero-img{width:100%; max-width:320px; margin:20px auto; filter:drop-shadow(0 10px 20px rgba(3,53,79,0.1))}
 
-        /* CTA Card */
-        .price-card{margin:25px auto; padding:20px; background:var(--brand-light); border-radius:var(--radius); border:2px solid var(--accent); max-width:100%; box-shadow: 0 6px 15px rgba(222,107,36,0.1); text-align: center;}
+        /* CTA Price Card */
+        .price-card{margin:25px auto; padding:25px; background:var(--brand-light); border-radius:var(--radius); border:2px solid var(--accent); max-width:100%; box-shadow: 0 6px 15px rgba(219,103,35,0.1); text-align: center;}
         .price-label{font-weight:800; color:var(--brand); margin-bottom:8px; font-size:0.85rem; text-transform: uppercase;}
         .price-current{font-size:2.2rem; font-weight:900; color:var(--brand); font-family:'Merriweather',serif; display: block; margin-bottom: 5px;}
         .price-subtext{font-weight: 700; color: var(--accent); font-size: 1rem; display: block; margin-bottom: 12px;}
-        .cta-primary{display:inline-flex; align-items:center; justify-content:center; background:linear-gradient(135deg, #f3945a, var(--accent)); color:#ffffff; font-weight:800; font-size:1rem; padding:16px 20px; border-radius:8px; width:100%; box-shadow:0 4px 15px rgba(222,107,36,0.2); text-align: center; text-transform: uppercase;}
+        .cta-primary{display:inline-flex; align-items:center; justify-content:center; background:linear-gradient(135deg, #f3a675, var(--accent)); color:#ffffff; font-weight:800; font-size:1rem; padding:16px 20px; border-radius:8px; width:100%; box-shadow:0 4px 15px rgba(219,103,35,0.2); text-align: center; text-transform: uppercase;}
         
         /* Grid de Selos */
         .trust-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:15px; margin-top:20px}
@@ -95,7 +95,7 @@
         .trust-card-title{font-weight:700; font-size:0.75rem; color:var(--brand); margin-bottom:4px}
         .trust-card-desc{font-size:.65rem; line-height:1.4}
 
-        /* Seção Mecanismo (Persistent Nerve Irritation) */
+        /* Seção Mecanismo */
         .mechanism-section { background-color: var(--brand); color: #ffffff; padding: 60px 0; }
         .mechanism-box{background:rgba(255,255,255,0.06); padding:25px; border-radius:12px; border-left:6px solid var(--accent); text-align:left; margin:25px auto; max-width:100%;}
         .mechanism-list { list-style: none; padding: 0; }
@@ -123,7 +123,7 @@
         .guarantee-text p { color: #ffffff; font-size: 0.95rem; line-height: 1.5; }
         
         .offer-section { background-color: var(--brand-light); padding: 60px 0; border-top: 1px solid #eee; }
-        .offer-product-final{width:100%; max-width:320px; margin:0 auto 25px; filter: drop-shadow(0 15px 35px rgba(222,107,36,0.15))}
+        .offer-product-final{width:100%; max-width:320px; margin:0 auto 25px; filter: drop-shadow(0 15px 35px rgba(219,103,35,0.15))}
 
         /* FAQ Estilizado */
         .faq-section { background-color: #ffffff; padding: 60px 0; }
@@ -131,7 +131,7 @@
         .faq-item { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 12px; overflow: hidden; }
         .faq-question { width: 100%; padding: 18px 20px; display: flex; justify-content: space-between; align-items: center; font-weight: 700; color: var(--brand); font-size: 0.95rem; text-align: left; cursor: pointer; }
         .faq-answer { max-height: 0; padding: 0 20px; overflow: hidden; background: #f8fafc; transition: all 0.3s ease; color: var(--text-body); font-size: 0.9rem; line-height: 1.6; }
-        .faq-item.active .faq-answer { max-height: 300px; padding-bottom: 15px; padding-top: 5px; }
+        .faq-item.active .faq-answer { max-height: 400px; padding-bottom: 15px; padding-top: 5px; }
         .faq-icon { font-size: 1.2rem; color: var(--accent); transition: transform 0.3s ease; }
         .faq-item.active .faq-icon { transform: rotate(45deg); color: var(--brand); }
 
@@ -140,6 +140,7 @@
         .modal-content { background: #fff; max-width: 800px; margin: 20px auto; padding: 30px; border-radius: 16px; position: relative; color: #333; }
         .modal-close { position: absolute; top: 10px; right: 15px; font-size: 2rem; cursor: pointer; color: var(--brand); line-height: 1; }
         .modal-body h2 { color: var(--brand); margin-bottom: 20px; border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 8px; font-family: 'Merriweather', serif; font-size: 1.5rem; }
+        .modal-body h3 { margin-top: 20px; color: var(--brand); font-size: 1.1rem; }
         .modal-body p { margin-bottom: 15px; font-size: 0.9rem; line-height: 1.6; }
         .modal-body ul { margin-bottom: 15px; padding-left: 20px; font-size: 0.9rem; }
 
@@ -150,7 +151,7 @@
         @media(min-width:1024px){
             .container { max-width: var(--max-w); }
             
-            /* Desktop Hero: Side-by-side. Hide mobile image. */
+            /* Desktop Hero: Sem duplicidade. Foto à direita. */
             .hero-inner { display: flex; align-items: center; justify-content: space-between; gap: 60px; text-align: left; }
             .hero-text { flex: 1.1; }
             .hero-visual { flex: 0.9; display: block !important; }
@@ -164,22 +165,18 @@
             .trust-grid { grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1000px; margin: 30px auto 0; }
             .trust-card img { height: 60px; }
 
-            /* Mechanism Desktop */
             .mechanism-box { max-width: 750px; padding: 50px; }
             .mechanism-item strong { font-size: 1.6rem; display: inline; }
             .mechanism-item span { font-size: 1.1rem; margin-left: 10px; }
 
-            /* Testimonials Desktop */
-            .reviews-banner { max-width: 500px; margin: 0 auto 50px; }
             .reviews-container { flex-direction: row; align-items: stretch; justify-content: center; gap: 25px; }
             .review-card { width: 32%; padding: 35px; }
 
-            /* Guarantee Desktop Faixa */
             .guarantee-wrap { flex-direction: row; justify-content: center; text-align: left; gap: 60px; max-width: 950px; margin: 0 auto; }
             .guarantee-img { width: 160px; }
             .guarantee-text h2 { font-size: 2.2rem; }
 
-            /* Section Split General */
+            /* Seção Split */
             .split-view { display: flex; align-items: center; gap: 70px; text-align: left; }
             .split-visual, .split-text { flex: 1; }
 
@@ -326,15 +323,17 @@
     </div>
 </section>
 
-<!-- LABEL SECTION -->
-<section class="section bg-white" style="border-top: 1px solid #f1f5f9;">
+<!-- LABEL SECTION - BACKGROUND DEEP BLUE AS REQUESTED -->
+<section class="section" style="background-color: var(--brand); color: #ffffff; border-top: 1px solid rgba(255,255,255,0.1);">
     <div class="container text-center">
-        <h2 class="section-badge">Natural-Based Daily Support</h2>
+        <div style="background: rgba(255,255,255,0.1); color: #fff; display: inline-block; padding: 6px 15px; border-radius: 4px; font-weight: 700; font-size: 0.75rem; margin-bottom: 25px; text-transform: uppercase; border: 1px solid rgba(255,255,255,0.2);">NATURAL-BASED DAILY SUPPORT</div>
         <div class="split-view">
-            <div class="split-visual"><img src="images/imgi_42_NeuroSalt_Print.png" alt="Supplement Label" style="max-width:100%; border-radius:12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05)"></div>
+            <div class="split-visual">
+                <img src="images/imgi_42_NeuroSalt_Print.png" alt="NeuroSalt Label" style="max-width:100%; border-radius:12px; box-shadow: 0 15px 40px rgba(0,0,0,0.3)">
+            </div>
             <div class="split-text">
-                <h2 class="h2">Natural Compounds & Quality</h2>
-                <div class="body-text" style="text-align: left;"><p>NeuroSalt Combines Ingredients Known For Supporting Nerve Function, Circulatory Balance, and Oxidative Support. Produced Under Strict Quality Standards For Daily Use.</p></div>
+                <h2 class="h2" style="color: #ffffff; font-size: 2rem;">Natural Compounds & Quality</h2>
+                <div class="body-text" style="text-align: left; color: #cbd5e1;"><p>NeuroSalt™ combines ingredients known for supporting nerve function, circulatory balance, and oxidative support. Produced under strict quality standards for daily use, our formula focuses on long-term consistency and internal balance.</p></div>
             </div>
         </div>
     </div>
@@ -346,9 +345,9 @@
         <h2 class="h1">What People Are Saying</h2>
         <img src="images/reviews.png" alt="Reviews" class="reviews-banner" style="border-radius:16px; box-shadow: 0 4px 15px rgba(0,0,0,0.04); max-width: 500px; margin-bottom: 40px;">
         <div class="reviews-container">
-            <div class="review-card"><p class="review-text">“Burning Every Night. Now I Barely Notice It During The Day. Consistency was key.”</p><div class="review-author">R. Thompson, 62</div></div>
-            <div class="review-card"><p class="review-text">“Tingling Used To Keep Me Awake. Now I Feel More Comfortable At Night.”</p><div class="review-author">M. Carter, 58</div></div>
-            <div class="review-card"><p class="review-text">“Over Time, I Feel More Stable Walking. I'm much more confident now.”</p><div class="review-author">D. Miller, 67</div></div>
+            <div class="review-card"><p class="review-text">“Burning every night. Now I barely notice it during the day. Consistency was key for me.”</p><div class="review-author">R. Thompson, 62</div></div>
+            <div class="review-card"><p class="review-text">“Tingling used to keep me awake. Now I feel more comfortable at night. Finally a better rest.”</p><div class="review-author">M. Carter, 58</div></div>
+            <div class="review-card"><p class="review-text">“Didn’t expect much. But over time, I feel more stable walking. I'm much more confident now.”</p><div class="review-author">D. Miller, 67</div></div>
         </div>
     </div>
 </section>
@@ -357,10 +356,10 @@
 <section class="guarantee-faixa">
     <div class="container">
         <div class="guarantee-wrap">
-            <img src="images/imgi_13_guarantee-badge.png" alt="Seal" class="guarantee-img">
+            <img src="images/imgi_13_guarantee-badge.png" alt="60-Day Money Back Guarantee" class="guarantee-img">
             <div class="guarantee-text">
                 <h2>Your Satisfaction Is Protected</h2>
-                <p>You’re Covered By A <strong>60-Day Money-Back Guarantee</strong>. Try It. If It’s Not For You — Request A Refund Within The Period.</p>
+                <p>You’re covered by a <strong>60-Day Money-Back Guarantee</strong>. Try it for two full months. If it’s not for you — request a refund within the period. No questions asked.</p>
             </div>
         </div>
     </div>
@@ -371,15 +370,15 @@
     <div class="container text-center">
         <h2 class="h1">Get NeuroSalt While It’s Still Available</h2>
         <div class="split-view">
-            <div class="split-visual"><img src="images/3-frascos.png" alt="Bundle" class="offer-product-final"></div>
+            <div class="split-visual"><img src="images/3-frascos.png" alt="NeuroSalt Bundle" class="offer-product-final"></div>
             <div class="offer-details">
-                <div class="price-card" style="background: #fff; border: 2px solid var(--brand); margin: 0;">
+                <div class="price-card" style="background: #fff; border: 2px solid var(--brand); margin: 0; text-align: left; padding: 35px;">
                     <div class="body-text" style="margin-bottom: 20px;">
-                        <p>• Starting at <strong>$49 per bottle</strong></p>
-                        <p>• <strong>Save up to 73% today</strong></p>
-                        <p>• Limited availability</p>
+                        <p style="font-size: 1.1rem; margin-bottom: 10px;">• Starting at <strong>$49 per bottle</strong></p>
+                        <p style="font-size: 1.1rem; margin-bottom: 10px;">• <strong>Save up to 73% today</strong></p>
+                        <p style="font-size: 1.1rem;">• Limited availability</p>
                     </div>
-                    <a href="https://43f17ngcmlemes3bul-d59uf7b.hop.clickbank.net" class="cta-primary" style="width:100%">CHECK AVAILABILITY NOW</a>
+                    <a href="https://43f17ngcmlemes3bul-d59uf7b.hop.clickbank.net" class="cta-primary" style="width:100%; font-size: 1.2rem; padding: 22px;">CHECK AVAILABILITY NOW</a>
                 </div>
                 <p style="background: #fee2e2; color:#b91c1c; padding: 12px; border-radius: 8px; font-weight:800; margin-top:20px; font-size: 0.85rem;">⚠️ ATTENTION: High Demand Detected.</p>
             </div>
@@ -392,16 +391,16 @@
     <div class="container">
         <div class="text-center" style="margin-bottom: 40px;"><h2 class="h1">Frequently Asked Questions</h2></div>
         <div class="faq-container">
-            <div class="faq-item"><div class="faq-question">How Long Does It Take? <span class="faq-icon">+</span></div><div class="faq-answer">Some users report changes in a few weeks. Best results typically occur after 60-90 days of consistent use.</div></div>
-            <div class="faq-item"><div class="faq-question">Do I Need A Prescription? <span class="faq-icon">+</span></div><div class="faq-answer">No, NeuroSalt is a supplement and does not require a prescription.</div></div>
-            <div class="faq-item"><div class="faq-question">How Do I Take It? <span class="faq-icon">+</span></div><div class="faq-answer">Follow the instructions on the product label. Typically taken with a glass of water.</div></div>
-            <div class="faq-item"><div class="faq-question">Can I Use With Other Supplements? <span class="faq-icon">+</span></div><div class="faq-answer">It uses a natural-based formula. Consult a healthcare professional if taking other medications.</div></div>
-            <div class="faq-item"><div class="faq-question">What If It Doesn’t Work? <span class="faq-icon">+</span></div><div class="faq-answer">You are protected by our 60-day money-back guarantee. Simply contact our support team.</div></div>
+            <div class="faq-item"><div class="faq-question">How Long Does It Take To Notice Results? <span class="faq-icon">+</span></div><div class="faq-answer">Some users report changes within a few weeks of consistent use. However, for optimal results, we recommend a 60 to 90-day period.</div></div>
+            <div class="faq-item"><div class="faq-question">Do I Need A Prescription? <span class="faq-icon">+</span></div><div class="faq-answer">No, NeuroSalt is a natural-based dietary supplement and does not require a prescription.</div></div>
+            <div class="faq-item"><div class="faq-question">How Do I Take It? <span class="faq-icon">+</span></div><div class="faq-answer">Follow the instructions on the product label. Typically taken with a glass of water, ideally with a meal.</div></div>
+            <div class="faq-item"><div class="faq-question">Can I Use With Other Supplements? <span class="faq-icon">+</span></div><div class="faq-answer">It uses a natural-based formula. However, we recommend consulting a healthcare professional if you are taking other medications.</div></div>
+            <div class="faq-item"><div class="faq-question">What If It Doesn’t Work For Me? <span class="faq-icon">+</span></div><div class="faq-answer">You are protected by our 60-day money-back guarantee. Simply contact our customer support team within the timeframe.</div></div>
         </div>
         <div class="text-center" style="margin-top: 50px;">
             <h2 class="h2">Recommended Next Step</h2>
-            <p class="body-text" style="margin-bottom: 20px;">If you want daily support, now is the best time to check availability.</p>
-            <a href="https://43f17ngcmlemes3bul-d59uf7b.hop.clickbank.net" class="cta-primary" style="padding: 20px 40px;">VIEW AVAILABLE OPTIONS</a>
+            <p class="body-text" style="margin-bottom: 25px;">If you've been dealing with burning, tingling, or numbness and want daily support, now is the best time to check availability.</p>
+            <a href="https://43f17ngcmlemes3bul-d59uf7b.hop.clickbank.net" class="cta-primary" style="padding: 20px 50px; font-size: 1.2rem;">VIEW AVAILABLE OPTIONS</a>
         </div>
     </div>
 </section>
@@ -422,17 +421,51 @@
         </div>
         <p style="margin-top: 35px; opacity: 0.8;">Instituto Experience 2026. All rights reserved.</p>
         <div style="opacity: 0.7; margin-top: 20px; font-style: italic; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">Authorized Distributor of NeuroSalt™ Product</div>
-        <p style="opacity:0.6; margin-top: 20px;">Disclaimer: These statements have not been evaluated by the FDA. Individual results may vary.</p>
+        <p style="opacity:0.6; margin-top: 20px; line-height: 1.5;">Disclaimer: These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure or prevent any disease. Individual results may vary.</p>
     </div>
 </footer>
 
 <script>
 const modalData = {
-    tos: `<h2>Terms of Service</h2><p>Effective Date: August, 2021</p><p>This website (the “Site”) is owned and operated by (“COMPANY”). By using the Site, you agree to be bound by these Terms of Service. Accessing the Site constitutes your agreement to these Terms. All materials on the site are the property of us and protected by copyright laws.</p><p><strong>Intellectual Property Rights:</strong> The Site is provided solely for your personal noncommercial use.</p><p><strong>Dispute Resolution:</strong> These Terms are governed by the laws of Barbados.</p>`,
-    privacy: `<h2>Privacy Policy</h2><p>Your privacy is critically important to us. We collect non-personally-identifying information to better understand how visitors use our site. We are committed to protecting personally identifiable information provided through the website.</p><p><strong>Cookies:</strong> We use cookies to store your preferences on your computer. You can opt out of interest-based advertising entirely by browser plugins.</p>`,
-    return: `<h2>Return Policy</h2><p>If you are unsatisfied for any reason, you have 60 days from delivery to return the product and request a refund.</p><ul><li>Step 1: Ensure you are within the 60-day period.</li><li>Step 2: Email <strong>contact@customercs.com</strong> with “Refund Request” in the subject line.</li><li>Step 3: Send all bottles (even empty) back to: 11870 62nd St N Largo, Fl. 33773.</li><li>Step 4: Refunds are processed within 5-10 business days.</li></ul>`,
-    disclaimer: `<h2>Disclaimer</h2><p>Date Effective: August, 2025</p><p>This product has not been evaluated by the FDA. This product is not intended to diagnose, treat, cure or prevent any disease. All content provided is for informational purposes only. neither the authors nor the publishers are responsible for inaccuracies.</p>`,
-    contact: `<h2>Contact Us</h2><p>Do you have any questions? Please contact us directly.</p><p><strong>Product Email Support:</strong> contact@customercs.com<br><strong>Product Number Support:</strong> +1 (507) 448-8190</p>`
+    tos: `<h2>Terms of Service</h2>
+          <p><strong>Date Effective: August, 2021</strong></p>
+          <p>This website (the “Site”) is owned and operated by (“COMPANY” “we” or “us”). By using the Site, you agree to be bound by these Terms of Service and to use the Site in accordance with these Terms of Service, our Privacy Policy, our Shipping Policy, our Return Policy and any additional terms and conditions that may apply to specific sections of the Site or to products and services available through the Site or from COMPANY. Accessing the Site, in any manner, whether automated or otherwise, constitutes use of the Site and your agreement to be bound by these Terms of Service.</p>
+          <h3>Intellectual Property Rights</h3>
+          <p>This Site and all the materials available on the Site are the property of us and/or our affiliates or licensors, and are protected by copyright, trademark, and other intellectual property laws. The Site is provided solely for your personal noncommercial use.</p>
+          <h3>Disclaimers</h3>
+          <p>All information, products and services offered on or through the Site are provided “as is” without warranties of any kind, express or implied. UNDER NO CIRCUMSTANCES shall we be liable for any direct, indirect, incidental, special or consequential damages arising from your use of the Site or inability to use the Site.</p>
+          <h3>Dispute Resolution</h3>
+          <p>These Terms are governed by the laws of Barbados. Any dispute is resolved by binding arbitration in St. Michael, Barbados. You may not join or bring a class action.</p>`,
+    
+    privacy: `<h2>Privacy Policy</h2>
+              <p>Your privacy is critically important to us. It is our policy to respect your privacy regarding any information we may collect while operating our website. This Privacy Policy applies to this website.</p>
+              <h3>Website Visitors</h3>
+              <p>Like most website operators, we collect non-personally-identifying information of the sort that web browsers and servers typically make available, such as the browser type, language preference, referring site, and the date and time of each visitor request.</p>
+              <h3>Security</h3>
+              <p>The security of your Personal Information is important to us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Information, we cannot guarantee its absolute security.</p>
+              <h3>Remarketing</h3>
+              <p>We may use remarketing services (including Google, Facebook and Others) to advertise on third-party websites to previous visitors to our site. You can opt out of interest-based advertising entirely by cookie settings or permanently using a browser plugin.</p>`,
+    
+    return: `<h2>Return Policy</h2>
+             <p>If you are unsatisfied with your product for any reason you will have 60 days from the date of delivery to return the product and request a refund.</p>
+             <h3>Step 1</h3>
+             <p>Make sure you are still in the 60-day period starting with the day the order has been delivered to you. To remember the delivery date please check the tracking number on the carrier’s website.</p>
+             <h3>Step 2</h3>
+             <p>Send an email to our support team <strong>contact@customercs.com</strong> and tell them you are not fully convinced by the benefits of the product. Please add “Refund Request” in the subject line.</p>
+             <h3>Step 3</h3>
+             <p>Send all the bottles back to us (even empty) at the below address: <strong>11870 62nd St N Largo, Fl. 33773.</strong></p>
+             <h3>Step 4</h3>
+             <p>Be patient, we will process your refund in no time after we get your package. The processing time is between 5 and 10 days.</p>`,
+    
+    disclaimer: `<h2>General Disclaimer</h2>
+                 <p><strong>Date Effective: August, 2025</strong></p>
+                 <p>This product has not been evaluated by the FDA. This product is not intended to diagnose, treat, cure or prevent any disease. Your use of the site and the purchase of our product is subject to our Terms of Service, Privacy Policy and Medical Disclaimer.</p>
+                 <p>All content sold or provided by this website and its related companies are strictly for informational purposes only. neither the authors nor the publishers are responsible for assuming liability for possible inaccuracies. Loss of property, injury to self or others, and even death could occur as a consequence of the use and application of any content found herein.</p>`,
+    
+    contact: `<h2>How To Contact Us</h2>
+              <p>Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within a matter of hours to help you.</p>
+              <p><strong>Product Email Support:</strong> contact@customercs.com</p>
+              <p><strong>Product Number Support:</strong> +1 (507) 448-8190</p>`
 };
 
 function openModal(type) {
@@ -447,15 +480,19 @@ function closeModal() {
 }
 
 window.onclick = function(event) {
-    if (event.target == document.getElementById('modalOverlay')) closeModal();
+    if (event.target == document.getElementById('modalOverlay')) {
+        closeModal();
+    }
 }
 
-// FAQ Accordion
+// FAQ Logic
 document.querySelectorAll('.faq-item').forEach(item => {
     item.querySelector('.faq-question').addEventListener('click', () => {
         const isActive = item.classList.contains('active');
         document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
-        if(!isActive) item.classList.add('active');
+        if(!isActive) {
+            item.classList.add('active');
+        }
     });
 });
 </script>
