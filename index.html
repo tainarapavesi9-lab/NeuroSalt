@@ -96,28 +96,43 @@
 
         .offer-bar{background: var(--brand); color:#ffffff; padding:10px 16px; font-size:0.8rem; font-weight:700; text-align:center; text-transform: uppercase;}
 
-        /* Hero Mobile */
+        /* Hero Styling */
         .hero{padding:30px 0; background: #ffffff;}
         .hero-img{width:100%; max-width:320px; margin:25px auto; filter:drop-shadow(0 15px 25px rgba(3,53,79,0.1))}
 
-        /* CTA Price Card Refined */
+        /* CTA Price Card */
         .price-card{margin:25px auto; padding:25px; background:var(--brand-light); border-radius:12px; border:2px solid var(--accent); max-width:400px; box-shadow: 0 6px 15px rgba(222,107,36,0.1); text-align: center;}
         .price-label{font-weight:800; color:var(--brand); margin-bottom:8px; font-size:0.85rem; text-transform: uppercase; letter-spacing: 0.5px;}
         .price-current{font-size:2.4rem; font-weight:900; color:var(--brand); font-family:'Merriweather',serif; display: block; margin-bottom: 5px;}
         .price-subtext{font-weight: 700; color: var(--accent); font-size: 1rem; display: block; margin-bottom: 15px;}
-        .cta-primary{display:inline-flex; align-items:center; justify-content:center; background:linear-gradient(135deg, #f3945a, var(--accent)); color:#ffffff; font-weight:800; font-size:1.1rem; padding:18px 25px; border-radius:8px; width:100%; box-shadow:0 4px 15px rgba(222,107,36,0.3); text-align: center; text-transform: uppercase;}
+        .cta-primary{display:inline-flex; align-items:center; justify-content:center; background:linear-gradient(135deg, #f3945a, var(--accent)); color:#ffffff; font-weight:800; font-size:1.1rem; padding:16px 20px; border-radius:8px; width:100%; box-shadow:0 4px 15px rgba(222,107,36,0.3); text-align: center; text-transform: uppercase;}
         
-        /* Quality Seals Mobile */
+        /* Quality Seals */
         .trust-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:15px; margin-top:20px}
         .trust-card{background:#ffffff; padding:20px 10px; border-radius:10px; text-align:center; border:1px solid #e2e8f0; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;}
         .trust-card img{height:45px; width:auto; margin-bottom:12px; object-fit:contain}
         .trust-card-title{font-weight:700; font-size:0.75rem; color:var(--brand); margin-bottom:4px}
         .trust-card-desc{font-size:.65rem; color:var(--text-light); line-height:1.4}
 
-        /* Mechanism Section */
+        /* Mechanism Section CSS - FIXED DESKTOP */
         .mechanism-section { background-color: var(--brand); color: #ffffff; padding: 60px 0; }
-        .mechanism-box{background:rgba(255,255,255,0.08); padding:30px; border-radius:10px; border-left:6px solid var(--accent); text-align:left; margin:25px auto; max-width:100%; color: #ffffff}
-        .mechanism-box p { margin-bottom: 12px; font-size: 1.05rem; }
+        .mechanism-box {
+            background: rgba(255,255,255,0.06); 
+            padding: 40px; 
+            border-radius: 12px; 
+            border-left: 6px solid var(--accent); 
+            text-align: left; 
+            margin: 30px auto; 
+            max-width: 700px; 
+            color: #ffffff;
+        }
+        .mechanism-list { list-style: none; padding: 0; }
+        .mechanism-item { margin-bottom: 25px; display: flex; align-items: baseline; gap: 15px; }
+        .mechanism-item:last-child { margin-bottom: 0; }
+        .mechanism-item::before { content: "●"; color: var(--accent); font-size: 1.2rem; }
+        .mechanism-item div { display: flex; flex-direction: row; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+        .mechanism-item strong { font-size: 1.5rem; color: #ffffff; font-weight: 700; line-height: 1.2; }
+        .mechanism-item span { font-size: 1rem; color: #cbd5e1; font-weight: 400; }
         
         .neurosalt2-img { width:100%; max-width:400px; border-radius:15px; margin:30px auto; border: 4px solid rgba(255,255,255,0.15); box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
         .product-highlight { background-color: var(--brand-light); border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
@@ -128,23 +143,23 @@
         .bullet-icon{color:var(--accent); font-weight: bold; font-size: 1.2rem;}
         .warning-box{background:#fff5f5; border:1px dashed #feb2b2; padding:20px; border-radius:8px; margin:25px auto; color:#c53030; font-weight:700; font-size:0.95rem; max-width:650px}
 
-        /* Testimonials Mobile */
+        /* Reviews */
         .reviews-container { display: flex; flex-direction: column; gap: 20px; margin-top: 30px; }
         .review-card { background: #ffffff; border: 1px solid #e2e8f0; padding: 25px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.03); text-align: left; }
         .review-text { font-style: italic; color: var(--text-body); margin-bottom: 15px; line-height: 1.7; font-size: 0.95rem; }
         .review-author { color: var(--brand); font-weight: 700; font-size: 0.95rem; border-top: 1px solid #f1f5f9; padding-top: 12px; }
 
-        /* Guarantee Faixa */
+        /* Guarantee */
         .guarantee-faixa { background-color: var(--accent); color: #ffffff; padding: 40px 0; }
         .guarantee-wrap { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px; }
-        .guarantee-img { width: 120px; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.1)); }
+        .guarantee-img { width: 120px; }
         .guarantee-text h2 { color: #ffffff; margin-bottom: 10px; font-family: 'Merriweather', serif; font-size: 1.5rem; }
         .guarantee-text p { color: #ffffff; font-size: 1rem; opacity: 0.95; }
         
         .offer-section { background-color: var(--brand-light); padding: 80px 0; border-top: 1px solid #eee; }
         .offer-product-final{width:100%; max-width:380px; margin:0 auto 30px; filter: drop-shadow(0 15px 35px rgba(222,107,36,0.15))}
 
-        /* FAQ Style */
+        /* FAQ */
         .faq-section { background-color: #ffffff; padding: 60px 0; }
         .faq-container { background: #fafafa; border-radius: 12px; padding: 10px 20px; border: 1px solid #efefef; margin-top: 30px; max-width: 100%; }
         .faq-item{border-bottom: 1px solid #e2e8f0; padding:18px 0; text-align:left}
@@ -163,39 +178,34 @@
         .footer a{text-decoration:underline; margin:0 10px; color:#ffffff; cursor: pointer;}
         .footer-distributor { opacity: 0.7; font-size: 0.75rem; margin-top: 25px; font-style: italic; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 25px; }
 
-        /* DESKTOP LAYOUT OVERRIDES (MEDIA QUERIES) */
+        /* DESKTOP LAYOUT OVERRIDES */
         @media(min-width:1024px){
             .container { max-width: 1100px; }
-            
-            /* HERO Desktop Balanced Alignment */
             .hero-inner { display: flex; align-items: center; justify-content: space-between; gap: 50px; text-align: left; }
             .hero-text { flex: 1.1; }
             .hero-visual { flex: 0.9; }
             .hero-img { max-width: 440px; margin: 0; }
             .h1 { font-size: 2.6rem; margin-bottom: 20px; }
             .h2 { font-size: 1.4rem; margin-bottom: 20px; }
-            .price-card { margin-left: 0; max-width: 380px; padding: 25px; border-width: 2px; } 
+            .price-card { margin-left: 0; max-width: 360px; padding: 25px; border-width: 2px; } 
 
-            /* Seals Proportional */
             .trust-grid { grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1000px; margin: 20px auto 0; }
             .trust-card { padding: 30px 15px; }
             .trust-card img { height: 60px; }
 
-            /* Mechanism Desktop */
-            .mechanism-box { max-width: 650px; padding: 40px; }
-            .mechanism-section strong { font-size: 2.4rem !important; }
+            /* Mechanism Section Desktop Fix */
+            .mechanism-item strong { font-size: 1.8rem; }
+            .mechanism-item span { font-size: 1.1rem; }
+            .mechanism-box { max-width: 750px; padding: 50px; }
 
-            /* Reviews Desktop Congruente */
-            .reviews-banner { max-width: 600px; margin: 0 auto 40px; }
+            .reviews-banner { max-width: 500px; margin: 0 auto 40px; }
             .reviews-container { flex-direction: row; align-items: stretch; justify-content: center; gap: 25px; }
             .review-card { width: 32%; padding: 35px; }
 
-            /* Guarantee Desktop Faixa */
             .guarantee-wrap { flex-direction: row; justify-content: center; text-align: left; gap: 50px; max-width: 900px; margin: 0 auto; }
             .guarantee-img { width: 150px; }
             .guarantee-text h2 { font-size: 2rem; }
 
-            /* Offer Final Desktop Proporcional */
             .offer-split { display: flex; align-items: center; gap: 60px; text-align: left; }
             .offer-visual { flex: 1; }
             .offer-details { flex: 1; }
@@ -211,7 +221,7 @@
     60-DAY MONEY-BACK GUARANTEE | Save $780 today
 </div>
 
-<!-- SECTION 1: HERO (Desktop Refined) -->
+<!-- SECTION 1: HERO -->
 <section class="hero">
     <div class="container">
         <div class="hero-inner">
@@ -226,7 +236,6 @@
                     <p style="margin-top: 12px;">Then It Comes Back. More Often. At Night. When You’re Trying To Relax. And Eventually, You Realize: <strong>This Isn’t Going Away.</strong></p>
                 </div>
 
-                <!-- Revised Offer Card ($49 Focus) -->
                 <div class="price-card">
                     <p class="price-label">Discount Applied Today</p>
                     <span class="price-current">$49 Per Bottle</span>
@@ -244,7 +253,7 @@
     </div>
 </section>
 
-<!-- QUALITY SEALS (Grid Fixed Desktop) -->
+<!-- QUALITY SEALS -->
 <section class="section bg-white" style="padding: 50px 0; border-bottom: 1px solid #f1f5f9;">
     <div class="container text-center">
         <h2 class="h2" style="font-size: 1.6rem; margin-bottom: 40px;">Manufactured To The Highest Standards</h2>
@@ -273,20 +282,37 @@
     </div>
 </section>
 
-<!-- INSIGHT / MECHANISM (Centered and Proportional Desktop) -->
-<section class="section mechanism-section">
+<!-- SECTION 2: MECHANISM (FIXED DESKTOP) -->
+<section class="mechanism-section">
     <div class="container text-center">
         <h2 class="section-badge" style="background: var(--accent);">Here’s The Part Most People Don’t Realize</h2>
         <div class="body-text">
             <p style="color: #fff;">It’s Not Just “Discomfort”. There May Be An Internal Pattern Behind It:</p>
-            <strong style="font-size: 2.2rem; display: block; margin: 15px 0; line-height: 1.2;">Persistent Nerve Irritation</strong>
         </div>
         
         <div class="mechanism-box">
-            <p>● <strong>Nerves Stay In A Sensitive State</strong> for extended periods</p>
-            <p>● <strong>Signals Fire More Often</strong> and harder to ignore</p>
-            <p>● <strong>Balance Becomes Harder To Maintain</strong> internally</p>
+            <ul class="mechanism-list">
+                <li class="mechanism-item">
+                    <div>
+                        <strong>Nerves Stay In A Sensitive State</strong>
+                        <span>for extended periods</span>
+                    </div>
+                </li>
+                <li class="mechanism-item">
+                    <div>
+                        <strong>Signals Fire More Often</strong>
+                        <span>and harder to ignore</span>
+                    </div>
+                </li>
+                <li class="mechanism-item">
+                    <div>
+                        <strong>Balance Becomes Harder To Maintain</strong>
+                        <span>internally</span>
+                    </div>
+                </li>
+            </ul>
         </div>
+        
         <p class="body-text mt-20" style="color: #cbd5e1;">That’s Why Temporary Solutions Don’t Last.</p>
     </div>
 </section>
@@ -314,7 +340,7 @@
 <!-- DIFFERENT APPROACH -->
 <section class="section product-highlight">
     <div class="container">
-        <div class="hero-inner"> <!-- Reusing flex alignment -->
+        <div class="hero-inner">
             <div class="hero-visual">
                 <img src="images/neurosalt2.png" alt="NeuroSalt Close-up" class="neurosalt2-img">
             </div>
@@ -323,11 +349,11 @@
                 <div class="body-text">
                     <p>Instead Of Covering The Problem… NeuroSalt Was Designed To Support The Body Internally:</p>
                 </div>
-                <div class="mechanism-box" style="background: white; border-left: 6px solid var(--brand); color: var(--text-body); margin-left: 0; padding: 30px;">
-                    <p>✔️ Helps Support A Balanced Inflammatory Response</p>
-                    <p>✔️ Helps Support Nerve Function</p>
-                    <p>✔️ Helps Support Circulation</p>
-                    <p>✔️ Helps Protect Against Oxidative Stress</p>
+                <div class="mechanism-box" style="background: white; border-left: 6px solid var(--brand); color: var(--text-body); margin-left: 0; padding: 25px;">
+                    <p style="color: var(--text-body);">✔️ Helps Support A Balanced Inflammatory Response</p>
+                    <p style="color: var(--text-body);">✔️ Helps Support Nerve Function</p>
+                    <p style="color: var(--text-body);">✔️ Helps Support Circulation</p>
+                    <p style="color: var(--text-body);">✔️ Helps Protect Against Oxidative Stress</p>
                 </div>
             </div>
         </div>
@@ -365,7 +391,7 @@
     </div>
 </section>
 
-<!-- TESTIMONIALS (Fixed Desktop Proportions) -->
+<!-- TESTIMONIALS -->
 <section class="section bg-gray" style="background-color: #f8fafc;">
     <div class="container text-center">
         <h2 class="h1">What People Are Saying</h2>
@@ -388,7 +414,7 @@
     </div>
 </section>
 
-<!-- GUARANTEE FAIXA (Orange Strip Style) -->
+<!-- GUARANTEE FAIXA -->
 <section class="guarantee-faixa">
     <div class="container">
         <div class="guarantee-wrap">
@@ -401,7 +427,7 @@
     </div>
 </section>
 
-<!-- FINAL OFFER (Desktop Proportional) -->
+<!-- FINAL OFFER -->
 <section class="section offer-section">
     <div class="container text-center">
         <h2 class="h1">Get NeuroSalt While It’s Still Available</h2>
@@ -429,7 +455,7 @@
     </div>
 </section>
 
-<!-- FAQ (Limiter applied for Desktop) -->
+<!-- FAQ -->
 <section class="faq-section">
     <div class="container">
         <h2 class="h1 text-center">Frequently Asked Questions</h2>
@@ -499,10 +525,9 @@
 </footer>
 
 <script>
-// Modal data logic
 const modalData = {
-    tos: `<h2>Terms of Service</h2><p>Effective Date: August, 2021</p><p>This website is owned and operated by COMPANY. By using the Site, you agree to be bound by these Terms of Service. Accessing the Site constitutes your agreement to these Terms. All materials on this site are protected by intellectual property laws.</p>`,
-    privacy: `<h2>Privacy Policy</h2><p>Your privacy is critically important to us. We collect non-personally-identifying information to better understand how our visitors use our website. We do not sell your personal data to third parties.</p>`,
+    tos: `<h2>Terms of Service</h2><p>Effective Date: August, 2021</p><p>This website is owned and operated by COMPANY. By using the Site, you agree to be bound by these Terms of Service. Accessing the Site constitutes your agreement to these Terms.</p>`,
+    privacy: `<h2>Privacy Policy</h2><p>Your privacy is critically important to us. We collect non-personally-identifying information to better understand how our visitors use our website.</p>`,
     return: `<h2>Return Policy</h2><p>If you are unsatisfied for any reason, you have 60 days from delivery to request a refund. Return bottles to: 11870 62nd St N Largo, Fl. 33773. Shipping costs are not covered.</p>`,
     disclaimer: `<h2>General Disclaimer</h2><p>Effective Date: August, 2025</p><p>This product has not been evaluated by the FDA. This product is not intended to diagnose, treat, cure or prevent any disease. Informational purposes only.</p>`,
     contact: `<h2>Contact Us</h2><p>Email: contact@customercs.com<br>Phone: +1 (507) 448-8190</p>`
