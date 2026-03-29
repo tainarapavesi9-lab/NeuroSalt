@@ -33,7 +33,7 @@
             --brand:        #03354F; /* Deep Blue */
             --brand-dark:   #022436;
             --brand-light:  #F6EADF; /* Warm Beige */
-            --accent:       #DB6723; /* Laranja NeuroSalt */
+            --accent:       #DB6723; /* Tom Laranja NeuroSalt Solicitado */
             --accent-hover: #c45a1e;
             --text-dark:    #0f172a;
             --text-body:    #334155;
@@ -49,10 +49,10 @@
         button{cursor:pointer;font-family:inherit;border:none;background:none}
 
         .container { max-width: 850px; margin: 0 auto; padding: 0 20px }
-        .section { padding: 60px 0 }
+        .section { padding: 50px 0 }
         .text-center { text-align: center }
         
-        /* Typography */
+        /* Tipografia */
         .h1{font-family:'Merriweather',serif;font-size:1.8rem;font-weight:900;color:var(--brand);line-height:1.2;margin-bottom:15px}
         .h2{font-family:'Merriweather',serif;font-size:1.3rem;font-weight:800;color:var(--brand);margin-bottom:15px}
         .section-badge{display:inline-block;background:var(--brand);color:#fff;font-weight:700;font-size:0.75rem;padding:6px 12px;border-radius:4px;margin-bottom:16px;text-transform:uppercase;letter-spacing:1px}
@@ -105,7 +105,7 @@
         .trust-card-title{font-weight:700; font-size:0.75rem; color:var(--brand); margin-bottom:4px}
         .trust-card-desc{font-size:.65rem; line-height:1.4}
 
-        /* Mechanism Section */
+        /* Mechanism Section (Persistent Nerve Irritation) */
         .mechanism-section { background-color: var(--brand); color: #ffffff; padding: 60px 0; }
         .mechanism-box{background:rgba(255,255,255,0.06); padding:25px; border-radius:12px; border-left:6px solid var(--accent); text-align:left; margin:25px auto; max-width:100%;}
         .mechanism-list { list-style: none; padding: 0; }
@@ -127,29 +127,30 @@
         .review-author { color: var(--brand); font-weight: 700; font-size: 0.95rem; border-top: 1px solid #f1f5f9; padding-top: 12px; display: flex; align-items: center; justify-content: space-between;}
         .verified-badge { font-size: 0.65rem; color: #16a34a; font-weight: 600; text-transform: uppercase; }
 
-        /* Guarantee Strip */
+        /* Faixa de Garantia */
         .guarantee-faixa { background-color: var(--accent); color: #ffffff; padding: 45px 0; }
         .guarantee-wrap { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px; }
         .guarantee-img { width: 110px; }
         .guarantee-text h2 { color: #ffffff; font-family: 'Merriweather', serif; font-size: 1.5rem; margin-bottom: 8px; }
         .guarantee-text p { color: #ffffff; font-size: 0.95rem; line-height: 1.5; }
         
-        /* FAQ */
-        .faq-section { background-color: #ffffff; padding: 60px 0; }
+        /* FAQ REFORMATTED */
+        .faq-section { background-color: #ffffff; padding: 80px 0; }
         .faq-container { max-width: 100%; margin: 0 auto; }
-        .faq-item { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 12px; overflow: hidden; }
-        .faq-question { width: 100%; padding: 20px; display: flex; justify-content: space-between; align-items: center; font-weight: 700; color: var(--brand); font-size: 0.95rem; text-align: left; cursor: pointer; }
-        .faq-answer { max-height: 0; padding: 0 20px; overflow: hidden; background: #f8fafc; transition: all 0.3s ease; color: var(--text-body); font-size: 0.9rem; line-height: 1.6; }
-        .faq-item.active .faq-answer { max-height: 400px; padding-bottom: 20px; padding-top: 5px; }
-        .faq-icon { font-size: 1.2rem; color: var(--accent); transition: transform 0.3s ease; }
+        .faq-item { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 12px; overflow: hidden; transition: all 0.3s ease; }
+        .faq-question { width: 100%; padding: 20px; display: flex; justify-content: space-between; align-items: center; font-weight: 700; color: var(--brand); font-size: 1.05rem; text-align: left; cursor: pointer; }
+        .faq-answer { max-height: 0; padding: 0 20px; overflow: hidden; background: #f8fafc; transition: all 0.4s ease; color: var(--text-body); font-size: 0.95rem; line-height: 1.6; }
+        .faq-item.active .faq-answer { max-height: 400px; padding-bottom: 20px; padding-top: 10px; }
+        .faq-icon { font-size: 1.4rem; color: var(--accent); transition: transform 0.3s ease; }
         .faq-item.active .faq-icon { transform: rotate(45deg); color: var(--brand); }
 
-        /* Modals */
+        /* Modals Structure */
         .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 999999; display: none; overflow-y: auto; padding: 20px; }
         .modal-content { background: #fff; max-width: 800px; margin: 20px auto; padding: 35px; border-radius: 16px; position: relative; color: #333; }
         .modal-close { position: absolute; top: 15px; right: 20px; font-size: 2.5rem; cursor: pointer; color: var(--brand); line-height: 1; }
         .modal-body h2 { color: var(--brand); margin-bottom: 20px; border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 8px; font-family: 'Merriweather', serif; font-size: 1.6rem; }
         .modal-body p { margin-bottom: 15px; font-size: 0.9rem; line-height: 1.6; }
+        .modal-body ul { margin-bottom: 15px; padding-left: 20px; font-size: 0.9rem; }
 
         .footer{background:var(--brand); color:#cbd5e1; padding:60px 20px; font-size:0.75rem; text-align:center}
         .footer a{text-decoration:underline; margin:0 8px; color:#ffffff; cursor: pointer; display: inline-block; margin-bottom: 10px;}
@@ -225,7 +226,7 @@
                         CHECK TODAY'S AVAILABILITY
                     </a>
                     <div class="secure-info">
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/></svg>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
                         Secure 256-bit SSL Encrypted Checkout
                     </div>
                 </div>
@@ -243,7 +244,7 @@
     <div class="container text-center">
         <h2 class="h2" style="font-size: 1.5rem; margin-bottom: 30px;">Manufactured To The Highest Standards</h2>
         <div class="trust-grid">
-            <div class="trust-card"><img src="images/imgi_6_badge-usa.png" alt="USA"><div class="trust-card-title">Registered Facilities</div><p class="trust-card-desc">Manufactured in the USA under strict protocols.</p></div>
+            <div class="trust-card"><img src="images/imgi_6_badge-usa.png" alt="USA"><div class="trust-card-title">Registered Facilities</div><p class="trust-card-desc">Manufactured in the USA under strict standards.</p></div>
             <div class="trust-card"><img src="images/imgi_9_badge-natural.png" alt="Natural"><div class="trust-card-title">Natural-Based Formula</div><p class="trust-card-desc">Clean compounds sourced from nature.</p></div>
             <div class="trust-card"><img src="images/imgi_7_badge-fda.png" alt="No Rx"><div class="trust-card-title">No Prescription Required</div><p class="trust-card-desc">Daily wellness support for everyone.</p></div>
             <div class="trust-card"><img src="images/imgi_8_badge-gmp.png" alt="Quality"><div class="trust-card-title">Quality Standards</div><p class="trust-card-desc">Consistency and safety at every step.</p></div>
