@@ -104,36 +104,20 @@
     }
     </script>
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "url": "https://neurosalt.vercel.app/",
-      "name": "NeuroSalt Official",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://neurosalt.vercel.app/?s={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
-
     <!-- Stuart Little Tracking Script -->
     <script src="https://api.stuart-little.com/code/8300-b4ac0f9e-ebfa-405d-8931-c40c89d96188"></script>
 
-    <!-- Favicon Links -->
     <link rel="icon" type="image/png" href="images/faviconV2.png">
     <link rel="shortcut icon" href="images/faviconV2.png" type="image/x-icon">
 
-    <!-- Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@700;800;900&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --brand:        #03354F; 
+            --brand:        #03354F; /* Deep Blue */
             --brand-dark:   #022436;
-            --brand-light:  #F6EADF; 
-            --accent:       #DE6B24; 
+            --brand-light:  #F6EADF; /* Warm Beige */
+            --accent:       #DE6B24; /* Vibrant Orange */
             --accent-light: #fff5ef;
             --cta:          #16a34a; 
             --cta-dark:     #15803d;
@@ -168,6 +152,7 @@
 
         .offer-bar{background: var(--brand); color:#ffffff; padding:12px 16px; font-size:0.85rem; font-weight:700; text-align:center; text-transform: uppercase;}
 
+        /* Hero - WHITE BACKGROUND */
         .hero{padding:40px 0; background: #ffffff;}
         .hero-img{width:100%; max-width:320px; margin:25px auto; filter:drop-shadow(0 15px 25px rgba(3,53,79,0.1))}
 
@@ -178,17 +163,20 @@
         .cta-primary{display:inline-flex; align-items:center; justify-content:center; background:linear-gradient(135deg, var(--accent), #f18d4b); color:#ffffff; font-weight:800; font-size:1.15rem; padding:22px 30px; border-radius:8px; width:100%; max-width:440px; box-shadow:0 6px 20px rgba(222,107,36,0.4); transition:0.2s; text-align: center;}
         .cta-primary:hover{transform: translateY(-3px); box-shadow:0 10px 25px rgba(222,107,36,0.5)}
 
+        /* Quality Grid */
         .trust-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:15px; margin-top:10px}
         .trust-card{background:#ffffff; padding:20px 10px; border-radius:10px; text-align:center; border:1px solid #e2e8f0; box-shadow: 0 2px 8px rgba(0,0,0,0.02)}
         .trust-card img{height:60px; width:auto; margin:0 auto 12px; object-fit:contain}
         .trust-card-title{font-weight:700; font-size:0.85rem; color:var(--brand); margin-bottom:4px}
         .trust-card-desc{font-size:.75rem; color:var(--text-light); line-height:1.4}
 
+        /* Mechanism Section - DARK BLUE */
         .mechanism-section { background-color: var(--brand); color: #ffffff; padding: 70px 0; }
         .mechanism-section .h1, .mechanism-section p, .mechanism-section strong { color: #ffffff !important; }
         .mechanism-box{background:rgba(255,255,255,0.08); padding:30px; border-radius:10px; border-left:6px solid var(--accent); text-align:left; margin:25px auto; max-width:620px; color: #ffffff}
         .neurosalt2-img { width:100%; max-width:440px; border-radius:15px; margin:30px auto; border: 4px solid rgba(255,255,255,0.15); box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
 
+        /* Product Highlight Sections */
         .product-highlight { background-color: var(--brand-light); border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
         .highlight-img { max-width:320px; margin:35px auto; filter: drop-shadow(0 0 35px rgba(222,107,36,0.35)); }
 
@@ -197,18 +185,22 @@
         .bullet-icon{color:var(--accent); font-weight: bold; font-size: 1.2rem;}
         .warning-box{background:#fff5f5; border:1px dashed #feb2b2; padding:20px; border-radius:8px; margin:25px auto; color:#c53030; font-weight:700; font-size:0.95rem; max-width:560px}
 
-        .reviews-container { display: flex; flex-direction: column; gap: 24px; margin-top: 20px; }
-        .review-card { background: #ffffff; border: 1px solid #e2e8f0; padding: 30px 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); text-align: left; }
-        .review-text { font-style: italic; color: var(--text-body); margin-bottom: 15px; }
-        .review-author { color: var(--brand); font-weight: 700; font-size: 1rem; }
+        /* Reviews Refined */
+        .reviews-container { display: flex; flex-direction: column; gap: 30px; margin-top: 30px; }
+        .review-card { background: #ffffff; border: 1px solid #e2e8f0; padding: 35px 30px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.03); text-align: left; transition: transform 0.2s; }
+        .review-text { font-style: italic; color: var(--text-body); margin-bottom: 20px; line-height: 1.8; }
+        .review-author { color: var(--brand); font-weight: 700; font-size: 1.05rem; }
 
+        /* Guarantee Refined */
         .guarantee-section { background-color: #ffffff; border-top: 4px solid var(--accent); padding: 80px 0; }
         .guarantee-wrap{text-align:center; margin:0 auto; max-width:660px}
         .guarantee-img{width:160px; margin:0 auto 20px}
         
+        /* Offer Refined */
         .offer-section { background-color: var(--brand-light); padding: 80px 0; border-top: 1px solid #eee; }
         .offer-product-final{width:100%; max-width:440px; margin:35px auto; filter: drop-shadow(0 15px 35px rgba(222,107,36,0.2))}
 
+        /* FAQ Refined */
         .faq-section { background-color: #ffffff; padding: 80px 0; }
         .faq-container { background: #fafafa; border-radius: 12px; padding: 10px 25px; border: 1px solid #efefef; margin-top: 35px; max-width: 700px; margin-left: auto; margin-right: auto; }
         .faq-item{border-bottom: 1px solid #e2e8f0; padding:22px 0; text-align:left}
@@ -227,8 +219,8 @@
             .hero-inner{display:flex; align-items:center; text-align:left; gap:60px; max-width:1100px; margin:0 auto}
             .hero-text{flex:1}
             .hero-img{max-width:420px}
-            .reviews-container { flex-direction: row; justify-content: center; }
-            .review-card { width: calc(33.33% - 16px); }
+            .reviews-container { flex-direction: row; justify-content: center; align-items: stretch; }
+            .review-card { width: calc(33.33% - 20px); }
         }
     </style>
 </head>
@@ -244,22 +236,23 @@
         <div class="hero-inner">
             <div class="hero-text">
                 <p class="eyebrow">Advanced Support</p>
-                <h1 class="h1">Do you feel burning in your feet, pins and needles… or numbness that gets worse at night?</h1>
+                <h1 class="h1">Do you feel burning in your feet at night, constant tingling… or numbness that just won’t go away?</h1>
                 
-                <img src="images/neurosalt1.png" alt="NeuroSalt Bottle" class="hero-img">
+                <!-- Main Bottle Image -->
+                <img src="images/neurosalt1.png" alt="NeuroSalt Product Setup" class="hero-img">
 
                 <div class="body-text">
                     <p>And no matter what you try… it keeps coming back?</p>
                     <p><strong>This isn’t random — and for many people, it tends to get more persistent over time.</strong></p>
-                    <p>It usually starts small. A mild tingling. A strange sensation in your feet or hands. Easy to ignore. Until it keeps showing up again. Especially at night… when you’re trying to relax. And at some point, you realize: This isn’t going away on its own.</p>
+                    <p>It usually starts small. A slight tingling. A strange sensation in your feet… or hands. Easy to ignore. Until it keeps showing up again. Especially when you lie down at night. And at some point, it becomes clear: This isn’t going away on its own.</p>
                 </div>
 
                 <div class="price-card">
-                    <p class="price-label">LIMITED TIME PRICING</p>
+                    <p class="price-label">EXCLUSIVE DISCOUNT ACTIVE</p>
                     <div class="price-row">
                         <span class="price-current">Starting at $49 <small>/ bottle</small></span>
                     </div>
-                    <p style="font-weight: 700; color: var(--accent); margin-bottom: 20px;">Save 73% today</p>
+                    <p style="font-weight: 700; color: var(--accent); margin-bottom: 20px;">Save up to 73% today</p>
                     <a href="https://43f17ngcmlemes3bul-d59uf7b.hop.clickbank.net" class="cta-primary">
                         CHECK TODAY'S AVAILABILITY
                     </a>
@@ -269,30 +262,30 @@
     </div>
 </section>
 
-<!-- QUALITY SEALS SECTION (Heading added to anchor the badges) -->
+<!-- QUALITY SEALS SECTION -->
 <section class="section bg-white" style="padding: 40px 0; border-bottom: 1px solid #f1f5f9;">
     <div class="container text-center">
-        <h2 class="h2" style="font-size: 1.25rem; margin-bottom: 25px;">Our Quality & Safety Standards</h2>
+        <h2 class="h2" style="font-size: 1.35rem; margin-bottom: 30px;">Manufactured to the Highest Standards</h2>
         <div class="trust-grid">
             <div class="trust-card">
-                <img src="images/imgi_6_badge-usa.png" alt="USA">
+                <img src="images/imgi_6_badge-usa.png" alt="USA Registered">
                 <div class="trust-card-title">Registered Facilities</div>
-                <p class="trust-card-desc">Manufactured in the USA under strict standards.</p>
+                <p class="trust-card-desc">Manufactured in the USA under strict protocols.</p>
             </div>
             <div class="trust-card">
-                <img src="images/imgi_9_badge-natural.png" alt="Natural">
+                <img src="images/imgi_9_badge-natural.png" alt="Natural Formula">
                 <div class="trust-card-title">Natural-Based Formula</div>
-                <p class="trust-card-desc">Clean compounds extracted from natural sources.</p>
+                <p class="trust-card-desc">Clean compounds sourced from nature.</p>
             </div>
             <div class="trust-card">
-                <img src="images/imgi_7_badge-fda.png" alt="No Rx">
+                <img src="images/imgi_7_badge-fda.png" alt="No Prescription">
                 <div class="trust-card-title">No Prescription Required</div>
-                <p class="trust-card-desc">Daily wellness supplement, no prescription needed.</p>
+                <p class="trust-card-desc">Daily wellness support accessible to everyone.</p>
             </div>
             <div class="trust-card">
-                <img src="images/imgi_8_badge-gmp.png" alt="Quality">
-                <div class="trust-card-title">Quality Standards</div>
-                <p class="trust-card-desc">Manufactured under high quality-controlled production.</p>
+                <img src="images/imgi_8_badge-gmp.png" alt="Quality Standards">
+                <div class="trust-card-title">Strict Quality Standards</div>
+                <p class="trust-card-desc">Production focuses on consistency and safety.</p>
             </div>
         </div>
     </div>
@@ -301,8 +294,8 @@
 <!-- SCIENTIFIC REFERENCES -->
 <section class="section bg-white" style="padding: 30px 0;">
     <div class="container text-center">
-        <p class="eyebrow" style="margin-bottom: 10px;">Scientifically Backed Support</p>
-        <img src="images/imgi_2_scientific-refs.png" alt="Scientific References" style="max-width:100%; width:640px; opacity:0.85;">
+        <p class="eyebrow" style="margin-bottom: 10px;">Scientific Research Support</p>
+        <img src="images/imgi_2_scientific-refs.png" alt="Science Journals and Studies" style="max-width:100%; width:640px; opacity:0.85;">
     </div>
 </section>
 
@@ -314,7 +307,7 @@
             <p>At first, it’s just a sensation. But then it starts interfering with simple things:</p>
         </div>
         <ul class="bullet-list">
-            <li><span class="bullet-icon">🔴</span> <span>Standing too long begins to feel uncomfortable</span></li>
+            <li><span class="bullet-icon">🔴</span> <span>Standing for long periods begins to feel uncomfortable</span></li>
             <li><span class="bullet-icon">🔴</span> <span>Walking may feel less stable than before</span></li>
             <li><span class="bullet-icon">🔴</span> <span>That burning or tingling gets stronger at night</span></li>
             <li><span class="bullet-icon">🔴</span> <span>You start noticing every step you take</span></li>
@@ -323,7 +316,7 @@
             <p>And slowly… you begin adjusting your routine around it.</p>
         </div>
         <div class="warning-box text-center">
-            Attention: many people report that when ignored, this pattern tends to become more noticeable over time.
+            Attention: many people report that when ignored, this pattern tends to become more noticeable and persistent.
         </div>
     </div>
 </section>
@@ -334,34 +327,35 @@
         <h2 class="section-badge" style="background: var(--accent);">Why does this keep happening?</h2>
         <div class="body-text">
             <p>Most solutions focus on temporary relief. But that doesn’t address what’s happening internally. A common pattern behind this is:</p>
-            <strong style="font-size: 1.5rem; display: block; margin: 15px 0; font-family: 'Merriweather',serif;">Persistent Nerve Irritation</strong>
+            <strong style="font-size: 1.6rem; display: block; margin: 15px 0; font-family: 'Merriweather',serif;">Persistent Nerve Irritation</strong>
         </div>
         
-        <img src="images/neurosalt2.png" alt="Mechanism Diagram" class="neurosalt2-img">
+        <img src="images/neurosalt2.png" alt="Nerve Diagram Visual" class="neurosalt2-img">
         
         <div class="mechanism-box">
-            <p>1. <strong>Nerves stay in a sensitive state</strong> for long periods of time.</p>
-            <p>2. <strong>Signals like burning or tingling</strong> occur more often and more intensely.</p>
-            <p>3. <strong>The body struggles</strong> to return to its natural state of balance.</p>
+            <p>1. <strong>Nerves stay in a sensitive state</strong>, reacting more easily to minor triggers.</p>
+            <p>2. <strong>Signals like burning or tingling</strong> occur more often as the body stays on alert.</p>
+            <p>3. <strong>The body struggles</strong> to return to its natural internal state of balance.</p>
         </div>
     </div>
 </section>
 
-<!-- PRODUCT HIGHLIGHT -->
+<!-- PRODUCT HIGHLIGHT - NEURAL VISUAL -->
 <section class="section product-highlight">
     <div class="container text-center">
         <p class="eyebrow">Designed to support your body where it matters most</p>
         <h2 class="h1">Introducing NeuroSalt</h2>
         
-        <img src="images/imgi_48_hero.png" alt="NeuroSalt Highlight" class="highlight-img">
+        <!-- Neural graphic / connection visual bottle -->
+        <img src="images/imgi_48_hero.png" alt="NeuroSalt Neural Visual" class="highlight-img">
         
-        <div class="body-text" style="text-align: left; max-width: 560px; margin: 0 auto; background: rgba(3,53,79,0.05); padding: 35px; border-radius: 12px; border: 1px solid rgba(3,53,79,0.1);">
-            <p style="margin-bottom: 12px;">✔️ Helps support a balanced inflammatory response</p>
-            <p style="margin-bottom: 12px;">✔️ Helps protect against oxidative stress</p>
-            <p style="margin-bottom: 12px;">✔️ Supports healthy nerve function</p>
+        <div class="body-text" style="text-align: left; max-width: 580px; margin: 0 auto; background: rgba(3,53,79,0.05); padding: 40px; border-radius: 12px; border: 1px solid rgba(3,53,79,0.1);">
+            <p style="margin-bottom: 15px;">✔️ Helps support a balanced inflammatory response</p>
+            <p style="margin-bottom: 15px;">✔️ Helps protect against oxidative stress</p>
+            <p style="margin-bottom: 15px;">✔️ Supports healthy nerve function</p>
             <p style="margin-bottom: 0;">✔️ Supports circulation at the tissue level</p>
         </div>
-        <p class="body-text mt-30">This multi-point support is what makes the approach different from single-focus solutions.</p>
+        <p class="body-text mt-30">This multi-point support approach is what makes it different from single-focus solutions.</p>
     </div>
 </section>
 
@@ -369,48 +363,48 @@
 <section class="section bg-white">
     <div class="container text-center">
         <h2 class="h2">Support where your body needs it most</h2>
-        <div class="body-text" style="max-width: 560px; margin: 0 auto; text-align: left;">
+        <div class="body-text" style="max-width: 580px; margin: 0 auto; text-align: left;">
             <p>With consistent use, many users report:</p>
-            <ul style="list-style: none; margin-top: 15px;">
-                <li style="margin-bottom: 10px;">🛡️ More comfort while walking</li>
-                <li style="margin-bottom: 10px;">🛡️ Less awareness of tingling during the day</li>
-                <li style="margin-bottom: 10px;">🛡️ Improved ability to relax at night</li>
-                <li style="margin-bottom: 0;">🛡️ Better overall daily comfort</li>
+            <ul style="list-style: none; margin-top: 20px;">
+                <li style="margin-bottom: 12px;">🛡️ More comfort while walking</li>
+                <li style="margin-bottom: 12px;">🛡️ Less awareness of tingling during the day</li>
+                <li style="margin-bottom: 12px;">🛡️ Better ability to relax at night</li>
+                <li style="margin-bottom: 0;">🛡️ More ease in daily movement</li>
             </ul>
         </div>
-        <p class="small-text mt-30"><strong>Important: results may vary.</strong></p>
+        <p class="small-text mt-40"><strong>Important: results may vary depending on the individual.</strong></p>
     </div>
 </section>
 
 <!-- LABEL SECTION -->
 <section class="section bg-white">
     <div class="container text-center">
-        <h2 class="section-badge">Natural-Based Approach</h2>
-        <h2 class="h2">Formulated with care</h2>
-        <img src="images/imgi_42_NeuroSalt_Print.png" alt="Supplement Label" style="max-width:100%; width:560px; margin:30px auto; border-radius:10px; box-shadow: 0 10px 30px rgba(0,0,0,0.08)">
-        <div class="body-text" style="max-width: 600px; margin: 0 auto;">
-            <p>The formula combines carefully selected compounds known for their supportive roles in nerve function, oxidative balance, and circulatory support.</p>
+        <h2 class="section-badge">Formulated with a natural-based approach</h2>
+        <h2 class="h2">Natural Compounds & Consistency</h2>
+        <img src="images/imgi_42_NeuroSalt_Print.png" alt="NeuroSalt Composition Label" style="max-width:100%; width:560px; margin:30px auto; border-radius:10px; box-shadow: 0 10px 30px rgba(0,0,0,0.08)">
+        <div class="body-text" style="max-width: 620px; margin: 0 auto;">
+            <p>The formula combines carefully selected compounds known for their supportive roles in nerve function, oxidative balance, and circulatory support. Produced under strict quality standards for reliability.</p>
         </div>
     </div>
 </section>
 
-<!-- USER EXPERIENCES -->
+<!-- USER EXPERIENCES - REFINED SPACING -->
 <section class="section bg-gray" style="background-color: #f9fafb;">
     <div class="container text-center">
         <h2 class="h1">What people are experiencing</h2>
-        <img src="images/reviews.png" alt="Testimonials Banner" style="max-width:100%; border-radius:10px; margin-bottom:40px; box-shadow: 0 4px 15px rgba(0,0,0,0.05)">
+        <img src="images/reviews.png" alt="User Testimonials Banner" style="max-width:100%; border-radius:10px; margin-bottom:40px; box-shadow: 0 4px 15px rgba(0,0,0,0.05)">
         
         <div class="reviews-container">
             <div class="review-card">
-                <p class="review-text">“I had burning in my feet almost every night. After using it consistently, I started noticing more comfort when walking.”</p>
+                <p class="review-text">“I had burning in my feet almost every night. It was hard to relax. After using it consistently, I started noticing more comfort when walking.”</p>
                 <div class="review-author">R. Thompson, 62</div>
             </div>
             <div class="review-card">
-                <p class="review-text">“The tingling used to bother me most at night. After a few weeks, I felt more relaxed and comfortable.”</p>
+                <p class="review-text">“The tingling used to bother me most when I tried to sleep. After a few weeks, I felt more comfortable and could finally relax at night.”</p>
                 <div class="review-author">M. Carter, 58</div>
             </div>
             <div class="review-card">
-                <p class="review-text">“I didn’t expect big changes overnight, but over time I felt more stable and confident moving around.”</p>
+                <p class="review-text">“I didn’t expect big changes overnight, but over time I felt more stable and confident in my routine. Moving around feels better.”</p>
                 <div class="review-author">D. Miller, 67</div>
             </div>
         </div>
@@ -421,9 +415,9 @@
 <section class="section guarantee-section">
     <div class="container">
         <div class="guarantee-wrap">
-            <img src="images/imgi_13_guarantee-badge.png" alt="60 Day Seal" class="guarantee-img">
+            <img src="images/imgi_13_guarantee-badge.png" alt="Satisfaction Guarantee Seal" class="guarantee-img">
             <h2 class="h1">Your satisfaction is protected</h2>
-            <p class="body-text" style="font-size: 1.15rem;">Try it with confidence. You’re covered by a <strong>60-day money-back guarantee</strong>. If you’re not satisfied for any reason, you can request a refund within the timeframe.</p>
+            <p class="body-text" style="font-size: 1.15rem;">Try it with confidence. You’re covered by a <strong>60-day money-back guarantee</strong>. If you’re not satisfied for any reason, you can request a refund within the timeframe. No questions asked.</p>
         </div>
     </div>
 </section>
@@ -433,16 +427,17 @@
     <div class="container text-center">
         <h2 class="h1">Get NeuroSalt at today’s discounted price</h2>
         
-        <img src="images/3-frascos.png" alt="Bundle Offer" class="offer-product-final">
+        <!-- Bundle offer image -->
+        <img src="images/3-frascos.png" alt="Discounted Bundle Offer" class="offer-product-final">
 
         <div class="body-text" style="margin-bottom: 25px;">
             <p>• Starting at $49 per bottle</p>
-            <p>• <strong>Save 73% today</strong></p>
+            <p>• <strong>Save up to 73% today</strong></p>
             <p>• Limited availability depending on stock</p>
         </div>
 
         <div style="background: #fee2e2; color:#b91c1c; padding: 18px 25px; border-radius: 8px; font-weight:800; margin-bottom:35px; font-size: 1rem; display: inline-block; border: 1px solid #fecaca;">
-            ⚠️ ATTENTION: High demand may affect availability throughout the day.
+            ⚠️ ATTENTION: due to high demand, some batches may sell out within the same day.
         </div>
         
         <br>
@@ -469,11 +464,11 @@
             </div>
             <div class="faq-item">
                 <button class="faq-question">3. How do I take it? <span class="faq-icon">+</span></button>
-                <div class="faq-answer">Follow the instructions on the product label for daily use, typically taken with a glass of water.</div>
+                <div class="faq-answer">Follow the instructions on the product label for daily use. It is a simple routine typically taken with a glass of water.</div>
             </div>
             <div class="faq-item">
                 <button class="faq-question">4. Is this safe to use with other supplements? <span class="faq-icon">+</span></button>
-                <div class="faq-answer">It uses natural-based ingredients. However, if you have specific medical conditions or take prescription drugs, we always recommend consulting a professional before use.</div>
+                <div class="faq-answer">It uses natural-based ingredients. However, if you have specific concerns or take other medications, we always recommend consulting a professional before use.</div>
             </div>
             <div class="faq-item">
                 <button class="faq-question">5. What if it doesn’t work for me? <span class="faq-icon">+</span></button>
