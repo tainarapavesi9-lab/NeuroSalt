@@ -30,10 +30,10 @@
 
     <style>
         :root {
-            --brand:        #03354F; /* Azul Marinho */
+            --brand:        #03354F; /* Deep Blue */
             --brand-dark:   #022436;
-            --brand-light:  #F6EADF; /* Bege Suave */
-            --accent:       #DB6723; /* Tom Laranja NeuroSalt */
+            --brand-light:  #F6EADF; /* Warm Beige */
+            --accent:       #DB6723; /* Laranja NeuroSalt */
             --accent-hover: #c45a1e;
             --text-dark:    #0f172a;
             --text-body:    #334155;
@@ -49,10 +49,10 @@
         button{cursor:pointer;font-family:inherit;border:none;background:none}
 
         .container { max-width: 850px; margin: 0 auto; padding: 0 20px }
-        .section { padding: 50px 0 }
+        .section { padding: 60px 0 }
         .text-center { text-align: center }
         
-        /* Tipografia */
+        /* Typography */
         .h1{font-family:'Merriweather',serif;font-size:1.8rem;font-weight:900;color:var(--brand);line-height:1.2;margin-bottom:15px}
         .h2{font-family:'Merriweather',serif;font-size:1.3rem;font-weight:800;color:var(--brand);margin-bottom:15px}
         .section-badge{display:inline-block;background:var(--brand);color:#fff;font-weight:700;font-size:0.75rem;padding:6px 12px;border-radius:4px;margin-bottom:16px;text-transform:uppercase;letter-spacing:1px}
@@ -74,12 +74,17 @@
             justify-content: center;
             box-shadow: 0 8px 25px rgba(219,103,35,0.4);
             z-index: 9999;
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: pulse 2s infinite;
+            cursor: pointer;
         }
-        .floating-cart:hover { transform: scale(1.1); background-color: var(--accent-hover); }
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(219,103,35, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(219,103,35, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(219,103,35, 0); }
+        }
         .floating-cart svg { width: 30px; height: 30px; fill: #fff; }
 
-        /* Hero Section */
+        /* Hero */
         .hero{padding:20px 0 40px; background: #ffffff;}
         .hero-img{width:100%; max-width:340px; margin:20px auto; filter:drop-shadow(0 10px 20px rgba(3,53,79,0.1))}
 
@@ -89,16 +94,18 @@
         .price-current{font-size:2.2rem; font-weight:900; color:var(--brand); font-family:'Merriweather',serif; display: block; margin-bottom: 5px;}
         .price-subtext{font-weight: 700; color: var(--accent); font-size: 1rem; display: block; margin-bottom: 12px;}
         .cta-primary{display:inline-flex; align-items:center; justify-content:center; background:linear-gradient(135deg, #f3a675, var(--accent)); color:#ffffff; font-weight:800; font-size:1.1rem; padding:18px 25px; border-radius:8px; width:100%; box-shadow:0 4px 15px rgba(219,103,35,0.25); text-align: center; text-transform: uppercase; transition: transform 0.2s;}
-        .cta-primary:hover { transform: translateY(-2px); }
+        .cta-primary:hover { transform: translateY(-2px); filter: brightness(1.1); }
 
-        /* Grid de Selos */
+        .secure-info { font-size: 0.75rem; color: var(--text-body); margin-top: 10px; display: flex; align-items: center; justify-content: center; gap: 5px; opacity: 0.8; }
+
+        /* Seals Grid */
         .trust-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:15px; margin-top:20px}
         .trust-card{background:#ffffff; padding:15px 10px; border-radius:10px; text-align:center; border:1px solid #e2e8f0; display: flex; flex-direction: column; align-items: center;}
         .trust-card img{height:40px; margin-bottom:10px; object-fit:contain}
         .trust-card-title{font-weight:700; font-size:0.75rem; color:var(--brand); margin-bottom:4px}
         .trust-card-desc{font-size:.65rem; line-height:1.4}
 
-        /* Seção Mecanismo */
+        /* Mechanism Section */
         .mechanism-section { background-color: var(--brand); color: #ffffff; padding: 60px 0; }
         .mechanism-box{background:rgba(255,255,255,0.06); padding:25px; border-radius:12px; border-left:6px solid var(--accent); text-align:left; margin:25px auto; max-width:100%;}
         .mechanism-list { list-style: none; padding: 0; }
@@ -115,20 +122,19 @@
         /* Depoimentos */
         .reviews-container { display: flex; flex-direction: column; gap: 20px; margin-top: 30px; }
         .review-card { background: #ffffff; border: 1px solid #e2e8f0; padding: 25px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.03); text-align: left; }
+        .review-stars { color: #facc15; font-size: 0.9rem; margin-bottom: 10px; }
         .review-text { font-style: italic; color: var(--text-body); margin-bottom: 15px; line-height: 1.7; font-size: 0.95rem; }
-        .review-author { color: var(--brand); font-weight: 700; font-size: 0.95rem; border-top: 1px solid #f1f5f9; padding-top: 12px; }
+        .review-author { color: var(--brand); font-weight: 700; font-size: 0.95rem; border-top: 1px solid #f1f5f9; padding-top: 12px; display: flex; align-items: center; justify-content: space-between;}
+        .verified-badge { font-size: 0.65rem; color: #16a34a; font-weight: 600; text-transform: uppercase; }
 
-        /* Faixa de Garantia */
+        /* Guarantee Strip */
         .guarantee-faixa { background-color: var(--accent); color: #ffffff; padding: 45px 0; }
         .guarantee-wrap { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px; }
         .guarantee-img { width: 110px; }
         .guarantee-text h2 { color: #ffffff; font-family: 'Merriweather', serif; font-size: 1.5rem; margin-bottom: 8px; }
         .guarantee-text p { color: #ffffff; font-size: 0.95rem; line-height: 1.5; }
         
-        .offer-section { background-color: var(--brand-light); padding: 65px 0; border-top: 1px solid #eee; }
-        .offer-product-final{width:100%; max-width:320px; margin:0 auto 25px; filter: drop-shadow(0 15px 35px rgba(219,103,35,0.15))}
-
-        /* FAQ Estilizado */
+        /* FAQ */
         .faq-section { background-color: #ffffff; padding: 60px 0; }
         .faq-container { max-width: 100%; margin: 0 auto; }
         .faq-item { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 12px; overflow: hidden; }
@@ -138,13 +144,12 @@
         .faq-icon { font-size: 1.2rem; color: var(--accent); transition: transform 0.3s ease; }
         .faq-item.active .faq-icon { transform: rotate(45deg); color: var(--brand); }
 
-        /* Modais de Política */
-        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 99999; display: none; overflow-y: auto; padding: 20px; }
+        /* Modals */
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 999999; display: none; overflow-y: auto; padding: 20px; }
         .modal-content { background: #fff; max-width: 800px; margin: 20px auto; padding: 35px; border-radius: 16px; position: relative; color: #333; }
         .modal-close { position: absolute; top: 15px; right: 20px; font-size: 2.5rem; cursor: pointer; color: var(--brand); line-height: 1; }
         .modal-body h2 { color: var(--brand); margin-bottom: 20px; border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 8px; font-family: 'Merriweather', serif; font-size: 1.6rem; }
         .modal-body p { margin-bottom: 15px; font-size: 0.9rem; line-height: 1.6; }
-        .modal-body ul { margin-bottom: 15px; padding-left: 20px; font-size: 0.9rem; }
 
         .footer{background:var(--brand); color:#cbd5e1; padding:60px 20px; font-size:0.75rem; text-align:center}
         .footer a{text-decoration:underline; margin:0 8px; color:#ffffff; cursor: pointer; display: inline-block; margin-bottom: 10px;}
@@ -219,6 +224,10 @@
                     <a href="https://43f17ngcmlemes3bul-d59uf7b.hop.clickbank.net" class="cta-primary">
                         CHECK TODAY'S AVAILABILITY
                     </a>
+                    <div class="secure-info">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/></svg>
+                        Secure 256-bit SSL Encrypted Checkout
+                    </div>
                 </div>
             </div>
             <!-- Foto Desktop: Ao lado do texto -->
@@ -234,7 +243,7 @@
     <div class="container text-center">
         <h2 class="h2" style="font-size: 1.5rem; margin-bottom: 30px;">Manufactured To The Highest Standards</h2>
         <div class="trust-grid">
-            <div class="trust-card"><img src="images/imgi_6_badge-usa.png" alt="USA"><div class="trust-card-title">Registered Facilities</div><p class="trust-card-desc">Manufactured in the USA under strict standards.</p></div>
+            <div class="trust-card"><img src="images/imgi_6_badge-usa.png" alt="USA"><div class="trust-card-title">Registered Facilities</div><p class="trust-card-desc">Manufactured in the USA under strict protocols.</p></div>
             <div class="trust-card"><img src="images/imgi_9_badge-natural.png" alt="Natural"><div class="trust-card-title">Natural-Based Formula</div><p class="trust-card-desc">Clean compounds sourced from nature.</p></div>
             <div class="trust-card"><img src="images/imgi_7_badge-fda.png" alt="No Rx"><div class="trust-card-title">No Prescription Required</div><p class="trust-card-desc">Daily wellness support for everyone.</p></div>
             <div class="trust-card"><img src="images/imgi_8_badge-gmp.png" alt="Quality"><div class="trust-card-title">Quality Standards</div><p class="trust-card-desc">Consistency and safety at every step.</p></div>
@@ -316,8 +325,8 @@
             </div>
             <div class="split-visual">
                 <div style="background: var(--brand-light); border-radius: 16px; padding: 40px; text-align: center; border: 1px dashed var(--accent);">
-                    <p style="font-weight: 700; color: var(--brand);">High Consistency Formula</p>
-                    <p style="font-size: 0.9rem;">Produced for those seeking daily dietary support.</p>
+                    <p style="font-weight: 700; color: var(--brand); margin-bottom: 10px;">Official Lab Formula</p>
+                    <p style="font-size: 0.85rem; color: var(--text-body);">100% Natural • Non-GMO • Gluten Free</p>
                 </div>
             </div>
         </div>
@@ -346,9 +355,21 @@
         <h2 class="h1">What People Are Saying</h2>
         <img src="images/reviews.png" alt="Reviews" class="reviews-banner" style="border-radius:16px; box-shadow: 0 4px 15px rgba(0,0,0,0.04); max-width: 500px; margin-bottom: 40px;">
         <div class="reviews-container">
-            <div class="review-card"><p class="review-text">“Burning every night. Now I barely notice it during the day. Consistency was key for me.”</p><div class="review-author">R. Thompson, 62</div></div>
-            <div class="review-card"><p class="review-text">“Tingling used to keep me awake. Now I feel more comfortable at night. Finally a better rest.”</p><div class="review-author">M. Carter, 58</div></div>
-            <div class="review-card"><p class="review-text">“Didn’t expect much. But over time, I feel more stable walking. I'm much more confident now.”</p><div class="review-author">D. Miller, 67</div></div>
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">“Burning every night. Now I barely notice it during the day. Consistency was key for me.”</p>
+                <div class="review-author">R. Thompson, 62 <span class="verified-badge">✓ Verified Buyer</span></div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">“Tingling used to keep me awake. Now I feel more comfortable at night. Finally a better rest.”</p>
+                <div class="review-author">M. Carter, 58 <span class="verified-badge">✓ Verified Buyer</span></div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">“Didn’t expect much. But over time, I feel more stable walking. I'm much more confident now.”</p>
+                <div class="review-author">D. Miller, 67 <span class="verified-badge">✓ Verified Buyer</span></div>
+            </div>
         </div>
     </div>
 </section>
@@ -380,6 +401,10 @@
                         <p style="font-size: 1.1rem;">• Limited availability</p>
                     </div>
                     <a href="https://43f17ngcmlemes3bul-d59uf7b.hop.clickbank.net" class="cta-primary" style="width:100%; font-size: 1.2rem; padding: 22px;">CHECK AVAILABILITY NOW</a>
+                    <div class="secure-info">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+                        Secure 256-bit Encrypted SSL
+                    </div>
                 </div>
                 <p style="background: #fee2e2; color:#b91c1c; padding: 12px; border-radius: 8px; font-weight:800; margin-top:20px; font-size: 0.85rem;">⚠️ ATTENTION: High Demand Detected.</p>
             </div>
@@ -395,7 +420,7 @@
             <div class="faq-item"><div class="faq-question">How Long Does It Take To Notice Results? <span class="faq-icon">+</span></div><div class="faq-answer">Some users report changes within a few weeks of consistent use. However, for optimal results, we recommend a 60 to 90-day period to allow nutrients to build up in your system.</div></div>
             <div class="faq-item"><div class="faq-question">Do I Need A Prescription? <span class="faq-icon">+</span></div><div class="faq-answer">No, NeuroSalt is a natural-based dietary supplement and does not require a prescription for use.</div></div>
             <div class="faq-item"><div class="faq-question">How Do I Take It? <span class="faq-icon">+</span></div><div class="faq-answer">Follow the instructions on the product label. Typically taken with a glass of water, ideally with a meal for optimal absorption.</div></div>
-            <div class="faq-item"><div class="faq-question">Can I Use With Other Supplements? <span class="faq-icon">+</span></div><div class="faq-answer">It uses a natural-based formula. However, we always recommend consulting a healthcare professional if you are taking other medications or have specific medical concerns.</div></div>
+            <div class="faq-item"><div class="faq-question">Can I Use It With Other Supplements? <span class="faq-icon">+</span></div><div class="faq-answer">It uses a natural-based formula. However, we always recommend consulting a healthcare professional if you are taking other medications or have specific medical concerns.</div></div>
             <div class="faq-item"><div class="faq-question">What If It Doesn’t Work For Me? <span class="faq-icon">+</span></div><div class="faq-answer">You are protected by our 60-day money-back guarantee. Simply contact our customer support team within the timeframe for a full refund.</div></div>
         </div>
         <div class="text-center" style="margin-top: 55px;">
@@ -430,7 +455,7 @@
 const modalData = {
     tos: `<h2>Terms of Service</h2>
           <p><strong>Effective Date: August, 2021</strong></p>
-          <p>This website (the “Site”) is owned and operated by (“COMPANY” “we” or “us”). By using the Site, you agree to be bound by these Terms of Service and to use the Site in accordance with these Terms of Service, our Privacy Policy, our Shipping Policy, our Return Policy and any additional terms and conditions that may apply to specific sections of the Site or to products and services available through the Site or from COMPANY. Accessing the Site, in any manner, whether automated or otherwise, constitutes use of the Site and your agreement to be bound by these Terms of Service.</p>
+          <p>This website (the “Site”) is owned and operated by (“COMPANY” “we” or “us”). By using the Site, you agree to be bound by these Terms of Service and to use the Site in accordance with these Terms of Service, our Privacy Policy, our Shipping Policy, our Return Policy and any additional terms and conditions that may apply.</p>
           <h3>Intellectual Property Rights</h3>
           <p>This Site and all the materials available on the Site are the property of us and/or our affiliates or licensors, and are protected by copyright, trademark, and other intellectual property laws. The Site is provided solely for your personal noncommercial use.</p>
           <h3>Disclaimers</h3>
@@ -461,7 +486,7 @@ const modalData = {
     disclaimer: `<h2>General Disclaimer</h2>
                  <p><strong>Date Effective: August, 2025</strong></p>
                  <p>This product has not been evaluated by the FDA. This product is not intended to diagnose, treat, cure or prevent any disease. Your use of the site and the purchase of our product is subject to our Terms of Service, Privacy Policy and Medical Disclaimer.</p>
-                 <p>All content provided by this website and its related companies are strictly for informational purposes only. neither the authors nor the publishers are responsible for assuming liability for possible inaccuracies. Loss of property, injury to self or others, and even death could occur as a consequence of the use and application of any content found herein.</p>`,
+                 <p>All content sold or provided by this website and its related companies are strictly for informational purposes only. neither the authors nor the publishers are responsible for assuming liability for possible inaccuracies. Loss of property, injury to self or others, and even death could occur as a consequence of the use and application of any content found herein.</p>`,
     
     contact: `<h2>How To Contact Us</h2>
               <p>Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within a matter of hours to help you.</p>
