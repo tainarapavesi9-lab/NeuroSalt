@@ -61,10 +61,10 @@
 
     <style>
         :root {
-            --brand:        #03354F; /* Deep Blue */
+            --brand:        #03354F; 
             --brand-dark:   #022436;
-            --brand-light:  #F6EADF; /* Warm Beige */
-            --accent:       #DE6B24; /* Vibrant Orange */
+            --brand-light:  #F6EADF; 
+            --accent:       #DE6B24; 
             --accent-light: #fff5ef;
             --cta:          #16a34a; 
             --cta-dark:     #15803d;
@@ -72,6 +72,7 @@
             --text-body:    #334155;
             --bg-white:     #ffffff;
             --radius-card:  14px;
+            --container-w:  1140px;
         }
 
         *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -80,12 +81,12 @@
         a{text-decoration:none;color:inherit}
         button{cursor:pointer;font-family:inherit;background:none;border:none}
 
-        .container     {max-width:800px;margin:0 auto;padding:0 20px}
-        .section        {padding:60px 0}
-        .text-center{text-align:center}
+        .container { max-width: 800px; margin: 0 auto; padding: 0 20px }
+        .section { padding: 60px 0 }
+        .text-center { text-align: center }
         
         .h1{font-family:'Merriweather',serif;font-size:1.8rem;font-weight:900;color:var(--brand);line-height:1.25;letter-spacing:-.01em;margin-bottom:20px}
-        .h2{font-family:'Merriweather',serif;font-size:1.5rem;font-weight:800;color:var(--brand);margin-bottom:15px}
+        .h2{font-family:'Merriweather',serif;font-size:1.4rem;font-weight:800;color:var(--brand);margin-bottom:15px}
         
         .section-badge{
             display:inline-block;
@@ -99,16 +100,16 @@
 
         .offer-bar{background: var(--brand); color:#ffffff; padding:12px 16px; font-size:0.85rem; font-weight:700; text-align:center; text-transform: uppercase;}
 
-        /* Hero */
+        /* Hero Styling */
         .hero{padding:40px 0; background: #ffffff;}
-        .hero-img{width:100%; max-width:320px; margin:25px auto; filter:drop-shadow(0 15px 25px rgba(3,53,79,0.1))}
+        .hero-img{width:100%; max-width:340px; margin:25px auto; filter:drop-shadow(0 15px 25px rgba(3,53,79,0.1))}
 
-        .price-card{margin:30px auto; padding:25px; background:var(--brand-light); border-radius:12px; border:2px solid var(--accent); max-width:460px; box-shadow: 0 4px 20px rgba(222,107,36,0.1)}
-        .price-label{font-weight:700; color:var(--brand); margin-bottom:8px; font-size:0.95rem}
-        .price-row{display:flex; align-items:baseline; justify-content:center; gap:10px; margin-bottom:10px}
-        .price-current{font-size:2.5rem; font-weight:900; color:var(--brand); font-family:'Merriweather',serif}
-        .cta-primary{display:inline-flex; align-items:center; justify-content:center; background:linear-gradient(135deg, var(--accent), #f18d4b); color:#ffffff; font-weight:800; font-size:1.15rem; padding:22px 30px; border-radius:8px; width:100%; max-width:440px; box-shadow:0 6px 20px rgba(222,107,36,0.4); transition:0.2s; text-align: center;}
-        .cta-primary:hover{transform: translateY(-3px); box-shadow:0 10px 25px rgba(222,107,36,0.5)}
+        /* CTA Price Card - Styled per image_d38e9a.png */
+        .price-card{margin:30px auto; padding:35px; background:var(--brand-light); border-radius:12px; border:2px solid var(--accent); max-width:520px; box-shadow: 0 10px 30px rgba(222,107,36,0.1)}
+        .price-label{font-weight:800; color:var(--brand); margin-bottom:15px; font-size:1rem; text-transform: uppercase; letter-spacing: 1px;}
+        .price-current{font-size:3.2rem; font-weight:900; color:var(--brand); font-family:'Merriweather',serif; display: block; margin-bottom: 20px;}
+        .cta-primary{display:inline-flex; align-items:center; justify-content:center; background:linear-gradient(135deg, #f3945a, var(--accent)); color:#ffffff; font-weight:800; font-size:1.25rem; padding:22px 30px; border-radius:12px; width:100%; box-shadow:0 6px 20px rgba(222,107,36,0.3); transition:0.3s ease; text-align: center; text-transform: uppercase; letter-spacing: 0.5px;}
+        .cta-primary:hover{transform: translateY(-4px); box-shadow:0 12px 25px rgba(222,107,36,0.5)}
 
         /* Quality seals section */
         .trust-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:15px; margin-top:20px}
@@ -117,12 +118,12 @@
         .trust-card-title{font-weight:700; font-size:0.85rem; color:var(--brand); margin-bottom:4px}
         .trust-card-desc{font-size:.75rem; color:var(--text-light); line-height:1.4}
 
-        /* Mechanism Section */
+        /* Mechanism Boxes */
         .mechanism-section { background-color: var(--brand); color: #ffffff; padding: 70px 0; }
-        .mechanism-section .h1, .mechanism-section p, .mechanism-section strong { color: #ffffff !important; }
-        .mechanism-box{background:rgba(255,255,255,0.08); padding:30px; border-radius:10px; border-left:6px solid var(--accent); text-align:left; margin:25px auto; max-width:620px; color: #ffffff}
+        .mechanism-box{background:rgba(255,255,255,0.08); padding:35px; border-radius:12px; border-left:6px solid var(--accent); text-align:left; margin:25px auto; max-width:700px; color: #ffffff}
+        .mechanism-box p { margin-bottom: 12px; font-size: 1.1rem; }
         
-        /* Product Visuals */
+        /* Layout Fixes */
         .neurosalt2-img { width:100%; max-width:440px; border-radius:15px; margin:30px auto; border: 4px solid rgba(255,255,255,0.15); box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
         .product-highlight { background-color: var(--brand-light); border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
         .highlight-img { max-width:320px; margin:35px auto; filter: drop-shadow(0 0 35px rgba(222,107,36,0.35)); }
@@ -130,50 +131,64 @@
         .bullet-list{list-style:none; text-align:left; max-width:560px; margin:25px auto}
         .bullet-list li{margin-bottom:15px; display:flex; align-items:flex-start; gap:12px; font-size:1.05rem}
         .bullet-icon{color:var(--accent); font-weight: bold; font-size: 1.2rem;}
-        .warning-box{background:#fff5f5; border:1px dashed #feb2b2; padding:20px; border-radius:8px; margin:25px auto; color:#c53030; font-weight:700; font-size:0.95rem; max-width:560px}
+        .warning-box{background:#fff5f5; border:1px dashed #feb2b2; padding:25px; border-radius:8px; margin:25px auto; color:#c53030; font-weight:700; font-size:1rem; max-width:650px}
 
-        /* Reviews Refined */
+        /* Testimonials */
         .reviews-container { display: flex; flex-direction: column; gap: 30px; margin-top: 40px; }
-        .review-card { background: #ffffff; border: 1px solid #e2e8f0; padding: 35px 30px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.03); text-align: left; }
-        .review-text { font-style: italic; color: var(--text-body); margin-bottom: 20px; line-height: 1.8; }
-        .review-author { color: var(--brand); font-weight: 700; font-size: 1.05rem; }
+        .review-card { background: #ffffff; border: 1px solid #e2e8f0; padding: 35px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.03); text-align: left; }
+        .review-text { font-style: italic; color: var(--text-body); margin-bottom: 20px; line-height: 1.8; font-size: 1.05rem; }
+        .review-author { color: var(--brand); font-weight: 700; font-size: 1.1rem; border-top: 1px solid #f1f5f9; padding-top: 15px; }
 
-        /* Final Sections */
-        .guarantee-section { background-color: #ffffff; border-top: 4px solid var(--accent); padding: 80px 0; }
-        .guarantee-wrap{text-align:center; margin:0 auto; max-width:660px}
-        .guarantee-img{width:160px; margin:0 auto 20px}
-        .offer-section { background-color: var(--brand-light); padding: 80px 0; border-top: 1px solid #eee; }
-        .offer-product-final{width:100%; max-width:440px; margin:35px auto; filter: drop-shadow(0 15px 35px rgba(222,107,36,0.2))}
-
-        /* FAQ Alignment */
+        /* FAQ - Ref image_d2384c.png style */
         .faq-section { background-color: #ffffff; padding: 80px 0; }
-        .faq-container { background: #fafafa; border-radius: 12px; padding: 10px 25px; border: 1px solid #efefef; margin-top: 35px; max-width: 700px; margin-left: auto; margin-right: auto; }
-        .faq-item{border-bottom: 1px solid #e2e8f0; padding:22px 0; text-align:left}
+        .faq-container { background: #fafafa; border-radius: 12px; padding: 10px 25px; border: 1px solid #efefef; margin-top: 35px; max-width: 750px; margin-left: auto; margin-right: auto; }
+        .faq-item{border-bottom: 1px solid #e2e8f0; padding:25px 0; text-align:left}
         .faq-item:last-child { border-bottom: none; }
-        .faq-question{width:100%; display:flex; justify-content:space-between; font-weight:700; color:var(--brand); font-size:1.1rem; align-items:center; text-align: left; gap: 15px;}
-        .faq-answer{display:none; padding:18px 0 10px; font-size:1rem; color:var(--text-body); line-height:1.75}
+        .faq-question{width:100%; display:flex; justify-content:space-between; font-weight:700; color:var(--brand); font-size:1.2rem; align-items:center; text-align: left; gap: 20px;}
+        .faq-answer{display:none; padding:18px 0 10px; font-size:1.05rem; color:var(--text-body); line-height:1.75}
         .faq-item.active .faq-answer{display:block}
-        .faq-icon { font-size: 1.2rem; color: var(--brand); flex-shrink: 0; font-weight: 900;}
+        .faq-icon { font-size: 1.4rem; color: var(--brand); flex-shrink: 0; font-weight: 900;}
 
-        /* Compliance Modal Styles */
-        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; display: none; overflow-y: auto; padding: 20px; }
-        .modal-content { background: #fff; max-width: 800px; margin: 40px auto; padding: 40px; border-radius: 12px; position: relative; color: #333; }
-        .modal-close { position: sticky; top: 0; float: right; font-size: 2rem; cursor: pointer; color: var(--brand); font-weight: bold; }
-        .modal-body h2 { color: var(--brand); margin-bottom: 20px; border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 5px; }
-        .modal-body p { margin-bottom: 15px; font-size: 0.95rem; line-height: 1.6; }
+        /* Modals */
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 2000; display: none; overflow-y: auto; padding: 20px; }
+        .modal-content { background: #fff; max-width: 900px; margin: 40px auto; padding: 50px; border-radius: 16px; position: relative; color: #333; }
+        .modal-close { position: absolute; top: 20px; right: 20px; font-size: 2.5rem; cursor: pointer; color: var(--brand); line-height: 1; }
+        .modal-body h2 { color: var(--brand); margin-bottom: 25px; border-bottom: 3px solid var(--accent); display: inline-block; padding-bottom: 10px; font-family: 'Merriweather', serif; }
+        .modal-body p { margin-bottom: 20px; font-size: 1rem; line-height: 1.7; }
 
-        .footer{background:var(--brand); color:#cbd5e1; padding:60px 20px; font-size:0.8rem; text-align:center}
-        .footer a{text-decoration:underline; margin:0 10px; color:#ffffff; cursor: pointer;}
-        .footer-distributor { opacity: 0.7; font-size: 0.75rem; margin-top: 20px; font-style: italic; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
+        .footer{background:var(--brand); color:#cbd5e1; padding:70px 20px; font-size:0.85rem; text-align:center}
+        .footer a{text-decoration:underline; margin:0 12px; color:#ffffff; cursor: pointer; transition: opacity 0.2s;}
+        .footer a:hover { opacity: 0.7; }
+        .footer-distributor { opacity: 0.8; font-size: 0.8rem; margin-top: 30px; font-style: italic; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; letter-spacing: 0.5px;}
 
-        @media(min-width:768px){
-            .h1{font-size:2.8rem}
-            .trust-grid{grid-template-columns:repeat(4,1fr)}
-            .hero-inner{display:flex; align-items:center; text-align:left; gap:60px; max-width:1100px; margin:0 auto}
-            .hero-text{flex:1}
-            .hero-img{max-width:420px}
-            .reviews-container { flex-direction: row; justify-content: center; align-items: stretch; }
-            .review-card { width: calc(33.33% - 20px); }
+        /* DESKTOP LAYOUT OVERRIDES */
+        @media(min-width:1024px){
+            .container { max-width: var(--container-w); }
+            
+            /* HERO Desktop: 2 Columns */
+            .hero-inner { display: flex; align-items: center; justify-content: space-between; gap: 60px; text-align: left; }
+            .hero-text { flex: 1.2; }
+            .hero-visual { flex: 0.8; }
+            .hero-img { max-width: 100%; margin: 0; }
+            .h1 { font-size: 3.4rem; line-height: 1.15; }
+            .price-card { margin-left: 0; max-width: 500px; }
+
+            /* Quality Seals: 4 Columns */
+            .trust-grid { grid-template-columns: repeat(4, 1fr); gap: 25px; }
+
+            /* Testimonials: 3 Columns */
+            .reviews-container { flex-direction: row; align-items: stretch; justify-content: center; }
+            .review-card { width: 31%; }
+
+            /* Mechanism Split */
+            .mechanism-split { display: flex; align-items: center; gap: 50px; text-align: left; }
+            .mechanism-text { flex: 1; }
+            .mechanism-visual { flex: 1; }
+
+            /* Product Intro & Neural */
+            .neural-split { display: flex; align-items: center; gap: 60px; text-align: left; }
+            .neural-text { flex: 1; }
+            .neural-visual { flex: 1; }
         }
     </style>
 </head>
@@ -191,35 +206,35 @@
                 <p class="eyebrow">Advanced Daily Support</p>
                 <h1 class="h1">Do You Feel Burning In Your Feet At Night, Constant Tingling… Or Numbness That Just Won’t Stop?</h1>
                 
-                <p class="h2" style="font-size: 1.25rem; color: var(--text-body);">What If This Isn’t Random… And Tends To Get Worse Over Time?</p>
-
-                <!-- Section 1 Image: neurosalt1.png -->
-                <img src="images/neurosalt1.png" alt="NeuroSalt Bottle on Clean Background" class="hero-img">
+                <p class="h2" style="font-size: 1.35rem; color: var(--text-body); margin-bottom: 25px;">What If This Isn’t Random… And Tends To Get Worse Over Time?</p>
 
                 <div class="body-text">
                     <p>Many People Ignore These Signals At First. A Slight Tingling. A Burning Sensation That Comes And Goes. That Numb Feeling You Can’t Quite Explain.</p>
-                    <p>Then It Comes Back. More Often. At Night. When You’re Trying To Relax. When You’re Lying In Bed. And That’s When You Notice It. <strong>This Isn’t Going Away.</strong></p>
+                    <p style="margin-top: 15px;">But Then… It Starts Showing Up More Often. At Night. When Walking. Even When You’re Trying To Relax. And Slowly — It Becomes Hard To Ignore. <strong>This Isn’t Going Away On Its Own.</strong></p>
                 </div>
 
                 <div class="price-card">
-                    <p class="price-label">EXCLUSIVE 73% DISCOUNT APPLIED</p>
-                    <div class="price-row">
-                        <span class="price-current">Save $780 Today</span>
-                    </div>
-                    <p style="font-weight: 700; color: var(--accent); margin-bottom: 20px;">Starting at $49 per bottle</p>
+                    <p class="price-label">73% Discount Applied Today</p>
+                    <span class="price-current">Save $780 Today</span>
+                    <p style="font-weight: 700; color: var(--accent); margin-bottom: 20px; font-size: 1.1rem;">Starting at $49 per bottle</p>
                     <a href="https://43f17ngcmlemes3bul-d59uf7b.hop.clickbank.net" class="cta-primary">
                         CHECK TODAY'S AVAILABILITY
                     </a>
                 </div>
             </div>
+
+            <div class="hero-visual">
+                <!-- Section 1 Image: neurosalt1.png -->
+                <img src="images/neurosalt1.png" alt="NeuroSalt Bottle on Clean Background" class="hero-img">
+            </div>
         </div>
     </div>
 </section>
 
-<!-- QUALITY SEALS Heading Anchor -->
-<section class="section bg-white" style="padding: 40px 0; border-bottom: 1px solid #f1f5f9;">
+<!-- QUALITY SEALS -->
+<section class="section bg-white" style="padding: 50px 0; border-bottom: 1px solid #f1f5f9;">
     <div class="container text-center">
-        <h2 class="h2" style="font-size: 1.35rem; margin-bottom: 30px;">Manufactured To The Highest Standards</h2>
+        <h2 class="h2" style="font-size: 1.6rem; margin-bottom: 35px;">Manufactured To The Highest Standards</h2>
         <div class="trust-grid">
             <div class="trust-card">
                 <img src="images/imgi_6_badge-usa.png" alt="USA">
@@ -245,29 +260,25 @@
     </div>
 </section>
 
-<!-- SCIENTIFIC REFERENCES -->
-<section class="section bg-white" style="padding: 30px 0;">
+<!-- INSIGHT / MECHANISM -->
+<section class="section mechanism-section">
     <div class="container text-center">
-        <p class="eyebrow" style="margin-bottom: 10px;">Scientific Research Support</p>
-        <img src="images/imgi_2_scientific-refs.png" alt="Scientific References" style="max-width:100%; width:640px; opacity:0.85;">
-    </div>
-</section>
-
-<!-- INSIGHT / PROBLEM -->
-<section class="section bg-white">
-    <div class="container text-center">
-        <h2 class="section-badge" style="background: var(--accent);">Here’s The Part Most People Don’t Realize</h2>
-        <div class="body-text">
-            <p>It’s Not Just “Discomfort”. There May Be An Internal Pattern Behind It:</p>
-            <strong style="font-size: 1.6rem; display: block; margin: 15px 0;">Persistent Nerve Irritation</strong>
+        <div class="mechanism-split">
+            <div class="mechanism-text">
+                <h2 class="section-badge" style="background: var(--accent);">Here’s The Part Most People Don’t Realize</h2>
+                <div class="body-text">
+                    <p style="color: #fff;">It’s Not Just “Discomfort”. There May Be An Internal Pattern Behind It:</p>
+                    <strong style="font-size: 2.2rem; display: block; margin: 20px 0; line-height: 1.2;">Persistent Nerve Irritation</strong>
+                </div>
+                
+                <div class="mechanism-box">
+                    <p>● <strong>Nerves Stay In A Sensitive State</strong> for extended periods</p>
+                    <p>● <strong>Signals Fire More Often</strong> even without triggers</p>
+                    <p>● <strong>Balance Becomes Harder To Maintain</strong> internally</p>
+                </div>
+                <p class="body-text mt-20" style="color: #cbd5e1;">That’s Why Temporary Solutions Don’t Last.</p>
+            </div>
         </div>
-        
-        <div class="mechanism-box" style="background: var(--brand); border-left: 6px solid var(--accent);">
-            <p>● <strong>Nerves Stay In A Sensitive State</strong> for extended periods</p>
-            <p>● <strong>Signals Fire More Often</strong> even without triggers</p>
-            <p>● <strong>Balance Becomes Harder To Maintain</strong> internally</p>
-        </div>
-        <p class="body-text mt-20">That’s Why Temporary Solutions Don’t Last.</p>
     </div>
 </section>
 
@@ -275,79 +286,102 @@
 <section class="section bg-white">
     <div class="container text-center">
         <h2 class="h1">And Over Time… It Starts Affecting Your Routine</h2>
-        <div class="body-text">
-            <p>Standing Too Long Feels Different. Walking Doesn’t Feel The Same. Night-Time Becomes The Worst Moment.</p>
-            <p>You Start Paying Attention To Every Step.</p>
+        <div class="body-text" style="max-width: 800px; margin: 0 auto 30px;">
+            <p>Standing Too Long Feels Different. Walking Doesn’t Feel The Same. Night-Time Becomes The Worst Moment. You Start Paying Attention To Every Step.</p>
         </div>
+        
         <ul class="bullet-list">
             <li><span class="bullet-icon">🔴</span> <span>Difficulty relaxing when trying to sleep</span></li>
             <li><span class="bullet-icon">🔴</span> <span>Increased focus on balance while walking</span></li>
             <li><span class="bullet-icon">🔴</span> <span>Night-time discomfort becomes hard to ignore</span></li>
         </ul>
+
         <div class="warning-box text-center">
             Attention: Many People Report This Pattern Becomes More Noticeable When Ignored.
         </div>
     </div>
 </section>
 
-<!-- DIFFERENT APPROACH - Mechanism Image: neurosalt2.png -->
-<section class="section mechanism-section">
-    <div class="container text-center">
-        <h2 class="h1">A Different Approach To Daily Support</h2>
-        <img src="images/neurosalt2.png" alt="NeuroSalt Different Approach Visual" class="neurosalt2-img">
-        <div class="body-text mt-20">
-            <p>Instead Of Covering The Problem… NeuroSalt Was Designed To Support The Body Internally:</p>
-        </div>
-        <div class="mechanism-box" style="background: rgba(255,255,255,0.1); border-left: 6px solid var(--accent); color: #fff;">
-            <p>✔️ Helps Support A Balanced Inflammatory Response</p>
-            <p>✔️ Helps Support Nerve Function</p>
-            <p>✔️ Helps Support Circulation</p>
-            <p>✔️ Helps Protect Against Oxidative Stress</p>
+<!-- DIFFERENT APPROACH -->
+<section class="section product-highlight">
+    <div class="container">
+        <div class="neural-split">
+            <div class="neural-visual">
+                <!-- Image: product close-up -->
+                <img src="images/neurosalt2.png" alt="NeuroSalt Different Approach Visual" class="neurosalt2-img">
+            </div>
+            <div class="neural-text">
+                <h2 class="h1">A Different Approach To Daily Support</h2>
+                <div class="body-text">
+                    <p>Instead Of Covering The Problem… NeuroSalt Was Designed To Support The Body Internally:</p>
+                </div>
+                <div class="mechanism-box" style="background: white; border-left: 6px solid var(--brand); color: var(--text-body); margin-left: 0;">
+                    <p>✔️ Helps Support A Balanced Inflammatory Response</p>
+                    <p>✔️ Helps Support Nerve Function</p>
+                    <p>✔️ Helps Support Circulation</p>
+                    <p>✔️ Helps Protect Against Oxidative Stress</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- INTRODUCING NEUROSALT - Highlight Image: imgi_48_hero.png -->
+<!-- INTRODUCING NEUROSALT -->
 <section class="section bg-white">
     <div class="container text-center">
         <h2 class="section-badge">Introducing NeuroSalt</h2>
-        <h2 class="h2">Daily Support For Nerve Comfort And Function</h2>
+        <h2 class="h2" style="font-size: 2.2rem;">Daily Support For Nerve Comfort And Function</h2>
         
-        <img src="images/imgi_48_hero.png" alt="NeuroSalt Bottle Highlight" class="highlight-img">
+        <!-- Image: imgi_48_hero.png -->
+        <img src="images/imgi_48_hero.png" alt="NeuroSalt Bottle Hero" class="highlight-img" style="margin: 40px auto;">
         
-        <h2 class="h2">Support Where It Matters Most</h2>
-        <!-- Neural graphic visual -->
-        <img src="images/product-neural.png" alt="NeuroSalt Support Mechanism Visual" style="max-width: 100%; border-radius: 12px; margin: 20px auto;">
-        
-        <div class="body-text" style="max-width: 580px; margin: 0 auto; text-align: left;">
-            <p>With Consistent Use, Many Users Report:</p>
-            <ul style="list-style: none; margin-top: 15px;">
-                <li style="margin-bottom: 12px;">🛡️ More Comfort While Walking</li>
-                <li style="margin-bottom: 12px;">🛡️ Less Awareness Of Tingling</li>
-                <li style="margin-bottom: 12px;">🛡️ Better Relaxation At Night</li>
-                <li style="margin-bottom: 0;">🛡️ Easier Daily Movement</li>
-            </ul>
+        <div class="neural-split" style="margin-top: 50px;">
+            <div class="neural-text">
+                <h2 class="h2">Support Where It Matters Most</h2>
+                <div class="body-text" style="text-align: left;">
+                    <p>With Consistent Use, Many Users Report:</p>
+                    <ul style="list-style: none; margin-top: 25px;">
+                        <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;"><span style="color: var(--accent); font-weight: 800;">🛡️</span> <span>More Comfort While Walking</span></li>
+                        <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;"><span style="color: var(--accent); font-weight: 800;">🛡️</span> <span>Less Awareness Of Tingling</span></li>
+                        <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;"><span style="color: var(--accent); font-weight: 800;">🛡️</span> <span>Better Relaxation At Night</span></li>
+                        <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;"><span style="color: var(--accent); font-weight: 800;">🛡️</span> <span>Easier Daily Movement</span></li>
+                    </ul>
+                    <p class="small-text mt-30" style="font-size: 0.85rem; color: #94a3b8;">*Important: Results May Vary Depending On Individual Use.</p>
+                </div>
+            </div>
+            <div class="neural-visual">
+                <!-- Image: product-neural.png -->
+                <img src="images/product-neural.png" alt="NeuroSalt Support Mechanism Visual" style="max-width: 100%; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+            </div>
         </div>
-        <p class="small-text mt-30">Important: Results May Vary.</p>
     </div>
 </section>
 
-<!-- LABEL SECTION - Label Image: imgi_42_NeuroSalt_Print.png -->
-<section class="section bg-white">
+<!-- LABEL SECTION -->
+<section class="section bg-white" style="border-top: 1px solid #f1f5f9;">
     <div class="container text-center">
         <h2 class="section-badge">Natural-Based Daily Support</h2>
-        <img src="images/imgi_42_NeuroSalt_Print.png" alt="NeuroSalt Supplement Label" style="max-width:100%; width:560px; margin:30px auto; border-radius:10px; box-shadow: 0 10px 30px rgba(0,0,0,0.08)">
-        <div class="body-text" style="max-width: 620px; margin: 0 auto;">
-            <p>NeuroSalt Supports Nerve Function, Circulatory Balance, and Oxidative Support. Produced Under Strict Quality Standards For Daily Use.</p>
+        <div class="neural-split">
+            <div class="neural-visual">
+                <!-- Image: imgi_42_NeuroSalt_Print.png -->
+                <img src="images/imgi_42_NeuroSalt_Print.png" alt="NeuroSalt Supplement Label" style="max-width:100%; border-radius:12px; box-shadow: 0 15px 40px rgba(0,0,0,0.06)">
+            </div>
+            <div class="neural-text">
+                <h2 class="h2">Natural Compounds & Quality</h2>
+                <div class="body-text" style="text-align: left;">
+                    <p>NeuroSalt Supports Nerve Function, Circulatory Balance, and Oxidative Support. Produced Under Strict American Quality Standards For Reliable Daily Use.</p>
+                    <p style="margin-top: 15px;">The formula is specifically tailored for those looking for a non-prescriptive, clean, and consistent way to nourish their nervous system.</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- TESTIMONIALS - Reviews Image: reviews.png -->
-<section class="section bg-gray" style="background-color: #f9fafb;">
+<!-- TESTIMONIALS -->
+<section class="section bg-gray" style="background-color: #f8fafc;">
     <div class="container text-center">
         <h2 class="h1">What People Are Saying</h2>
-        <img src="images/reviews.png" alt="Testimonial Collage" style="max-width:100%; border-radius:12px; margin-bottom:40px; box-shadow: 0 4px 15px rgba(0,0,0,0.05)">
+        <img src="images/reviews.png" alt="Verified Testimonials" style="max-width: 800px; border-radius:16px; margin-bottom:50px; box-shadow: 0 5px 25px rgba(0,0,0,0.06)">
         
         <div class="reviews-container">
             <div class="review-card">
@@ -366,70 +400,76 @@
     </div>
 </section>
 
-<!-- GUARANTEE - Seal Image: imgi_13_guarantee-badge.png -->
+<!-- GUARANTEE -->
 <section class="section guarantee-section">
     <div class="container">
         <div class="guarantee-wrap">
+            <!-- Image: imgi_13_guarantee-badge.png -->
             <img src="images/imgi_13_guarantee-badge.png" alt="60-Day Guarantee Seal" class="guarantee-img">
             <h2 class="h1">Your Satisfaction Is Protected</h2>
-            <p class="body-text" style="font-size: 1.15rem;">You’re Covered By A <strong>60-Day Money-Back Guarantee</strong>. Try It. If It’s Not For You — Request A Refund Within The Guarantee Period.</p>
+            <p class="body-text" style="font-size: 1.2rem; max-width: 700px; margin: 0 auto;">You’re Covered By A <strong>60-Day Money-Back Guarantee</strong>. Try It For A Full Two Months. If It’s Not For You — Request A Refund Within The Period. No Questions Asked.</p>
         </div>
     </div>
 </section>
 
-<!-- FINAL OFFER - Bundle Image: 3-frascos.png -->
+<!-- FINAL OFFER -->
 <section class="section offer-section">
     <div class="container text-center">
         <h2 class="h1">Get NeuroSalt While It’s Still Available</h2>
+        
+        <!-- Image: 3-frascos.png -->
         <img src="images/3-frascos.png" alt="NeuroSalt Bundle Options" class="offer-product-final">
-        <div class="body-text" style="margin-bottom: 25px;">
-            <p>• Starting at $49 per bottle</p>
-            <p>• <strong>Save up to 73% today</strong></p>
-            <p>• Limited availability depending on stock</p>
+        
+        <div class="price-card" style="margin: 0 auto 30px; background: #fff; border: 2px solid var(--brand);">
+            <div class="body-text" style="margin-bottom: 25px;">
+                <p style="font-size: 1.2rem;">• Starting at <strong>$49 per bottle</strong></p>
+                <p style="font-size: 1.2rem;">• <strong>Save up to 73% today</strong></p>
+                <p style="font-size: 1.2rem;">• Limited availability depending on stock</p>
+            </div>
+            <a href="https://43f17ngcmlemes3bul-d59uf7b.hop.clickbank.net" class="cta-primary" style="font-size: 1.4rem; padding: 25px 50px;">
+                CHECK AVAILABILITY NOW
+            </a>
         </div>
-        <p style="background: #fee2e2; color:#b91c1c; padding: 15px; border-radius: 8px; font-weight:800; margin-bottom:30px; font-size: 0.95rem; display: inline-block;">
-            ⚠️ ATTENTION: Due To Demand, Availability May Change During The Day.
+
+        <p style="background: #fee2e2; color:#b91c1c; padding: 18px 30px; border-radius: 10px; font-weight:800; margin-bottom:30px; font-size: 1.05rem; display: inline-block;">
+            ⚠️ ATTENTION: Due To High Demand, Some Batches May Sell Out Within The Same Day.
         </p>
-        <br>
-        <a href="https://43f17ngcmlemes3bul-d59uf7b.hop.clickbank.net" class="cta-primary" style="font-size: 1.25rem; padding: 25px 50px;">
-            CHECK AVAILABILITY NOW
-        </a>
     </div>
 </section>
 
-<!-- FAQ -->
+<!-- FAQ - Reference image_d2384c.png style -->
 <section class="faq-section">
     <div class="container">
         <h2 class="h1 text-center">Frequently Asked Questions</h2>
         <div class="faq-container">
             <div class="faq-item">
-                <button class="faq-question">How Long Does It Take? <span class="faq-icon">+</span></button>
-                <div class="faq-answer">Some Users Report Changes In A Few Weeks. Results May Vary Depending On The Individual. Consistent daily use for 60-90 days is recommended for best results.</div>
+                <button class="faq-question">How Long Does It Take To Notice Results? <span class="faq-icon">+</span></button>
+                <div class="faq-answer">Some Users Report Changes In A Few Weeks. Results May Vary Depending On The Individual. Consistent daily use for 60-90 days is recommended for optimal results as the formula builds up in your system.</div>
             </div>
             <div class="faq-item">
                 <button class="faq-question">Do I Need A Prescription? <span class="faq-icon">+</span></button>
-                <div class="faq-answer">No, NeuroSalt is a dietary supplement and does not require a prescription.</div>
+                <div class="faq-answer">No, NeuroSalt is a dietary supplement and does not require a prescription. It is formulated with nature-based compounds for daily wellness support.</div>
             </div>
             <div class="faq-item">
                 <button class="faq-question">How Do I Take It? <span class="faq-icon">+</span></button>
-                <div class="faq-answer">Follow the instructions on the product label for daily use, typically taken with a glass of water.</div>
+                <div class="faq-answer">Follow the instructions on the product label for daily use, typically taken with a glass of water. For best absorption, try to take it consistently around the same time each day.</div>
             </div>
             <div class="faq-item">
                 <button class="faq-question">Can I Use It With Other Supplements? <span class="faq-icon">+</span></button>
-                <div class="faq-answer">NeuroSalt uses nature-based ingredients, but we recommend consulting a healthcare professional if you are taking other medications or have specific concerns.</div>
+                <div class="faq-answer">NeuroSalt uses nature-based ingredients, but we recommend consulting a healthcare professional if you are taking other medications or have specific underlying concerns.</div>
             </div>
             <div class="faq-item">
                 <button class="faq-question">What If It Doesn’t Work? <span class="faq-icon">+</span></button>
-                <div class="faq-answer">You are protected by our 60-day money-back guarantee. Simply reach out to our customer support team for a full refund within that period.</div>
+                <div class="faq-answer">You are protected by our 60-day money-back guarantee. Simply reach out to our customer support team for a full refund within that period if you are not satisfied.</div>
             </div>
         </div>
 
-        <div class="mt-50 text-center" style="margin-top: 60px;">
-            <h2 class="h2">Next Step</h2>
-            <div class="body-text" style="max-width: 640px; margin: 0 auto;">
+        <div class="mt-50 text-center" style="margin-top: 80px;">
+            <h2 class="h2">Recommended Next Step</h2>
+            <div class="body-text" style="max-width: 700px; margin: 0 auto;">
                 <p>If You’ve Been Dealing With Burning, Tingling Or Numbness… And Want A Practical Daily Option To Support Nerve Comfort… Now Is The Best Time To Check Availability.</p>
             </div>
-            <a href="https://43f17ngcmlemes3bul-d59uf7b.hop.clickbank.net" class="cta-primary" style="margin-top: 25px;">VIEW AVAILABLE OPTIONS</a>
+            <a href="https://43f17ngcmlemes3bul-d59uf7b.hop.clickbank.net" class="cta-primary" style="margin-top: 30px; padding: 25px 60px;">VIEW AVAILABLE OPTIONS</a>
         </div>
     </div>
 </section>
@@ -452,7 +492,7 @@
             <a onclick="openModal('contact')">Contact Us</a>
         </div>
         
-        <p style="margin-top: 30px; opacity: 0.8; font-size: 0.75rem;">
+        <p style="margin-top: 35px; opacity: 0.8; font-size: 0.85rem;">
             Instituto Experience 2026. All rights reserved.
         </p>
         
@@ -460,20 +500,20 @@
             Authorized Distributor of NeuroSalt™ Product
         </div>
         
-        <p style="opacity:0.6; font-size: 0.7rem; margin-top: 20px;">
+        <p style="opacity:0.6; font-size: 0.75rem; margin-top: 25px; line-height: 1.5;">
             Disclaimer: These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, or cure diseases. Individual results may vary.
         </p>
     </div>
 </footer>
 
 <script>
-// Modal Data
+// Modal Content
 const modalData = {
-    tos: `<h2>Terms of Service</h2><p>Effective Date: August, 2021</p><p>This website is owned and operated by COMPANY. By using the Site, you agree to be bound by these Terms of Service. Personal noncommercial use only.</p>`,
-    privacy: `<h2>Privacy Policy</h2><p>Your privacy is critically important to us. We collect non-personally-identifying information to better understand how visitors use our website.</p>`,
-    return: `<h2>Return Policy</h2><p>If you are unsatisfied for any reason, you have 60 days from delivery to request a refund. Return bottles to: 11870 62nd St N Largo, Fl. 33773.</p>`,
-    disclaimer: `<h2>General Disclaimer</h2><p>Effective Date: August, 2025</p><p>This product has not been evaluated by the FDA. It is not intended to diagnose, treat, cure or prevent any disease. Informational purposes only.</p>`,
-    contact: `<h2>Contact Us</h2><p><strong>Email:</strong> contact@customercs.com</p><p><strong>Phone:</strong> +1 (507) 448-8190</p>`
+    tos: `<h2>Terms of Service</h2><p>Effective Date: August, 2021</p><p>This website is owned and operated by (“COMPANY”). By using the Site, you agree to be bound by these Terms of Service. Accessing the Site constitutes your agreement to these Terms. All materials on this site are the property of COMPANY and are protected by intellectual property laws.</p>`,
+    privacy: `<h2>Privacy Policy</h2><p>Your privacy is critically important to us. We collect non-personally-identifying information to better understand how our visitors use our website. We do not sell or rent your personal information to third parties.</p>`,
+    return: `<h2>Return Policy</h2><p>If you are unsatisfied for any reason, you have 60 days from delivery to request a refund. Please return all bottles (even empty) to: 11870 62nd St N Largo, Fl. 33773. Shipping costs are not covered.</p>`,
+    disclaimer: `<h2>General Disclaimer</h2><p>Effective Date: August, 2025</p><p>This product has not been evaluated by the FDA. This product is not intended to diagnose, treat, cure or prevent any disease. All content provided is for informational purposes only.</p>`,
+    contact: `<h2>Contact Us</h2><p>Email: contact@customercs.com<br>Phone: +1 (507) 448-8190</p><p>Our dedicated support team is available to assist you with any inquiries regarding your order or product details.</p>`
 };
 
 function openModal(type) {
@@ -491,7 +531,7 @@ window.onclick = function(event) {
     if (event.target == document.getElementById('modalOverlay')) closeModal();
 }
 
-// FAQ Toggle
+// FAQ Accordion Logic
 document.querySelectorAll('.faq-question').forEach(btn => {
     btn.addEventListener('click', () => {
         const item = btn.parentElement;
