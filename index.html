@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html lang="en">
 <head>
-    <title>NeuroSalt – Suporte Avançado para os Nervos | Oferta Oficial</title>
-    <meta name="description" content="Sente queimação, formigamento ou dormência? Descubra o NeuroSalt, o suporte diário para o conforto e função dos nervos. Garantia de 60 dias.">
+    <title>NeuroSalt – Advanced Nerve Support | Official Offer</title>
+    <meta name="description" content="Do you feel burning, tingling or numbness in your feet or hands? Discover NeuroSalt, the daily support for nerve comfort and function.">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -13,23 +13,23 @@
     <link rel="icon" type="image/png" href="images/faviconV2.png">
     <link rel="shortcut icon" href="images/faviconV2.png" type="image/x-icon">
 
-    <!-- Fontes -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@700;800;900&display=swap" rel="stylesheet">
 
     <style>
     :root {
-        --brand:        #03354F; /* Azul solicitado */
+        --brand:        #03354F; /* Deep Blue */
         --brand-dark:   #022436;
-        --accent:       #DE6B24; /* Laranja solicitado */
+        --brand-light:  #F6EADF; /* Warm Beige */
+        --accent:       #DE6B24; /* Vibrant Orange */
         --accent-light: #fff5ef;
         --cta:          #16a34a; 
         --cta-dark:     #15803d;
         --text-dark:    #0f172a;
         --text-body:    #334155;
         --bg-white:     #ffffff;
-        --bg-gray:      #f8fafc;
         --radius-card:  12px;
     }
 
@@ -43,76 +43,78 @@
     .section        {padding:60px 0}
     .text-center{text-align:center}
     
-    /* Tipografia */
+    /* Typography */
     .h1{font-family:'Merriweather',serif;font-size:1.8rem;font-weight:900;color:var(--brand);line-height:1.25;letter-spacing:-.01em;margin-bottom:20px}
     .h2{font-family:'Merriweather',serif;font-size:1.5rem;font-weight:800;color:var(--brand);margin-bottom:15px}
     
     .section-badge{
         display:inline-block;
         background: var(--brand);
-        color:#fff;font-family:'Inter',sans-serif;font-weight:700;
+        color:#ffffff;font-family:'Inter',sans-serif;font-weight:700;
         font-size:0.8rem;padding:8px 16px;border-radius:4px;margin-bottom:16px;text-transform:uppercase;letter-spacing:1px}
     
     .eyebrow{font-size:.85rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
     .body-text{font-size:1.05rem;line-height:1.75;color:var(--text-body)}
     .body-text strong{color:var(--brand);font-weight:700}
 
-    /* Barra Superior */
-    .offer-bar{background: var(--brand); color:#fff; padding:12px 16px; font-size:0.85rem; font-weight:700; text-align:center; text-transform: uppercase;}
+    /* Top Bar */
+    .offer-bar{background: var(--brand); color:#ffffff; padding:12px 16px; font-size:0.85rem; font-weight:700; text-align:center; text-transform: uppercase;}
 
-    /* Hero - FUNDO BRANCO */
+    /* Hero - WHITE BACKGROUND */
     .hero{padding:40px 0; background: #ffffff;}
     .hero-img{width:100%; max-width:320px; margin:25px auto; filter:drop-shadow(0 15px 25px rgba(3,53,79,0.1))}
 
-    /* Cartão CTA Principal */
-    .price-card{margin:30px auto; padding:25px; background:var(--accent-light); border-radius:12px; border:2px solid var(--accent); max-width:460px; box-shadow: 0 4px 20px rgba(222,107,36,0.1)}
+    /* CTA Card */
+    .price-card{margin:30px auto; padding:25px; background:var(--brand-light); border-radius:12px; border:2px solid var(--accent); max-width:460px; box-shadow: 0 4px 20px rgba(222,107,36,0.1)}
     .price-label{font-weight:700; color:var(--brand); margin-bottom:8px; font-size:0.95rem}
-    .price-row{display:flex; align-items:baseline; justify-content:center; gap:10px; margin-bottom:20px}
+    .price-row{display:flex; align-items:baseline; justify-content:center; gap:10px; margin-bottom:10px}
     .price-current{font-size:2.5rem; font-weight:900; color:var(--brand); font-family:'Merriweather',serif}
-    .cta-primary{display:inline-flex; align-items:center; justify-content:center; background:linear-gradient(135deg, var(--accent), #f18d4b); color:#fff; font-weight:800; font-size:1.15rem; padding:22px 30px; border-radius:8px; width:100%; max-width:440px; box-shadow:0 6px 20px rgba(222,107,36,0.4); transition:0.2s; text-align: center;}
+    .cta-primary{display:inline-flex; align-items:center; justify-content:center; background:linear-gradient(135deg, var(--accent), #f18d4b); color:#ffffff; font-weight:800; font-size:1.15rem; padding:22px 30px; border-radius:8px; width:100%; max-width:440px; box-shadow:0 6px 20px rgba(222,107,36,0.4); transition:0.2s; text-align: center;}
     .cta-primary:hover{transform: translateY(-3px); box-shadow:0 10px 25px rgba(222,107,36,0.5)}
 
-    /* Selos de Qualidade */
+    /* Trust Grid (2x2 Mobile) */
     .trust-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:15px; margin-top:25px}
-    .trust-card{background:#fff; padding:20px 10px; border-radius:10px; text-align:center; border:1px solid #e2e8f0; box-shadow: 0 2px 8px rgba(0,0,0,0.02)}
+    .trust-card{background:#ffffff; padding:20px 10px; border-radius:10px; text-align:center; border:1px solid #e2e8f0; box-shadow: 0 2px 8px rgba(0,0,0,0.02)}
     .trust-card img{height:60px; width:auto; margin:0 auto 12px; object-fit:contain}
     .trust-card-title{font-weight:700; font-size:0.85rem; color:var(--brand); margin-bottom:4px}
     .trust-card-desc{font-size:.75rem; color:var(--text-light); line-height:1.4}
 
-    /* Secção de Mecanismo - FUNDO ESCURO */
+    /* Mechanism Section - DARK BACKGROUND - WHITE TEXT */
     .mechanism-section { background-color: var(--brand); color: #ffffff; padding: 70px 0; }
-    .mechanism-section .h1, .mechanism-section p, .mechanism-section strong { color: #ffffff; }
+    .mechanism-section .h1, .mechanism-section p, .mechanism-section strong { color: #ffffff !important; }
     .mechanism-box{background:rgba(255,255,255,0.08); padding:30px; border-radius:10px; border-left:6px solid var(--accent); text-align:left; margin:25px auto; max-width:620px; color: #ffffff}
     .neurosalt2-img { width:100%; max-width:440px; border-radius:15px; margin:30px auto; border: 4px solid rgba(255,255,255,0.15); box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
 
-    /* Destaque do Produto */
-    .product-highlight { background-color: var(--accent-light); border-top: 1px solid #ffede1; border-bottom: 1px solid #ffede1; }
+    /* Product Highlight */
+    .product-highlight { background-color: var(--brand-light); border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
     .highlight-img { max-width:320px; margin:35px auto; filter: drop-shadow(0 0 35px rgba(222,107,36,0.35)); }
 
-    /* Listas e Avisos */
+    /* Lists */
     .bullet-list{list-style:none; text-align:left; max-width:560px; margin:25px auto}
     .bullet-list li{margin-bottom:15px; display:flex; align-items:flex-start; gap:12px; font-size:1.05rem}
     .bullet-icon{color:var(--accent); font-weight: bold; font-size: 1.2rem;}
     .warning-box{background:#fff5f5; border:1px dashed #feb2b2; padding:20px; border-radius:8px; margin:25px auto; color:#c53030; font-weight:700; font-size:0.95rem; max-width:560px}
 
-    /* Secções Finais */
+    /* Final Sections */
     .guarantee-section { background-color: #ffffff; border-top: 4px solid var(--accent); padding: 80px 0; }
     .guarantee-wrap{text-align:center; margin:0 auto; max-width:660px}
     .guarantee-img{width:160px; margin:0 auto 20px}
     
-    .offer-section { background-color: var(--accent-light); padding: 80px 0; border-top: 1px solid #eee; }
+    .offer-section { background-color: var(--brand-light); padding: 80px 0; border-top: 1px solid #eee; }
     .offer-product-final{width:100%; max-width:440px; margin:35px auto; filter: drop-shadow(0 15px 35px rgba(222,107,36,0.2))}
 
-    /* FAQ */
+    /* FAQ - ALIGNED */
     .faq-section { background-color: #ffffff; padding: 80px 0; }
-    .faq-container { background: #fafafa; border-radius: 12px; padding: 10px 25px; border: 1px solid #efefef; margin-top: 35px; }
+    .faq-container { background: #fafafa; border-radius: 12px; padding: 10px 25px; border: 1px solid #efefef; margin-top: 35px; max-width: 700px; margin-left: auto; margin-right: auto; }
     .faq-item{border-bottom: 1px solid #e2e8f0; padding:22px 0; text-align:left}
-    .faq-question{width:100%; display:flex; justify-content:space-between; font-weight:700; color:var(--brand); font-size:1.1rem; align-items:center}
+    .faq-item:last-child { border-bottom: none; }
+    .faq-question{width:100%; display:flex; justify-content:space-between; font-weight:700; color:var(--brand); font-size:1.1rem; align-items:center; text-align: left; gap: 15px;}
     .faq-answer{display:none; padding:18px 0 10px; font-size:1rem; color:var(--text-body); line-height:1.75}
     .faq-item.active .faq-answer{display:block}
+    .faq-icon { font-size: 1.2rem; color: var(--brand); flex-shrink: 0; }
 
     .footer{background:var(--brand); color:#cbd5e1; padding:60px 20px; font-size:0.8rem; text-align:center}
-    .footer a{text-decoration:underline; margin:0 10px; color:#fff}
+    .footer a{text-decoration:underline; margin:0 10px; color:#ffffff}
 
     @media(min-width:768px){
         .h1{font-size:2.8rem}
@@ -120,7 +122,7 @@
         .hero-inner{display:flex; align-items:center; text-align:left; gap:60px; max-width:1100px; margin:0 auto}
         .hero-text{flex:1}
         .hero-img{max-width:420px}
-        .review-card{display:inline-block; vertical-align:top; width: calc(33.33% - 16px); margin-right:20px; background: #fff; padding: 25px; border-radius: 10px; border: 1px solid #eee; text-align: left;}
+        .review-card{display:inline-block; vertical-align:top; width: calc(33.33% - 16px); margin-right:20px; background: #ffffff; padding: 25px; border-radius: 10px; border: 1px solid #eee; text-align: left;}
         .review-card:last-child{margin-right:0}
     }
     </style>
@@ -128,7 +130,7 @@
 <body>
 
 <div class="offer-bar">
-    GARANTIA DE REEMBOLSO DE 60 DIAS | ENVIO GRÁTIS EM PACOTES SELECIONADOS
+    60-DAY MONEY-BACK GUARANTEE | Save up to 38% today
 </div>
 
 <!-- 1. HOOK & 2. LOOP -->
@@ -136,24 +138,26 @@
     <div class="container">
         <div class="hero-inner">
             <div class="hero-text">
-                <p class="eyebrow">Suporte Avançado</p>
-                <h1 class="h1">Sente queimação, formigamento ou dormência que simplesmente não passa?</h1>
+                <p class="eyebrow">Advanced Support</p>
+                <h1 class="h1">Do you feel burning, tingling or numbness in your feet or hands that won’t go away?</h1>
                 
-                <img src="images/neurosalt1.png" alt="NeuroSalt" class="hero-img">
+                <!-- Main Product Image -->
+                <img src="images/neurosalt1.png" alt="NeuroSalt Product" class="hero-img">
 
                 <div class="body-text">
-                    <p>Mesmo quando descansa… a sensação continua a voltar?</p>
-                    <p><strong>Isto não é apenas "normal" — e ignorar o problema pode agravá-lo com o tempo.</strong></p>
-                    <p>Geralmente começa de forma subtil. Um leve formigamento. Uma sensação estranha nos pés… ou nas mãos. No início, ignora-se. Mas depois volta a aparecer. Especialmente à noite… quando tenta relaxar. E, eventualmente, percebe: isto já não é por acaso.</p>
+                    <p>Especially at night… when you’re trying to relax?</p>
+                    <p><strong>This isn’t just random — and it may get worse over time.</strong></p>
+                    <p>It usually starts small. A slight tingling. A strange sensation in your feet. You ignore it. But then it comes back. And again. And eventually, you realize: This isn’t going away on its own.</p>
                 </div>
 
                 <div class="price-card">
-                    <p class="price-label">OFERTA ESPECIAL DE HOJE</p>
+                    <p class="price-label">LIMITED DISCOUNT AVAILABLE</p>
                     <div class="price-row">
-                        <span class="price-current">$49–$79 <small>/ frasco</small></span>
+                        <span class="price-current">Starting at $49 <small>/ bottle</small></span>
                     </div>
+                    <p style="font-weight: 700; color: var(--accent); margin-bottom: 20px;">Save up to 38% today</p>
                     <a href="https://43f17ngcmlemes3bul-d59uf7b.hop.clickbank.net" class="cta-primary">
-                        VERIFICAR DISPONIBILIDADE DE HOJE
+                        CHECK TODAY'S AVAILABILITY
                     </a>
                 </div>
             </div>
@@ -166,24 +170,24 @@
     <div class="container">
         <div class="trust-grid">
             <div class="trust-card">
-                <img src="images/imgi_6_badge-usa.png" alt="Produzido nos EUA">
-                <div class="trust-card-title">Instalações Registadas</div>
-                <p class="trust-card-desc">Fabricado sob rigorosos padrões americanos.</p>
+                <img src="images/imgi_6_badge-usa.png" alt="Made in USA">
+                <div class="trust-card-title">Registered Facilities</div>
+                <p class="trust-card-desc">Manufactured in the USA under strict standards.</p>
             </div>
             <div class="trust-card">
-                <img src="images/imgi_9_badge-natural.png" alt="Fórmula Natural">
-                <div class="trust-card-title">Base Natural</div>
-                <p class="trust-card-desc">Compostos puros extraídos da natureza.</p>
+                <img src="images/imgi_9_badge-natural.png" alt="Natural Formula">
+                <div class="trust-card-title">Natural-Based</div>
+                <p class="trust-card-desc">Fórmula baseada em compostos naturais puros.</p>
             </div>
             <div class="trust-card">
-                <img src="images/imgi_7_badge-fda.png" alt="Seguro">
-                <div class="trust-card-title">Sem Receita</div>
-                <p class="trust-card-desc">Suplemento de venda livre e seguro para uso diário.</p>
+                <img src="images/imgi_7_badge-fda.png" alt="No Rx">
+                <div class="trust-card-title">No Prescription</div>
+                <p class="trust-card-desc">Natural daily supplement, no Rx required.</p>
             </div>
             <div class="trust-card">
-                <img src="images/imgi_8_badge-gmp.png" alt="Qualidade">
-                <div class="trust-card-title">Qualidade Controlada</div>
-                <p class="trust-card-desc">Produção com rigoroso controlo de pureza.</p>
+                <img src="images/imgi_8_badge-gmp.png" alt="Quality">
+                <div class="trust-card-title">Quality Control</div>
+                <p class="trust-card-desc">Manufactured under premium quality standards.</p>
             </div>
         </div>
     </div>
@@ -192,48 +196,48 @@
 <!-- SCIENTIFIC REFERENCES -->
 <section class="section bg-white" style="padding: 30px 0;">
     <div class="container text-center">
-        <p class="eyebrow" style="margin-bottom: 10px;">Suporte Cientificamente Embasado</p>
-        <img src="images/imgi_2_scientific-refs.png" alt="Publicações Científicas" style="max-width:100%; width:640px; opacity:0.85;">
+        <p class="eyebrow" style="margin-bottom: 10px;">Scientifically Based Support</p>
+        <img src="images/imgi_2_scientific-refs.png" alt="Science News and Journals" style="max-width:100%; width:640px; opacity:0.85;">
     </div>
 </section>
 
 <!-- IMPACT ON LIFE SECTION -->
 <section class="section bg-white">
     <div class="container text-center">
-        <h2 class="section-badge">Como isto afeta o seu dia a dia</h2>
+        <h2 class="section-badge">How this starts affecting your daily life</h2>
         <div class="body-text">
-            <p>Isto não é apenas uma sensação. Começa a interferir na sua qualidade de vida:</p>
+            <p>It’s not just a sensation. It begins to interfere with simple things:</p>
         </div>
         <ul class="bullet-list">
-            <li><span class="bullet-icon">🔴</span> <span>Estar de pé por longos períodos torna-se desconfortável</span></li>
-            <li><span class="bullet-icon">🔴</span> <span>Caminhar não parece tão natural como antes</span></li>
-            <li><span class="bullet-icon">🔴</span> <span>As noites tornam-se longas e difíceis para relaxar</span></li>
-            <li><span class="bullet-icon">🔴</span> <span>Sente-se mais consciente de cada passo que dá</span></li>
+            <li><span class="bullet-icon">🔴</span> <span>Standing for long periods feels uncomfortable</span></li>
+            <li><span class="bullet-icon">🔴</span> <span>Walking may feel less stable than before</span></li>
+            <li><span class="bullet-icon">🔴</span> <span>That tingling becomes more noticeable at night</span></li>
+            <li><span class="bullet-icon">🔴</span> <span>You become aware of every step you take</span></li>
         </ul>
         <div class="body-text mt-20">
-            <p>E, lentamente… começa a ajustar a sua rotina em torno disto.</p>
+            <p>And over time… you start adjusting your routine around it.</p>
         </div>
         <div class="warning-box text-center">
-            Atenção: muitas pessoas relatam que, quando este padrão é ignorado, ele tende a tornar-se mais persistente.
+            Attention: many people report that when this pattern is ignored, it tends to become more persistent.
         </div>
     </div>
 </section>
 
-<!-- MECHANISM SECTION (BLUE BACKGROUND) -->
+<!-- MECHANISM SECTION (BLUE BACKGROUND - ALL TEXT WHITE) -->
 <section class="section mechanism-section">
     <div class="container text-center">
-        <h2 class="section-badge" style="background: var(--accent);">Por que continua a voltar?</h2>
+        <h2 class="section-badge" style="background: var(--accent);">Why does this keep happening?</h2>
         <div class="body-text">
-            <p>A maioria das soluções foca-se no alívio de curto prazo. Mas o seu corpo não funciona dessa forma. Descobertas recentes sugerem um padrão chamado:</p>
-            <strong style="color: var(--accent); font-size: 1.5rem; display: block; margin: 15px 0; font-family: 'Merriweather',serif;">Ambiente Neuroinflamatório Persistente</strong>
+            <p>Most solutions only focus on temporary relief. But that doesn’t address what’s happening inside your body. Some experts now associate this pattern with:</p>
+            <strong style="font-size: 1.5rem; display: block; margin: 15px 0; font-family: 'Merriweather',serif;">Persistent Nerve Irritation</strong>
         </div>
         
-        <img src="images/neurosalt2.png" alt="Mecanismo Interno" class="neurosalt2-img">
+        <img src="images/neurosalt2.png" alt="Nerve Mechanism" class="neurosalt2-img">
         
         <div class="mechanism-box">
-            <p>1. <strong>Os nervos tornam-se mais sensíveis</strong> ao toque e movimento.</p>
-            <p>2. <strong>Os sinais de desconforto</strong> podem aumentar e tornar-se frequentes.</p>
-            <p>3. <strong>O corpo luta</strong> para manter o seu equilíbrio interno natural.</p>
+            <p>1. <strong>Nerves can become more sensitive</strong> over time to every stimulus.</p>
+            <p>2. <strong>Signals of discomfort</strong> may become more frequent and intense.</p>
+            <p>3. <strong>The body may struggle</strong> to return to its natural state of balance.</p>
         </div>
     </div>
 </section>
@@ -241,63 +245,64 @@
 <!-- INTRODUCING NEUROSALT (PRODUCT HIGHLIGHT) -->
 <section class="section product-highlight">
     <div class="container text-center">
-        <p class="eyebrow">Apresentamos o NeuroSalt</p>
-        <h2 class="h1">Suporte prático para o conforto dos seus nervos</h2>
+        <p class="eyebrow">Introducing NeuroSalt</p>
+        <h2 class="h1">Support for your body where it matters most</h2>
         
-        <img src="images/imgi_48_hero.png" alt="Produto NeuroSalt" class="highlight-img">
+        <!-- Highlight Product Image -->
+        <img src="images/imgi_48_hero.png" alt="NeuroSalt Close-up" class="highlight-img">
         
         <div class="body-text" style="text-align: left; max-width: 560px; margin: 0 auto; background: rgba(3,53,79,0.05); padding: 35px; border-radius: 12px; border: 1px solid rgba(3,53,79,0.1);">
-            <p style="margin-bottom: 12px;">✔️ Ajuda a apoiar uma resposta inflamatória equilibrada</p>
-            <p style="margin-bottom: 12px;">✔️ Ajuda a proteger contra o stress oxidativo</p>
-            <p style="margin-bottom: 12px;">✔️ Apoia a função nervosa saudável</p>
-            <p style="margin-bottom: 0;">✔️ Apoia a circulação ao nível tecidual</p>
+            <p style="margin-bottom: 12px;">✔️ Helps support a balanced inflammatory response</p>
+            <p style="margin-bottom: 12px;">✔️ Helps protect against oxidative stress</p>
+            <p style="margin-bottom: 12px;">✔️ Supports healthy nerve function</p>
+            <p style="margin-bottom: 0;">✔️ Supports circulation at the tissue level</p>
         </div>
-        <p class="body-text mt-30">Muitos utilizadores relatam um melhor conforto na rotina diária com o uso consistente. <br><strong>Importante: os resultados individuais podem variar.</strong></p>
+        <p class="body-text mt-30">Many users report feeling more comfortable in their daily routine with consistent use. <br><strong>Important: results may vary.</strong></p>
     </div>
 </section>
 
 <!-- INGREDIENTS / LABEL -->
 <section class="section bg-white">
     <div class="container text-center">
-        <h2 class="section-badge">Transparência</h2>
-        <h2 class="h2">Fórmula de Base Natural</h2>
-        <img src="images/imgi_42_NeuroSalt_Print.png" alt="Rótulo NeuroSalt" style="max-width:100%; width:560px; margin:30px auto; border-radius:10px; box-shadow: 0 10px 30px rgba(0,0,0,0.08)">
+        <h2 class="section-badge">Formula Transparency</h2>
+        <h2 class="h2">Natural-Based Formula</h2>
+        <img src="images/imgi_42_NeuroSalt_Print.png" alt="NeuroSalt Label Details" style="max-width:100%; width:560px; margin:30px auto; border-radius:10px; box-shadow: 0 10px 30px rgba(0,0,0,0.08)">
         <div class="body-text" style="max-width: 600px; margin: 0 auto;">
-            <p>Produzido sob rigorosos padrões, o NeuroSalt combina ingredientes selecionados para nutrir as fibras nervosas de dentro para fora.</p>
+            <p>NeuroSalt was developed with carefully selected ingredients to nourish and support your nerve health from the inside out.</p>
         </div>
     </div>
 </section>
 
 <!-- SOCIAL PROOF -->
-<section class="section bg-gray" style="background-color: #f9fafb;">
+<section class="section bg-light-gray" style="background-color: #f9fafb;">
     <div class="container text-center">
-        <h2 class="h1">O que as pessoas estão a experienciar</h2>
-        <img src="images/reviews.png" alt="Relatos de Clientes" style="max-width:100%; border-radius:10px; margin-bottom:30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05)">
+        <h2 class="h1">What people are experiencing</h2>
+        <img src="images/reviews.png" alt="Verified User Reviews" style="max-width:100%; border-radius:10px; margin-bottom:30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05)">
         
         <div class="reviews-container">
             <div class="review-card">
-                <p class="review-text">“Tinha aquele formigamento constante nos pés à noite. Depois de usar isto consistentemente, comecei a notar mais conforto ao caminhar.”</p>
+                <p class="review-text">“I had constant tingling in my feet, especially at night. After using it for a while, I noticed more comfort when walking and less awareness of it during the day.”</p>
                 <strong style="color:var(--brand); display:block; margin-top:15px">R. Thompson, 62</strong>
             </div>
             <div class="review-card">
-                <p class="review-text">“As noites eram o pior para mim. Não conseguia relaxar totalmente. Após algumas semanas, notei que dormia de forma muito mais confortável.”</p>
+                <p class="review-text">“Nights used to be the hardest. I couldn’t fully relax. After a few weeks, I started feeling more comfortable and sleeping better.”</p>
                 <strong style="color:var(--brand); display:block; margin-top:15px">M. Carter, 58</strong>
             </div>
             <div class="review-card">
-                <p class="review-text">“Não esperava nada dramático. Mas com o tempo, senti-me mais estável e confiante na minha rotina diária. Valeu muito a pena.”</p>
+                <p class="review-text">“I didn’t expect big changes overnight, but over time I felt more stable and confident in my routine. It's been a great addition to my day.”</p>
                 <strong style="color:var(--brand); display:block; margin-top:15px">D. Miller, 67</strong>
             </div>
         </div>
     </div>
 </section>
 
-<!-- GUARANTEE SECTION (HIGHLIGHTED) -->
+<!-- GUARANTEE SECTION -->
 <section class="section guarantee-section">
     <div class="container">
         <div class="guarantee-wrap">
-            <img src="images/imgi_13_guarantee-badge.png" alt="Garantia de 60 Dias" class="guarantee-img">
-            <h2 class="h1">A sua satisfação está protegida</h2>
-            <p class="body-text" style="font-size: 1.15rem;">Experimente com total confiança. Está coberto por uma <strong>garantia de reembolso de 60 dias</strong>. Se não ficar satisfeito, pode solicitar o reembolso total dentro do prazo. Sem perguntas.</p>
+            <img src="images/imgi_13_guarantee-badge.png" alt="60-Day Satisfaction Guarantee" class="guarantee-img">
+            <h2 class="h1">Your satisfaction is protected</h2>
+            <p class="body-text" style="font-size: 1.15rem;">Try it with confidence. You’re covered by a <strong>60-day money-back guarantee</strong>. If you’re not satisfied for any reason, you can request a refund within the timeframe.</p>
         </div>
     </div>
 </section>
@@ -305,68 +310,68 @@
 <!-- FINAL OFFER SECTION -->
 <section class="section offer-section">
     <div class="container text-center">
-        <h2 class="h1">Garanta o NeuroSalt ao preço com desconto de hoje</h2>
-        <p class="body-text">Devido ao aumento da procura, a disponibilidade de stock pode mudar ao longo do dia. Alguns lotes esgotam rapidamente.</p>
+        <h2 class="h1">Get NeuroSalt at today’s discounted price</h2>
+        <p class="body-text">Due to demand, availability may change throughout the day. Some batches may sell out quickly.</p>
         
-        <img src="images/3-frascos.png" alt="Opções de Compra" class="offer-product-final">
+        <img src="images/3-frascos.png" alt="NeuroSalt Package Options" class="offer-product-final">
 
         <div style="background: #fee2e2; color:#b91c1c; padding: 18px 25px; border-radius: 8px; font-weight:800; margin-bottom:35px; font-size: 1rem; display: inline-block; border: 1px solid #fecaca;">
-            ⚠️ URGÊNCIA: Desconto especial disponível apenas enquanto durarem os lotes de hoje.
+            ⚠️ URGÊNCIA: Limited discounted supply available for today.
         </div>
         
         <br>
         <a href="https://43f17ngcmlemes3bul-d59uf7b.hop.clickbank.net" class="cta-primary">
-            REIVINDICAR O MEU DESCONTO AGORA
+            CLAIM YOUR DISCOUNT NOW
         </a>
-        <p class="mt-20"><a href="https://43f17ngcmlemes3bul-d59uf7b.hop.clickbank.net" style="text-decoration: underline; color: var(--brand); font-weight: 700; font-size: 0.95rem;">Visitar Página Oficial com Segurança →</a></p>
+        <p class="mt-20"><a href="https://43f17ngcmlemes3bul-d59uf7b.hop.clickbank.net" style="text-decoration: underline; color: var(--brand); font-weight: 700; font-size: 0.95rem;">Visit Official Page Securely →</a></p>
     </div>
 </section>
 
-<!-- FAQ SECTION -->
-<section class="section faq-section">
+<!-- FAQ SECTION STRATEGIC -->
+<section class="faq-section">
     <div class="container">
-        <h2 class="h1 text-center">Perguntas Frequentes</h2>
+        <h2 class="h1 text-center">Frequently Asked Questions</h2>
         
         <div class="faq-container">
             <div class="faq-item">
-                <button class="faq-question">1. Quanto tempo demora até notar resultados? <span>+</span></button>
-                <div class="faq-answer">Muitos utilizadores relatam melhorias nas primeiras semanas. No entanto, para resultados consistentes, recomendamos o uso de 60 a 90 dias para permitir que o organismo se equilibre plenamente.</div>
+                <button class="faq-question">1. How long does it take to notice results? <span class="faq-icon">+</span></button>
+                <div class="faq-answer">Some users report changes within a few weeks of consistent use. However, for best results, we recommend a 60 to 90-day period to allow the natural ingredients to build up in your system. Results may vary.</div>
             </div>
             <div class="faq-item">
-                <button class="faq-question">2. Preciso de uma receita médica? <span>+</span></button>
-                <div class="faq-answer">Não. O NeuroSalt é um suplemento de base natural e não requer receita médica. Foi concebido para ser integrado facilmente na sua rotina diária.</div>
+                <button class="faq-question">2. Do I need a prescription? <span class="faq-icon">+</span></button>
+                <div class="faq-answer">No. NeuroSalt is a supplement and does not require a prescription. It uses natural-based ingredients designed to support daily wellness.</div>
             </div>
             <div class="faq-item">
-                <button class="faq-question">3. Como devo tomar o suplemento? <span>+</span></button>
-                <div class="faq-answer">É uma rotina diária simples. Siga as instruções no rótulo do produto para a toma diária recomendada com um copo de água.</div>
+                <button class="faq-question">3. How do I take it? <span class="faq-icon">+</span></button>
+                <div class="faq-answer">It’s a simple daily routine. Follow the instructions on the product label for the recommended daily intake with a glass of water.</div>
             </div>
             <div class="faq-item">
-                <button class="faq-question">4. É seguro para usar a longo prazo? <span>+</span></button>
-                <div class="faq-answer">A fórmula utiliza ingredientes naturais e é produzida sob padrões de qualidade rigorosos. Se tiver condições médicas específicas, consulte um profissional de saúde.</div>
+                <button class="faq-question">4. Is it safe to use long term? <span class="faq-icon">+</span></button>
+                <div class="faq-answer">NeuroSalt is produced under quality standards and uses natural-based ingredients. As with any supplement, if you have specific concerns or medical conditions, consult a healthcare professional.</div>
             </div>
             <div class="faq-item">
-                <button class="faq-question">5. E se não funcionar no meu caso? <span>+</span></button>
-                <div class="faq-answer">Está totalmente protegido. Oferecemos uma garantia de 60 dias. Se não estiver satisfeito por qualquer motivo, contacte o suporte para o reembolso total.</div>
+                <button class="faq-question">5. What if it doesn’t work for me? <span class="faq-icon">+</span></button>
+                <div class="faq-answer">You’re protected by a 60-day guarantee. If you’re not satisfied with your results for any reason, you can request a full refund within the timeframe.</div>
             </div>
         </div>
 
         <div class="mt-50 text-center" style="margin-top: 60px;">
-            <h2 class="h2">Próximo passo recomendado</h2>
+            <h2 class="h2">Recommended next step</h2>
             <div class="body-text" style="max-width: 640px; margin: 0 auto;">
-                <p>Se tem lidado com queimação, formigamento ou dormência… e quer uma forma prática de apoiar o conforto dos seus nervos… isto vale a pena tentar.</p>
+                <p>If you’ve been dealing with burning, tingling, or numbness… and want to support your nerve comfort in a practical way… this may be worth trying.</p>
             </div>
-            <a href="https://43f17ngcmlemes3bul-d59uf7b.hop.clickbank.net" class="cta-primary" style="margin-top: 25px;">VERIFICAR DISPONIBILIDADE AGORA</a>
+            <a href="https://43f17ngcmlemes3bul-d59uf7b.hop.clickbank.net" class="cta-primary" style="margin-top: 25px;">CHECK AVAILABILITY NOW</a>
         </div>
     </div>
 </section>
 
 <footer class="footer">
     <div class="container">
-        <p>&copy; 2026 NeuroSalt. Todos os Direitos Reservados.</p>
+        <p>&copy; 2026 NeuroSalt. All Rights Reserved.</p>
         <div style="margin: 20px 0;">
-            <a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a> | <a href="#">Contacte-nos</a>
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#">Contact Us</a>
         </div>
-        <p style="opacity:0.6; font-size: 0.75rem;">Aviso: Estas declarações não foram avaliadas por autoridades de saúde. Este produto não se destina a diagnosticar, tratar ou curar doenças. Os resultados individuais podem variar.</p>
+        <p style="opacity:0.6; font-size: 0.75rem;">Disclaimer: These statements have not been evaluated by health authorities. This product is not intended to diagnose, treat, or cure diseases. Individual results may vary.</p>
     </div>
 </footer>
 
@@ -378,11 +383,11 @@ document.querySelectorAll('.faq-question').forEach(btn => {
         const isActive = item.classList.contains('active');
         
         document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
-        document.querySelectorAll('.faq-question span').forEach(el => el.textContent = '+');
+        document.querySelectorAll('.faq-question .faq-icon').forEach(el => el.textContent = '+');
         
         if(!isActive) {
             item.classList.add('active');
-            btn.querySelector('span').textContent = '-';
+            btn.querySelector('.faq-icon').textContent = '-';
         }
     });
 });
