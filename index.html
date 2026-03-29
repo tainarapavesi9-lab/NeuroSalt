@@ -69,7 +69,6 @@
             --text-body:    #334155;
             --bg-white:     #ffffff;
             --radius-card:  14px;
-            --container-w:  1100px;
         }
 
         *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -97,30 +96,29 @@
 
         .offer-bar{background: var(--brand); color:#ffffff; padding:10px 16px; font-size:0.8rem; font-weight:700; text-align:center; text-transform: uppercase;}
 
-        /* Hero Styling (Mobile First) */
+        /* Hero Mobile */
         .hero{padding:30px 0; background: #ffffff;}
         .hero-img{width:100%; max-width:320px; margin:25px auto; filter:drop-shadow(0 15px 25px rgba(3,53,79,0.1))}
 
-        /* CTA Price Card Refined */
+        /* CTA Price Card */
         .price-card{margin:25px auto; padding:25px; background:var(--brand-light); border-radius:12px; border:2px solid var(--accent); max-width:400px; box-shadow: 0 6px 15px rgba(222,107,36,0.1); text-align: center;}
         .price-label{font-weight:800; color:var(--brand); margin-bottom:8px; font-size:0.85rem; text-transform: uppercase; letter-spacing: 0.5px;}
         .price-current{font-size:2.4rem; font-weight:900; color:var(--brand); font-family:'Merriweather',serif; display: block; margin-bottom: 5px;}
         .price-subtext{font-weight: 700; color: var(--accent); font-size: 1rem; display: block; margin-bottom: 15px;}
         .cta-primary{display:inline-flex; align-items:center; justify-content:center; background:linear-gradient(135deg, #f3945a, var(--accent)); color:#ffffff; font-weight:800; font-size:1.1rem; padding:16px 20px; border-radius:8px; width:100%; box-shadow:0 4px 15px rgba(222,107,36,0.3); text-align: center; text-transform: uppercase;}
         
-        /* Quality Seals (Mobile First 2x2) */
+        /* Quality Seals Mobile */
         .trust-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:15px; margin-top:20px}
         .trust-card{background:#ffffff; padding:20px 10px; border-radius:10px; text-align:center; border:1px solid #e2e8f0; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;}
         .trust-card img{height:45px; width:auto; margin-bottom:12px; object-fit:contain}
         .trust-card-title{font-weight:700; font-size:0.75rem; color:var(--brand); margin-bottom:4px}
         .trust-card-desc{font-size:.65rem; color:var(--text-light); line-height:1.4}
 
-        /* Mechanism Section (Mobile First) */
+        /* Mechanism Section */
         .mechanism-section { background-color: var(--brand); color: #ffffff; padding: 60px 0; }
         .mechanism-box{background:rgba(255,255,255,0.08); padding:30px; border-radius:10px; border-left:6px solid var(--accent); text-align:left; margin:25px auto; max-width:100%; color: #ffffff}
         .mechanism-box p { margin-bottom: 12px; font-size: 1.05rem; }
         
-        /* Images Positioning */
         .neurosalt2-img { width:100%; max-width:400px; border-radius:15px; margin:30px auto; border: 4px solid rgba(255,255,255,0.15); box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
         .product-highlight { background-color: var(--brand-light); border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
         .highlight-img { max-width:300px; margin:30px auto; filter: drop-shadow(0 0 35px rgba(222,107,36,0.25)); }
@@ -130,13 +128,23 @@
         .bullet-icon{color:var(--accent); font-weight: bold; font-size: 1.2rem;}
         .warning-box{background:#fff5f5; border:1px dashed #feb2b2; padding:20px; border-radius:8px; margin:25px auto; color:#c53030; font-weight:700; font-size:0.95rem; max-width:650px}
 
-        /* Testimonials (Mobile Stacked) */
+        /* Testimonials Mobile */
         .reviews-container { display: flex; flex-direction: column; gap: 20px; margin-top: 30px; }
         .review-card { background: #ffffff; border: 1px solid #e2e8f0; padding: 25px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.03); text-align: left; }
         .review-text { font-style: italic; color: var(--text-body); margin-bottom: 15px; line-height: 1.7; font-size: 0.95rem; }
         .review-author { color: var(--brand); font-weight: 700; font-size: 0.95rem; border-top: 1px solid #f1f5f9; padding-top: 12px; }
 
-        /* FAQ Style Aligned to Ref image_d2384c.png */
+        /* Guarantee Faixa */
+        .guarantee-faixa { background-color: var(--accent); color: #ffffff; padding: 40px 0; }
+        .guarantee-wrap { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px; }
+        .guarantee-img { width: 120px; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.1)); }
+        .guarantee-text h2 { color: #ffffff; margin-bottom: 10px; font-family: 'Merriweather', serif; font-size: 1.5rem; }
+        .guarantee-text p { color: #ffffff; font-size: 1rem; opacity: 0.95; }
+        
+        .offer-section { background-color: var(--brand-light); padding: 80px 0; border-top: 1px solid #eee; }
+        .offer-product-final{width:100%; max-width:380px; margin:0 auto 30px; filter: drop-shadow(0 15px 35px rgba(222,107,36,0.15))}
+
+        /* FAQ Style */
         .faq-section { background-color: #ffffff; padding: 60px 0; }
         .faq-container { background: #fafafa; border-radius: 12px; padding: 10px 20px; border: 1px solid #efefef; margin-top: 30px; max-width: 100%; }
         .faq-item{border-bottom: 1px solid #e2e8f0; padding:18px 0; text-align:left}
@@ -155,40 +163,45 @@
         .footer a{text-decoration:underline; margin:0 10px; color:#ffffff; cursor: pointer;}
         .footer-distributor { opacity: 0.7; font-size: 0.75rem; margin-top: 25px; font-style: italic; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 25px; }
 
-        /* DESKTOP LAYOUT OVERRIDES */
+        /* DESKTOP LAYOUT OVERRIDES (MEDIA QUERIES) */
         @media(min-width:1024px){
             .container { max-width: 1100px; }
             
-            /* HERO Desktop Balanced Alignment */
-            .hero-inner { display: flex; align-items: flex-start; justify-content: space-between; gap: 60px; text-align: left; }
+            /* HERO Desktop Alinhado */
+            .hero-inner { display: flex; align-items: center; justify-content: space-between; gap: 50px; text-align: left; }
             .hero-text { flex: 1.1; }
             .hero-visual { flex: 0.9; }
-            .hero-img { max-width: 440px; margin-top: 20px; margin-right: 0; }
-            .h1 { font-size: 2.7rem; margin-bottom: 20px; }
+            .hero-img { max-width: 440px; margin: 0; }
+            .h1 { font-size: 2.6rem; margin-bottom: 20px; }
             .h2 { font-size: 1.4rem; margin-bottom: 20px; }
-            .price-card { margin-left: 0; max-width: 380px; padding: 30px; border-width: 2px; } 
+            .price-card { margin-left: 0; max-width: 380px; padding: 25px; } 
 
-            /* Trust Grid 4 columns proportional */
-            .trust-grid { grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1000px; margin-left: auto; margin-right: auto; }
+            /* Seals Proportional */
+            .trust-grid { grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1000px; margin: 20px auto 0; }
             .trust-card { padding: 30px 15px; }
             .trust-card img { height: 60px; }
-            .trust-card-title { font-size: 0.9rem; }
 
-            /* Mechanism Section Desktop Proportion */
+            /* Mechanism Desktop */
             .mechanism-box { max-width: 650px; padding: 40px; }
             .mechanism-section strong { font-size: 2.4rem !important; }
 
-            /* FAQ Container Desktop Limiter */
-            .faq-container { max-width: 750px; padding: 20px 40px; }
-
-            /* Testimonials Proportional Grid */
+            /* Reviews Desktop Congruente */
+            .reviews-banner { max-width: 600px; margin: 0 auto 40px; }
             .reviews-container { flex-direction: row; align-items: stretch; justify-content: center; gap: 25px; }
             .review-card { width: 32%; padding: 35px; }
-            
-            /* General Split views for other sections */
-            .split-desktop { display: flex; align-items: center; gap: 60px; text-align: left; }
-            .split-text { flex: 1; }
-            .split-visual { flex: 1; }
+
+            /* Guarantee Desktop Faixa */
+            .guarantee-wrap { flex-direction: row; justify-content: center; text-align: left; gap: 50px; max-width: 900px; margin: 0 auto; }
+            .guarantee-img { width: 150px; }
+            .guarantee-text h2 { font-size: 2rem; }
+
+            /* Offer Final Desktop Proporcional */
+            .offer-split { display: flex; align-items: center; gap: 60px; text-align: left; }
+            .offer-visual { flex: 1; }
+            .offer-details { flex: 1; }
+            .offer-product-final { max-width: 450px; }
+
+            .faq-container { max-width: 750px; padding: 20px 40px; }
         }
     </style>
 </head>
@@ -198,7 +211,7 @@
     60-DAY MONEY-BACK GUARANTEE | Save $780 today
 </div>
 
-<!-- SECTION 1: HERO (Desktop Refined) -->
+<!-- SECTION 1: HERO (Desktop Proportional) -->
 <section class="hero">
     <div class="container">
         <div class="hero-inner">
@@ -213,11 +226,10 @@
                     <p style="margin-top: 12px;">Then It Comes Back. More Often. At Night. When You’re Trying To Relax. And Eventually, You Realize: <strong>This Isn’t Going Away.</strong></p>
                 </div>
 
-                <!-- Revised Offer Card ($49 Focus) -->
                 <div class="price-card">
                     <p class="price-label">Discount Applied Today</p>
                     <span class="price-current">$49 Per Bottle</span>
-                    <span class="price-subtext">Limited Availability</span>
+                    <span class="price-subtext">Only Today</span>
                     <a href="https://43f17ngcmlemes3bul-d59uf7b.hop.clickbank.net" class="cta-primary">
                         CHECK TODAY'S AVAILABILITY
                     </a>
@@ -231,7 +243,7 @@
     </div>
 </section>
 
-<!-- QUALITY SEALS (Grid Fixed Desktop) -->
+<!-- QUALITY SEALS -->
 <section class="section bg-white" style="padding: 50px 0; border-bottom: 1px solid #f1f5f9;">
     <div class="container text-center">
         <h2 class="h2" style="font-size: 1.6rem; margin-bottom: 40px;">Manufactured To The Highest Standards</h2>
@@ -260,13 +272,13 @@
     </div>
 </section>
 
-<!-- INSIGHT / MECHANISM (Centered and Proportional Desktop) -->
+<!-- INSIGHT / MECHANISM -->
 <section class="section mechanism-section">
     <div class="container text-center">
         <h2 class="section-badge" style="background: var(--accent);">Here’s The Part Most People Don’t Realize</h2>
         <div class="body-text">
             <p style="color: #fff;">It’s Not Just “Discomfort”. There May Be An Internal Pattern Behind It:</p>
-            <strong style="font-size: 2.2rem; display: block; margin: 20px 0; line-height: 1.2;">Persistent Nerve Irritation</strong>
+            <strong style="font-size: 2.2rem; display: block; margin: 15px 0; line-height: 1.2;">Persistent Nerve Irritation</strong>
         </div>
         
         <div class="mechanism-box">
@@ -301,11 +313,11 @@
 <!-- DIFFERENT APPROACH -->
 <section class="section product-highlight">
     <div class="container">
-        <div class="split-desktop">
-            <div class="split-visual">
+        <div class="hero-inner"> <!-- Reusing flex alignment -->
+            <div class="hero-visual">
                 <img src="images/neurosalt2.png" alt="NeuroSalt Close-up" class="neurosalt2-img">
             </div>
-            <div class="split-text">
+            <div class="hero-text">
                 <h2 class="h1">A Different Approach To Daily Support</h2>
                 <div class="body-text">
                     <p>Instead Of Covering The Problem… NeuroSalt Was Designed To Support The Body Internally:</p>
@@ -329,8 +341,8 @@
         
         <img src="images/imgi_48_hero.png" alt="NeuroSalt Bottle Hero" class="highlight-img">
         
-        <div class="split-desktop" style="margin-top: 40px;">
-            <div class="split-text">
+        <div class="hero-inner" style="margin-top: 40px;">
+            <div class="hero-text">
                 <h2 class="h2">Support Where It Matters Most</h2>
                 <div class="body-text" style="text-align: left;">
                     <p>With Consistent Use, Many Users Report:</p>
@@ -340,10 +352,9 @@
                         <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;"><span style="color: var(--accent); font-weight: 800;">🛡️</span> <span>Better Relaxation At Night</span></li>
                         <li style="margin-bottom: 0; display: flex; align-items: center; gap: 10px;"><span style="color: var(--accent); font-weight: 800;">🛡️</span> <span>Easier Daily Movement</span></li>
                     </ul>
-                    <p class="small-text mt-30" style="font-size: 0.8rem; color: #94a3b8;">*Important: Results May Vary Depending On Individual Use.</p>
                 </div>
             </div>
-            <div class="split-visual">
+            <div class="hero-visual">
                 <div style="background: var(--brand-light); border-radius: 16px; padding: 40px; text-align: center; border: 1px dashed var(--accent);">
                     <p style="font-weight: 700; color: var(--brand); font-size: 1.1rem;">High Consistency Formula</p>
                     <p style="font-size: 0.9rem;">Produced for those seeking daily dietary support.</p>
@@ -353,29 +364,11 @@
     </div>
 </section>
 
-<!-- LABEL SECTION -->
-<section class="section bg-white" style="border-top: 1px solid #f1f5f9;">
-    <div class="container text-center">
-        <h2 class="section-badge">Natural-Based Daily Support</h2>
-        <div class="split-desktop">
-            <div class="split-visual">
-                <img src="images/imgi_42_NeuroSalt_Print.png" alt="Supplement Label" style="max-width:100%; border-radius:12px; box-shadow: 0 15px 40px rgba(0,0,0,0.06)">
-            </div>
-            <div class="split-text">
-                <h2 class="h2">Natural Compounds & Quality</h2>
-                <div class="body-text" style="text-align: left;">
-                    <p>NeuroSalt Supports Nerve Function, Circulatory Balance, and Oxidative Support. Produced Under Strict Quality Standards For Reliable Daily Use.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- TESTIMONIALS (Grid Fixed Desktop) -->
+<!-- TESTIMONIALS (Fixed Desktop Proportions) -->
 <section class="section bg-gray" style="background-color: #f8fafc;">
     <div class="container text-center">
         <h2 class="h1">What People Are Saying</h2>
-        <img src="images/reviews.png" alt="Verified Testimonials" style="max-width: 800px; border-radius:16px; margin-bottom:50px; box-shadow: 0 4px 15px rgba(0,0,0,0.04)">
+        <img src="images/reviews.png" alt="Verified Testimonials" class="reviews-banner" style="border-radius:16px; box-shadow: 0 4px 15px rgba(0,0,0,0.04)">
         
         <div class="reviews-container">
             <div class="review-card">
@@ -394,42 +387,48 @@
     </div>
 </section>
 
-<!-- GUARANTEE -->
-<section class="section guarantee-section">
+<!-- GUARANTEE FAIXA (Orange Strip Style) -->
+<section class="guarantee-faixa">
     <div class="container">
         <div class="guarantee-wrap">
             <img src="images/imgi_13_guarantee-badge.png" alt="60-Day Guarantee" class="guarantee-img">
-            <h2 class="h1">Your Satisfaction Is Protected</h2>
-            <p class="body-text" style="font-size: 1.15rem; max-width: 700px; margin: 0 auto;">You’re Covered By A <strong>60-Day Money-Back Guarantee</strong>. Try It. If It’s Not For You — Request A Refund Within The Period.</p>
+            <div class="guarantee-text">
+                <h2>Your Satisfaction Is Protected</h2>
+                <p>You’re Covered By A <strong>60-Day Money-Back Guarantee</strong>. Try It. If It’s Not For You — Request A Refund Within The Period. No Questions Asked.</p>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- FINAL OFFER -->
+<!-- FINAL OFFER (Desktop Proportional) -->
 <section class="section offer-section">
     <div class="container text-center">
         <h2 class="h1">Get NeuroSalt While It’s Still Available</h2>
         
-        <img src="images/3-frascos.png" alt="NeuroSalt Bundles" class="offer-product-final">
-        
-        <div class="price-card" style="margin: 0 auto 30px; background: #fff; border: 2px solid var(--brand);">
-            <div class="body-text" style="margin-bottom: 20px;">
-                <p style="font-size: 1.15rem;">• Starting at <strong>$49 per bottle</strong></p>
-                <p style="font-size: 1.15rem;">• <strong>Save up to 73% today</strong></p>
-                <p style="font-size: 1.15rem;">• Limited availability depending on stock</p>
+        <div class="offer-split">
+            <div class="offer-visual">
+                <img src="images/3-frascos.png" alt="NeuroSalt Bundles" class="offer-product-final">
             </div>
-            <a href="https://43f17ngcmlemes3bul-d59uf7b.hop.clickbank.net" class="cta-primary" style="font-size: 1.3rem; padding: 22px 55px;">
-                CHECK AVAILABILITY NOW
-            </a>
+            <div class="offer-details">
+                <div class="price-card" style="margin: 0; background: #fff; border: 2px solid var(--brand); max-width: 100%;">
+                    <div class="body-text" style="margin-bottom: 20px;">
+                        <p style="font-size: 1.15rem; margin-bottom: 10px;">• Starting at <strong>$49 per bottle</strong></p>
+                        <p style="font-size: 1.15rem; margin-bottom: 10px;">• <strong>Save up to 73% today</strong></p>
+                        <p style="font-size: 1.15rem;">• Limited availability depending on stock</p>
+                    </div>
+                    <a href="https://43f17ngcmlemes3bul-d59uf7b.hop.clickbank.net" class="cta-primary" style="font-size: 1.3rem; padding: 22px 55px; width: 100%;">
+                        CHECK AVAILABILITY NOW
+                    </a>
+                </div>
+                <p style="background: #fee2e2; color:#b91c1c; padding: 15px 30px; border-radius: 10px; font-weight:800; margin-top:30px; font-size: 0.95rem; text-align: center;">
+                    ⚠️ ATTENTION: Due To High Demand, Some Batches May Sell Out Soon.
+                </p>
+            </div>
         </div>
-
-        <p style="background: #fee2e2; color:#b91c1c; padding: 15px 30px; border-radius: 10px; font-weight:800; margin-bottom:30px; font-size: 1rem; display: inline-block;">
-            ⚠️ ATTENTION: Due To High Demand, Some Batches May Sell Out Soon.
-        </p>
     </div>
 </section>
 
-<!-- FAQ (Limiter applied for Desktop) -->
+<!-- FAQ -->
 <section class="faq-section">
     <div class="container">
         <h2 class="h1 text-center">Frequently Asked Questions</h2>
@@ -484,7 +483,7 @@
             <a onclick="openModal('contact')">Contact Us</a>
         </div>
         
-        <p style="margin-top: 35px; opacity: 0.8; font-size: 0.85rem;">
+        <p style="margin-top: 35px; opacity: 0.8; font-size: 0.8rem;">
             Instituto Experience 2026. All rights reserved.
         </p>
         
@@ -499,12 +498,11 @@
 </footer>
 
 <script>
-// Modal data logic
 const modalData = {
-    tos: `<h2>Terms of Service</h2><p>Effective Date: August, 2021</p><p>This website is owned and operated by COMPANY. By using the Site, you agree to be bound by these Terms of Service. Accessing the Site constitutes your agreement to these Terms.</p>`,
-    privacy: `<h2>Privacy Policy</h2><p>Your privacy is critically important to us. We collect non-personally-identifying information to better understand how our visitors use our website.</p>`,
-    return: `<h2>Return Policy</h2><p>If you are unsatisfied for any reason, you have 60 days from delivery to request a refund. Return bottles to: 11870 62nd St N Largo, Fl. 33773.</p>`,
-    disclaimer: `<h2>General Disclaimer</h2><p>Effective Date: August, 2025</p><p>This product has not been evaluated by the FDA. This product is not intended to diagnose, treat, cure or prevent any disease. Informational purposes only.</p>`,
+    tos: `<h2>Terms of Service</h2><p>Effective Date: August, 2021</p><p>This website is owned and operated by COMPANY. By using the Site, you agree to be bound by these Terms of Service. Accessing the Site constitutes your agreement to these Terms. All materials on this site are protected by intellectual property laws.</p>`,
+    privacy: `<h2>Privacy Policy</h2><p>Your privacy is critically important to us. We collect non-personally-identifying information to better understand how our visitors use our website. We do not sell your personal data to third parties.</p>`,
+    return: `<h2>Return Policy</h2><p>If you are unsatisfied for any reason, you have 60 days from delivery to request a refund. Return bottles to: 11870 62nd St N Largo, Fl. 33773. Shipping costs are not covered.</p>`,
+    disclaimer: `<h2>General Disclaimer</h2><p>Effective Date: August, 2025</p><p>This product has not been evaluated by the FDA. This product is not intended to diagnose, treat, cure or prevent any disease. All content provided is for informational purposes only.</p>`,
     contact: `<h2>Contact Us</h2><p>Email: contact@customercs.com<br>Phone: +1 (507) 448-8190</p>`
 };
 
