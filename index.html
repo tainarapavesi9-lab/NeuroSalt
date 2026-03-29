@@ -100,12 +100,12 @@
         .hero{padding:30px 0; background: #ffffff;}
         .hero-img{width:100%; max-width:320px; margin:25px auto; filter:drop-shadow(0 15px 25px rgba(3,53,79,0.1))}
 
-        /* CTA Price Card */
+        /* CTA Price Card Refined */
         .price-card{margin:25px auto; padding:25px; background:var(--brand-light); border-radius:12px; border:2px solid var(--accent); max-width:400px; box-shadow: 0 6px 15px rgba(222,107,36,0.1); text-align: center;}
         .price-label{font-weight:800; color:var(--brand); margin-bottom:8px; font-size:0.85rem; text-transform: uppercase; letter-spacing: 0.5px;}
         .price-current{font-size:2.4rem; font-weight:900; color:var(--brand); font-family:'Merriweather',serif; display: block; margin-bottom: 5px;}
         .price-subtext{font-weight: 700; color: var(--accent); font-size: 1rem; display: block; margin-bottom: 15px;}
-        .cta-primary{display:inline-flex; align-items:center; justify-content:center; background:linear-gradient(135deg, #f3945a, var(--accent)); color:#ffffff; font-weight:800; font-size:1.1rem; padding:16px 20px; border-radius:8px; width:100%; box-shadow:0 4px 15px rgba(222,107,36,0.3); text-align: center; text-transform: uppercase;}
+        .cta-primary{display:inline-flex; align-items:center; justify-content:center; background:linear-gradient(135deg, #f3945a, var(--accent)); color:#ffffff; font-weight:800; font-size:1.1rem; padding:18px 25px; border-radius:8px; width:100%; box-shadow:0 4px 15px rgba(222,107,36,0.3); text-align: center; text-transform: uppercase;}
         
         /* Quality Seals Mobile */
         .trust-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:15px; margin-top:20px}
@@ -167,14 +167,14 @@
         @media(min-width:1024px){
             .container { max-width: 1100px; }
             
-            /* HERO Desktop Alinhado */
+            /* HERO Desktop Balanced Alignment */
             .hero-inner { display: flex; align-items: center; justify-content: space-between; gap: 50px; text-align: left; }
             .hero-text { flex: 1.1; }
             .hero-visual { flex: 0.9; }
             .hero-img { max-width: 440px; margin: 0; }
             .h1 { font-size: 2.6rem; margin-bottom: 20px; }
             .h2 { font-size: 1.4rem; margin-bottom: 20px; }
-            .price-card { margin-left: 0; max-width: 380px; padding: 25px; } 
+            .price-card { margin-left: 0; max-width: 380px; padding: 25px; border-width: 2px; } 
 
             /* Seals Proportional */
             .trust-grid { grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1000px; margin: 20px auto 0; }
@@ -211,7 +211,7 @@
     60-DAY MONEY-BACK GUARANTEE | Save $780 today
 </div>
 
-<!-- SECTION 1: HERO (Desktop Proportional) -->
+<!-- SECTION 1: HERO (Desktop Refined) -->
 <section class="hero">
     <div class="container">
         <div class="hero-inner">
@@ -226,6 +226,7 @@
                     <p style="margin-top: 12px;">Then It Comes Back. More Often. At Night. When You’re Trying To Relax. And Eventually, You Realize: <strong>This Isn’t Going Away.</strong></p>
                 </div>
 
+                <!-- Revised Offer Card ($49 Focus) -->
                 <div class="price-card">
                     <p class="price-label">Discount Applied Today</p>
                     <span class="price-current">$49 Per Bottle</span>
@@ -243,7 +244,7 @@
     </div>
 </section>
 
-<!-- QUALITY SEALS -->
+<!-- QUALITY SEALS (Grid Fixed Desktop) -->
 <section class="section bg-white" style="padding: 50px 0; border-bottom: 1px solid #f1f5f9;">
     <div class="container text-center">
         <h2 class="h2" style="font-size: 1.6rem; margin-bottom: 40px;">Manufactured To The Highest Standards</h2>
@@ -272,7 +273,7 @@
     </div>
 </section>
 
-<!-- INSIGHT / MECHANISM -->
+<!-- INSIGHT / MECHANISM (Centered and Proportional Desktop) -->
 <section class="section mechanism-section">
     <div class="container text-center">
         <h2 class="section-badge" style="background: var(--accent);">Here’s The Part Most People Don’t Realize</h2>
@@ -428,7 +429,7 @@
     </div>
 </section>
 
-<!-- FAQ -->
+<!-- FAQ (Limiter applied for Desktop) -->
 <section class="faq-section">
     <div class="container">
         <h2 class="h1 text-center">Frequently Asked Questions</h2>
@@ -498,11 +499,12 @@
 </footer>
 
 <script>
+// Modal data logic
 const modalData = {
     tos: `<h2>Terms of Service</h2><p>Effective Date: August, 2021</p><p>This website is owned and operated by COMPANY. By using the Site, you agree to be bound by these Terms of Service. Accessing the Site constitutes your agreement to these Terms. All materials on this site are protected by intellectual property laws.</p>`,
     privacy: `<h2>Privacy Policy</h2><p>Your privacy is critically important to us. We collect non-personally-identifying information to better understand how our visitors use our website. We do not sell your personal data to third parties.</p>`,
     return: `<h2>Return Policy</h2><p>If you are unsatisfied for any reason, you have 60 days from delivery to request a refund. Return bottles to: 11870 62nd St N Largo, Fl. 33773. Shipping costs are not covered.</p>`,
-    disclaimer: `<h2>General Disclaimer</h2><p>Effective Date: August, 2025</p><p>This product has not been evaluated by the FDA. This product is not intended to diagnose, treat, cure or prevent any disease. All content provided is for informational purposes only.</p>`,
+    disclaimer: `<h2>General Disclaimer</h2><p>Effective Date: August, 2025</p><p>This product has not been evaluated by the FDA. This product is not intended to diagnose, treat, cure or prevent any disease. Informational purposes only.</p>`,
     contact: `<h2>Contact Us</h2><p>Email: contact@customercs.com<br>Phone: +1 (507) 448-8190</p>`
 };
 
