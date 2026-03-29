@@ -87,7 +87,7 @@
     /* Trust Grid */
     .trust-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:28px}
     .trust-card{background:#fff;padding:22px 14px;border-radius:var(--radius-card);box-shadow:var(--shadow-card);text-align:center;border:1px solid #f1f5f9}
-    .trust-card img{height:60px;width:auto;margin:0 auto 14px;object-fit:contain}
+    .trust-card img{height:75px;width:auto;margin:0 auto 14px;object-fit:contain}
     .trust-card-title{font-weight:700;font-size:.9375rem;color:var(--brand);margin-bottom:4px}
     .trust-card-desc{font-size:.8125rem;color:var(--text-light);line-height:1.5}
 
@@ -95,6 +95,7 @@
     .story-img{border-radius:var(--radius-card);box-shadow:0 6px 24px rgba(0,0,0,.1);margin:0 auto 32px;max-width:500px;width:100%}
     .specialist-img{max-width:400px;width:100%;border-radius:var(--radius-card);margin:0 auto 28px}
     .reviews-banner{width:100%;max-width:800px;margin:0 auto 32px;border-radius:var(--radius-card);border:1px solid #eee}
+    .sci-refs-img{max-width:600px;width:100%;margin:0 auto 24px;opacity:0.9;}
 
     /* Bullets */
     .bullet-list li{margin-bottom: 14px; display: flex; align-items: flex-start; gap: 12px;}
@@ -106,7 +107,7 @@
 
     /* Guarantee */
     .guarantee-wrap{display:flex;flex-direction:column;align-items:center;gap:28px;text-align:center;background:linear-gradient(to right,#e7eff2,#f1f5f9);padding:48px 20px;border-radius:20px}
-    .guarantee-img{width:150px;filter:drop-shadow(0 4px 12px rgba(0,0,0,.1))}
+    .guarantee-img{width:180px;filter:drop-shadow(0 4px 12px rgba(0,0,0,.15))}
 
     /* Reviews Grid */
     .reviews-grid{display:grid;grid-template-columns:1fr;gap:20px}
@@ -193,26 +194,34 @@
     <div class="container-wide">
         <div class="trust-grid">
             <div class="trust-card">
-                <div style="font-size: 2rem; margin-bottom: 8px;">🇺🇸</div>
+                <img src="images/imgi_6_badge-usa.png" alt="Produzido nos EUA">
                 <div class="trust-card-title">Produzido nos EUA</div>
                 <p class="trust-card-desc">Fabricado sob rigorosos padrões americanos.</p>
             </div>
             <div class="trust-card">
-                <div style="font-size: 2rem; margin-bottom: 8px;">🏢</div>
+                <img src="images/imgi_7_badge-fda.png" alt="Instalação Registrada">
                 <div class="trust-card-title">Instalação Registrada</div>
                 <p class="trust-card-desc">Produzido em instalações seguras e regulamentadas.</p>
             </div>
             <div class="trust-card">
-                <div style="font-size: 2rem; margin-bottom: 8px;">🛡️</div>
+                <img src="images/imgi_8_badge-gmp.png" alt="Certificado GMP">
                 <div class="trust-card-title">Certificado GMP</div>
                 <p class="trust-card-desc">Garantia de pureza e boas práticas de fabricação.</p>
             </div>
             <div class="trust-card">
-                <div style="font-size: 2rem; margin-bottom: 8px;">🌱</div>
+                <img src="images/imgi_9_badge-natural.png" alt="100% Natural">
                 <div class="trust-card-title">100% Natural</div>
                 <p class="trust-card-desc">Fórmula sem OGMs ou compostos artificiais.</p>
             </div>
         </div>
+    </div>
+</section>
+
+<!-- SCIENTIFIC REFS -->
+<section class="section bg-white" style="padding-bottom: 0;">
+    <div class="container text-center">
+        <p class="eyebrow">Apoio Baseado em Ciência</p>
+        <img src="images/imgi_2_scientific-refs.jpg" alt="Scientific Journals" class="sci-refs-img">
     </div>
 </section>
 
@@ -330,7 +339,7 @@
 <section class="section bg-white">
     <div class="container">
         <div class="guarantee-wrap">
-            <img src="images/guaranted.png" alt="60-Day Guarantee" class="guarantee-img">
+            <img src="images/imgi_13_guarantee-badge.png" alt="60-Day Guarantee" class="guarantee-img">
             <div>
                 <h2 class="h1" style="color: var(--brand);">Garantia de 60 dias</h2>
                 <p class="body-text mt-12">Você pode testar o Neuro Salt com tranquilidade. Se não estiver satisfeito por qualquer motivo, basta solicitar o reembolso total dentro do prazo. Sem complicações.</p>
