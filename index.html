@@ -46,7 +46,7 @@
         body{font-family:'Inter',sans-serif;background:var(--bg-white);color:var(--text-body);line-height:1.6;-webkit-font-smoothing:antialiased}
         img{max-width:100%;height:auto;display:block;margin:0 auto}
         a{text-decoration:none;color:inherit}
-        button{cursor:pointer;font-family:inherit}
+        button{cursor:pointer;font-family:inherit;border:none;background:none}
 
         .container { max-width: 800px; margin: 0 auto; padding: 0 20px }
         .section { padding: 60px 0 }
@@ -92,7 +92,7 @@
         .bullet-icon{color:var(--accent); font-weight: bold; font-size: 1.2rem;}
         .warning-box{background:#fff5f5; border:1px dashed #feb2b2; padding:20px; border-radius:8px; margin:25px auto; color:#c53030; font-weight:700; font-size:0.9rem; max-width:100%}
 
-        /* Testimonials */
+        /* Reviews */
         .reviews-container { display: flex; flex-direction: column; gap: 20px; margin-top: 30px; }
         .review-card { background: #ffffff; border: 1px solid #e2e8f0; padding: 25px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.03); text-align: left; }
         .review-text { font-style: italic; color: var(--text-body); margin-bottom: 15px; line-height: 1.7; font-size: 0.95rem; }
@@ -108,21 +108,25 @@
         .offer-section { background-color: var(--brand-light); padding: 60px 0; border-top: 1px solid #eee; }
         .offer-product-final{width:100%; max-width:320px; margin:0 auto 25px; filter: drop-shadow(0 15px 35px rgba(222,107,36,0.15))}
 
-        /* FAQ */
-        .faq-section { background-color: #ffffff; padding: 60px 0; }
-        .faq-container { background: #fafafa; border-radius: 12px; padding: 10px 20px; border: 1px solid #efefef; margin-top: 30px; }
-        .faq-item{border-bottom: 1px solid #e2e8f0; padding:18px 0; text-align:left}
-        .faq-item:last-child { border-bottom: none; }
-        .faq-question{width:100%; display:flex; justify-content:space-between; font-weight:700; color:var(--brand); font-size:1rem; align-items:center; gap: 15px; text-align: left;}
-        .faq-answer{display:none; padding:15px 0 5px; font-size:0.9rem; color:var(--text-body); line-height:1.7}
-        .faq-item.active .faq-answer{display:block}
-        .faq-icon { font-size: 1.2rem; color: var(--brand); font-weight: 900;}
+        /* --- FAQ REFORMATTED --- */
+        .faq-section { background-color: #ffffff; padding: 80px 0; }
+        .faq-header { margin-bottom: 40px; }
+        .faq-container { max-width: 100%; margin: 0 auto; }
+        .faq-item { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 15px; overflow: hidden; transition: all 0.3s ease; }
+        .faq-item:hover { border-color: var(--accent); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .faq-question { width: 100%; padding: 20px 25px; display: flex; justify-content: space-between; align-items: center; font-weight: 700; color: var(--brand); font-size: 1.05rem; text-align: left; cursor: pointer; }
+        .faq-answer { max-height: 0; padding: 0 25px; overflow: hidden; background: #f8fafc; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); color: var(--text-body); font-size: 0.95rem; line-height: 1.6; }
+        .faq-item.active { border-color: var(--brand); }
+        .faq-item.active .faq-answer { max-height: 300px; padding-bottom: 20px; padding-top: 10px; }
+        .faq-icon { font-size: 1.4rem; color: var(--accent); transition: transform 0.3s ease; font-family: monospace; font-weight: 400;}
+        .faq-item.active .faq-icon { transform: rotate(45deg); color: var(--brand); }
 
         /* Modal Structure for Policies */
         .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 9999; display: none; overflow-y: auto; padding: 20px; }
         .modal-content { background: #fff; max-width: 800px; margin: 20px auto; padding: 40px; border-radius: 16px; position: relative; color: #333; }
         .modal-close { position: absolute; top: 15px; right: 20px; font-size: 2.5rem; cursor: pointer; color: var(--brand); line-height: 1; }
-        .modal-body h2 { color: var(--brand); margin-bottom: 20px; border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 8px; font-family: 'Merriweather', serif; }
+        .modal-body h2 { color: var(--brand); margin-bottom: 20px; border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 8px; font-family: 'Merriweather', serif; font-size: 1.6rem; }
+        .modal-body h3 { color: var(--brand); margin: 25px 0 10px; font-size: 1.2rem; }
         .modal-body p { margin-bottom: 15px; font-size: 0.95rem; line-height: 1.6; }
         .modal-body ul { margin-bottom: 15px; padding-left: 20px; font-size: 0.95rem; }
 
@@ -130,47 +134,33 @@
         .footer a{text-decoration:underline; margin:0 8px; color:#ffffff; cursor: pointer; display: inline-block; margin-bottom: 10px;}
         .footer-distributor { opacity: 0.7; font-size: 0.75rem; margin-top: 25px; font-style: italic; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 25px; }
 
-        /* DESKTOP REFINEMENTS (MEDIA QUERIES) */
+        /* DESKTOP REFINEMENTS */
         @media(min-width:1024px){
             .container { max-width: 1100px; }
-            
-            /* Hero Side-by-Side */
             .hero-inner { display: flex; align-items: center; justify-content: space-between; gap: 60px; text-align: left; }
             .hero-text { flex: 1.1; }
             .hero-visual { flex: 0.9; }
             .hero-img { max-width: 440px; margin: 0; }
             .mobile-only-img { display: none; }
-
             .h1 { font-size: 2.8rem; margin-bottom: 20px; }
             .h2 { font-size: 1.5rem; margin-bottom: 25px; }
             .price-card { margin-left: 0; max-width: 360px; padding: 30px; } 
-
             .trust-grid { grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1000px; margin: 30px auto 0; }
             .trust-card img { height: 60px; }
-
-            /* Mechanism Section Desktop (image_d46b41.png Fix) */
             .mechanism-box { max-width: 750px; padding: 50px; }
             .mechanism-item { display: flex; align-items: center; gap: 15px; margin-bottom: 30px; }
             .mechanism-item strong { font-size: 1.6rem; margin-bottom: 0; display: inline; }
             .mechanism-item span { font-size: 1.1rem; margin-left: 10px; }
-
-            /* Reviews Desktop */
-            .reviews-banner { max-width: 500px; margin: 0 auto 40px; }
             .reviews-container { flex-direction: row; align-items: stretch; justify-content: center; gap: 25px; }
             .review-card { width: 32%; padding: 35px; }
-
-            /* Guarantee Faixa Desktop */
             .guarantee-wrap { flex-direction: row; justify-content: center; text-align: left; gap: 60px; max-width: 900px; margin: 0 auto; }
-            .guarantee-img { width: 150px; }
+            .guarantee-img { width: 140px; }
             .guarantee-text h2 { font-size: 2.2rem; }
-
-            /* Offer Final Grid */
             .offer-split { display: flex; align-items: center; gap: 70px; text-align: left; }
             .offer-visual { flex: 1; }
             .offer-details { flex: 1; }
             .offer-product-final { max-width: 480px; }
-
-            .faq-container { max-width: 800px; padding: 30px 50px; }
+            .faq-container { max-width: 800px; }
         }
     </style>
 </head>
@@ -245,7 +235,7 @@
     </div>
 </section>
 
-<!-- SECTION 2: MECHANISM (FIXED DESKTOP image_d46b41.png) -->
+<!-- SECTION: MECHANISM -->
 <section class="mechanism-section">
     <div class="container text-center">
         <div style="background: var(--accent); color: #fff; display: inline-block; padding: 8px 15px; border-radius: 4px; font-weight: 700; font-size: 0.85rem; margin-bottom: 20px; text-transform: uppercase;">
@@ -258,16 +248,22 @@
         <div class="mechanism-box">
             <ul class="mechanism-list">
                 <li class="mechanism-item">
-                    <strong>Nerves Stay In A Sensitive State</strong>
-                    <span>for extended periods</span>
+                    <div>
+                        <strong>Nerves Stay In A Sensitive State</strong>
+                        <span>for extended periods</span>
+                    </div>
                 </li>
                 <li class="mechanism-item">
-                    <strong>Signals Fire More Often</strong>
-                    <span>and harder to ignore</span>
+                    <div>
+                        <strong>Signals Fire More Often</strong>
+                        <span>and harder to ignore</span>
+                    </div>
                 </li>
                 <li class="mechanism-item">
-                    <strong>Balance Becomes Harder To Maintain</strong>
-                    <span>internally</span>
+                    <div>
+                        <strong>Balance Becomes Harder To Maintain</strong>
+                        <span>internally</span>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -275,137 +271,34 @@
     </div>
 </section>
 
-<!-- IMPACT SECTION -->
-<section class="section bg-white">
-    <div class="container text-center">
-        <h2 class="h1">And Over Time… It Starts Affecting Your Routine</h2>
-        <div class="body-text" style="max-width: 800px; margin: 0 auto 35px;">
-            <p>Standing Too Long Feels Different. Walking Doesn’t Feel The Same. Night-Time Becomes The Worst Moment. You Start Paying Attention To Every Step.</p>
-        </div>
-        
-        <ul class="bullet-list">
-            <li><span class="bullet-icon">🔴</span> <span>Difficulty relaxing when trying to sleep</span></li>
-            <li><span class="bullet-icon">🔴</span> <span>Increased focus on balance while walking</span></li>
-            <li><span class="bullet-icon">🔴</span> <span>Night-time discomfort becoming more noticeable</span></li>
-        </ul>
-
-        <div class="warning-box text-center">
-            Attention: Many People Report This Pattern Becomes More Noticeable When Ignored.
-        </div>
-    </div>
-</section>
-
-<!-- DIFFERENT APPROACH -->
-<section class="section product-highlight">
-    <div class="container">
-        <div class="hero-inner">
-            <div class="hero-visual">
-                <img src="images/neurosalt2.png" alt="NeuroSalt Close-up" class="neurosalt2-img">
-            </div>
-            <div class="hero-text">
-                <h2 class="h1">A Different Approach To Daily Support</h2>
-                <div class="body-text">
-                    <p>Instead Of Covering The Problem… NeuroSalt Was Designed To Support The Body Internally:</p>
-                </div>
-                <div class="mechanism-box" style="background: white; border-left: 6px solid var(--brand); color: var(--text-body); margin-left: 0; padding: 25px;">
-                    <p style="color: var(--text-body);">✔️ Helps Support A Balanced Inflammatory Response</p>
-                    <p style="color: var(--text-body);">✔️ Helps Support Nerve Function</p>
-                    <p style="color: var(--text-body);">✔️ Helps Support Circulation</p>
-                    <p style="color: var(--text-body);">✔️ Helps Protect Against Oxidative Stress</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="section bg-gray" style="background-color: #f8fafc;">
-    <div class="container text-center">
-        <h2 class="h1">What People Are Saying</h2>
-        <img src="images/reviews.png" alt="Testimonials Collage" class="reviews-banner" style="border-radius:16px; box-shadow: 0 4px 15px rgba(0,0,0,0.04)">
-        
-        <div class="reviews-container">
-            <div class="review-card">
-                <p class="review-text">“Burning Every Night. Now I Barely Notice It During The Day. It took some time but consistency was the key for me.”</p>
-                <div class="review-author">R. Thompson, 62</div>
-            </div>
-            <div class="review-card">
-                <p class="review-text">“Tingling Used To Keep Me Awake. Now I Feel More Comfortable At Night. Finally a better rest.”</p>
-                <div class="review-author">M. Carter, 58</div>
-            </div>
-            <div class="review-card">
-                <p class="review-text">“Didn’t Expect Much. But Over Time, I Feel More Stable Walking. I'm much more confident moving around.”</p>
-                <div class="review-author">D. Miller, 67</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- GUARANTEE FAIXA -->
-<section class="guarantee-faixa">
-    <div class="container">
-        <div class="guarantee-wrap">
-            <img src="images/imgi_13_guarantee-badge.png" alt="60-Day Guarantee" class="guarantee-img">
-            <div class="guarantee-text">
-                <h2>Your Satisfaction Is Protected</h2>
-                <p>You’re Covered By A <strong>60-Day Money-Back Guarantee</strong>. Try It. If It’s Not For You — Request A Refund Within The Period. No Questions Asked.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- FINAL OFFER -->
-<section class="section offer-section">
-    <div class="container text-center">
-        <h2 class="h1">Get NeuroSalt While It’s Still Available</h2>
-        
-        <div class="offer-split">
-            <div class="offer-visual">
-                <img src="images/3-frascos.png" alt="NeuroSalt Bundle" class="offer-product-final">
-            </div>
-            <div class="offer-details">
-                <div class="price-card" style="margin: 0; background: #fff; border: 2px solid var(--brand); max-width: 100%;">
-                    <div class="body-text" style="margin-bottom: 20px;">
-                        <p style="font-size: 1.15rem; margin-bottom: 10px;">• Starting at <strong>$49 per bottle</strong></p>
-                        <p style="font-size: 1.15rem; margin-bottom: 10px;">• <strong>Save up to 73% today</strong></p>
-                        <p style="font-size: 1.15rem;">• Limited availability depending on stock</p>
-                    </div>
-                    <a href="https://43f17ngcmlemes3bul-d59uf7b.hop.clickbank.net" class="cta-primary" style="font-size: 1.2rem; padding: 22px 55px; width: 100%;">
-                        CHECK AVAILABILITY NOW
-                    </a>
-                </div>
-                <p style="background: #fee2e2; color:#b91c1c; padding: 15px 30px; border-radius: 10px; font-weight:800; margin-top:30px; font-size: 0.95rem; text-align: center;">
-                    ⚠️ ATTENTION: Due To High Demand, Some Batches May Sell Out Soon.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- FAQ -->
+<!-- SECTION: FAQ -->
 <section class="faq-section">
     <div class="container">
-        <h2 class="h1 text-center">Frequently Asked Questions</h2>
+        <div class="faq-header text-center">
+            <h2 class="h1">Frequently Asked Questions</h2>
+            <p class="body-text">Everything you need to know about NeuroSalt™</p>
+        </div>
+        
         <div class="faq-container">
             <div class="faq-item">
-                <button class="faq-question">How Long Does It Take To Notice Results? <span class="faq-icon">+</span></button>
-                <div class="faq-answer">Some Users Report Changes In A Few Weeks. Results May Vary Depending On The Individual. Best results typically occur after 60-90 days of consistent use.</div>
+                <div class="faq-question">How Long Does It Take To Notice Results? <span class="faq-icon">+</span></div>
+                <div class="faq-answer">Some users report changes within a few weeks of consistent use. However, for optimal results, we recommend a 60 to 90-day period. Individual results may vary based on your system's response.</div>
             </div>
             <div class="faq-item">
-                <button class="faq-question">Do I Need A Prescription? <span class="faq-icon">+</span></button>
-                <div class="faq-answer">No, NeuroSalt is a supplement and does not require a prescription. It is formulated with nature-based compounds.</div>
+                <div class="faq-question">Do I Need A Prescription? <span class="faq-icon">+</span></div>
+                <div class="faq-answer">No. NeuroSalt™ is a dietary supplement formulated with nature-based compounds and does not require a prescription for purchase or use.</div>
             </div>
             <div class="faq-item">
-                <button class="faq-question">How Do I Take It? <span class="faq-icon">+</span></button>
-                <div class="faq-answer">Follow the instructions on the product label for daily use, typically taken with a glass of water.</div>
+                <div class="faq-question">How Do I Take It? <span class="faq-icon">+</span></div>
+                <div class="faq-answer">Follow the instructions on the product label for daily use. We typically recommend taking the capsules with a glass of water, ideally with a meal for better absorption.</div>
             </div>
             <div class="faq-item">
-                <button class="faq-question">Can I Use It With Other Supplements? <span class="faq-icon">+</span></button>
-                <div class="faq-answer">NeuroSalt uses a natural-based formula. However, if you have specific medical concerns, consult a professional first.</div>
+                <div class="faq-question">Can I Use It With Other Supplements? <span class="faq-icon">+</span></div>
+                <div class="faq-answer">NeuroSalt™ uses a natural-based formula. However, if you are currently taking prescription medication or have underlying medical concerns, we always recommend consulting a healthcare professional first.</div>
             </div>
             <div class="faq-item">
-                <button class="faq-question">What If It Doesn’t Work? <span class="faq-icon">+</span></button>
-                <div class="faq-answer">You are protected by our 60-day money-back guarantee. Simply contact our support team for a full refund.</div>
+                <div class="faq-question">What If It Doesn’t Work For Me? <span class="faq-icon">+</span></div>
+                <div class="faq-answer">You are 100% protected by our 60-day money-back guarantee. If you are not satisfied with your experience for any reason, simply contact our support team within the timeframe for a full refund.</div>
             </div>
         </div>
     </div>
@@ -448,28 +341,35 @@ const modalData = {
     tos: `<h2>Terms of Service</h2>
           <p><strong>Date Effective: August, 2021</strong></p>
           <p>This website (the “Site”) is owned and operated by (“COMPANY” “we” or “us”). By using the Site, you agree to be bound by these Terms of Service and to use the Site in accordance with these Terms of Service, our Privacy Policy, our Shipping Policy, our Return Policy and any additional terms and conditions that may apply to specific sections of the Site or to products and services available through the Site or from COMPANY.</p>
-          <p><strong>Intellectual Property Rights:</strong> This Site and all the materials available on the Site are the property of us and/or our affiliates or licensors, and are protected by copyright, trademark, and other intellectual property laws. The Site is provided solely for your personal noncommercial use.</p>
-          <p><strong>Refund Policy:</strong> To request a full refund, email contact@customercs.com within 60 days of purchase and return the bottles (even empty). Refunds are processed in 3–5 business days.</p>
-          <p><strong>Dispute Resolution:</strong> These Terms are governed by the laws of Barbados. Any dispute is resolved by binding arbitration in St. Michael, Barbados.</p>`,
+          <h3>Intellectual Property Rights</h3>
+          <p>This Site and all the materials available on the Site are the property of us and/or our affiliates or licensors, and are protected by copyright, trademark, and other intellectual property laws. The Site is provided solely for your personal noncommercial use.</p>
+          <h3>Disclaimers</h3>
+          <p>All information, products and services offered on or through the Site are provided “as is” without warranties of any kind, express or implied. UNDER NO CIRCUMSTANCES shall we be liable for any direct, indirect, incidental, special or consequential damages arising from your use of the Site.</p>
+          <h3>Dispute Resolution</h3>
+          <p>These Terms are governed by the laws of Barbados. Any dispute is resolved by binding arbitration in St. Michael, Barbados. You may not join or bring a class action.</p>`,
     
     privacy: `<h2>Privacy Policies and Use of Information</h2>
-              <p>Your privacy is critically important to us. We are committed to protecting personally identifiable information you may provide us through the Website. We collect non-personally-identifying information of the sort that web browsers and servers typically make available.</p>
-              <p><strong>Remarketing:</strong> We may use remarketing services to advertise on third-party websites (including Google, Facebook and Others) to previous visitors to our site.</p>
-              <p><strong>Cookies:</strong> To enrich and perfect your online experience, we use “Cookies” to display personalized content and store your preferences on your computer.</p>`,
+              <p>Your privacy is critically important to us. It is our policy to respect your privacy regarding any information we may collect while operating our website.</p>
+              <h3>Website Visitors</h3>
+              <p>Like most website operators, we collect non-personally-identifying information of the sort that web browsers and servers typically make available, such as the browser type, language preference, referring site, and the date and time of each visitor request.</p>
+              <h3>Security</h3>
+              <p>The security of your Personal Information is important to us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Information, we cannot guarantee its absolute security.</p>
+              <h3>Remarketing</h3>
+              <p>We may use remarketing services (including Google, Facebook and Others) to advertise on third-party websites to previous visitors to our site. You can opt out of interest-based advertising entirely by cookie settings or browser plugins.</p>`,
     
     return: `<h2>Return Policy</h2>
              <p>If you are unsatisfied with your product for any reason you will have 60 days from the date of delivery to return the product and request a refund.</p>
              <ul>
-                 <li><strong>Step 1:</strong> Ensure you are still in the 60-day period starting with the day the order has been delivered to you.</li>
-                 <li><strong>Step 2:</strong> Send an email to contact@customercs.com with “Refund Request” in the subject line.</li>
-                 <li><strong>Step 3:</strong> Send all the bottles back to: 11870 62nd St N Largo, Fl. 33773.</li>
-                 <li><strong>Step 4:</strong> We will process your refund shortly after receiving your package. Processing time is between 5 and 10 days.</li>
+                 <li><strong>Step 1:</strong> Make sure you are still in the 60-day period starting with the day the order has been delivered to you.</li>
+                 <li><strong>Step 2:</strong> Send an email to our support team <strong>contact@customercs.com</strong> and tell them you are not fully convinced. Please add “Refund Request” in the subject line.</li>
+                 <li><strong>Step 3:</strong> Send all the bottles back to us (even empty) at: <strong>11870 62nd St N Largo, Fl. 33773.</strong></li>
+                 <li><strong>Step 4:</strong> Be patient, we will process your refund shortly after receiving your package. The processing time is between 5 and 10 days.</li>
              </ul>`,
     
     disclaimer: `<h2>General Disclaimer</h2>
                  <p><strong>Date Effective: August, 2025</strong></p>
                  <p>This product has not been evaluated by the FDA. This product is not intended to diagnose, treat, cure or prevent any disease. Your use of the site and the purchase of our product is subject to our Terms of Service, Privacy Policy and Medical Disclaimer.</p>
-                 <p>All content sold or provided by this website and its related companies are strictly for informational purposes only. neither the authors nor the publishers are responsible for assuming liability for possible inaccuracies.</p>`,
+                 <p>All content provided by this website is strictly for informational purposes only. neither the authors nor the publishers are responsible for assuming liability for possible inaccuracies. Loss of property, injury to self or others, and even death could occur as a consequence of the use of any content found herein.</p>`,
     
     contact: `<h2>How To Contact Us</h2>
               <p>Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within a matter of hours to help you.</p>
@@ -493,9 +393,8 @@ window.onclick = function(event) {
 }
 
 // FAQ Logic
-document.querySelectorAll('.faq-question').forEach(btn => {
-    btn.addEventListener('click', () => {
-        const item = btn.parentElement;
+document.querySelectorAll('.faq-item').forEach(item => {
+    item.querySelector('.faq-question').addEventListener('click', () => {
         const isActive = item.classList.contains('active');
         document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
         if(!isActive) {
